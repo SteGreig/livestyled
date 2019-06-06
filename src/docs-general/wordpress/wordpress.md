@@ -7,7 +7,7 @@
 
 ## Don't brace yourself
 
-We tend not to use braces, therefore please use
+We tend not to use braces, therefore;
 
 ![#ff0000](https://placehold.it/15/ff0000/000000?text=+) Instead of:
 ```php
