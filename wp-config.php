@@ -18,9 +18,9 @@
  * @package WordPress
  */
 
-if (strpos($_SERVER['HTTP_HOST'], 'dev-wp.wearebigrock.com') !== false) {
+if (strpos($_SERVER['HTTP_HOST'], 'dev.livestyled.com') !== false) {
 	$config_file = 'wp-br-config/wp-config.development.php';
-} elseif (strpos($_SERVER['HTTP_HOST'], 'project.staging.wearebigrock.com') !== false) {
+} elseif (strpos($_SERVER['HTTP_HOST'], 'livestyled.staging.wearebigrock.com') !== false) {
 	$config_file = 'wp-br-config/wp-config.staging.php';
 } else {
 	$config_file = 'wp-br-config/wp-config.production.php';
