@@ -25,8 +25,5 @@ define( 'WP_DEBUG_DISPLAY', false );
 define( 'CONCATENATE_SCRIPTS', false );
 define( 'SAVEQUERIES', true );
 define( 'SCRIPT_DEBUG', false );
-
-
-// define( 'WP_CACHE', false );
-
-// define( 'WP_AUTO_UPDATE_CORE', true );
+define( 'WP_CACHE', false );
+define( 'WP_AUTO_UPDATE_CORE', false );
