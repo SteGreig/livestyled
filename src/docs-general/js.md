@@ -1,8 +1,6 @@
 # JavaScript
 
-> JavaScript Guidlines
-
-For the time being you are free to use jQuery, however this will be changing in the future. 
+> For the time being you are free to use jQuery, however this will be changing in the future. 
 
 The JS is compiled using Gulp from the ```src/js``` directory.
 

@@ -9,7 +9,13 @@
 	*/
 	/// Extends
 	include( plugin_dir_path(__FILE__) . 'inc/wp-extend/wp-menus.php' );
+	
+	
+	
+	include( plugin_dir_path(__FILE__) . 'inc/custom/tracking-gtm.php' );
 
+	
+	
 	/// Custom Post Types	
 	/**
 	 * EXAMPLE OF HOW TO SET ONE UP!
