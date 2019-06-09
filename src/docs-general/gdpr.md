@@ -3,7 +3,9 @@
 > Alert which warns users of GDPR acceptance
 
 ## Overview
-By default the alert is set up to be full screen as this is proven to improve conversion rates, if the design suggest the GDPR message should be reloacted then it's advisable to temind the project team that the conversion rate will drop. 
+By default the alert is set up to be full screen as this is proven to improve conversion rates, if the design suggest the GDPR message should be reloacted then it's advisable to remind the project team that the conversion rate will drop for all tracking. 
+
+Either way the css is easy enough to change if required
 
 ### What's happening here...
 On page load we check for 2 cookies, if these are undfinded then the alert is shown. If the terms have been previously accepted or declined the cookies are updated to expire in another 30 days.
@@ -33,4 +35,3 @@ Main file:
 - ```src/js/gdpr.js```
 
 Also be aware that the cookies are set using ```js/libs/js.cookie.js```.
-

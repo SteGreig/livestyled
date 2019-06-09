@@ -23,11 +23,11 @@
 
 ## WordPress Theme
 Main template:
-- THEME/templates/pb-copy-video.php
+- ```wp-content/THEME/templates/pb-copy-video.php```
 
 ## Scss files
 Main file:
-- scss/components/_pb-copy-video.scss
+- ```src/scss/components/_pb-copy-video.scss```
 
 Be also aware of:
-- scss/components/_pb-copy.scss
+- ```src/scss/components/_pb-copy.scss```

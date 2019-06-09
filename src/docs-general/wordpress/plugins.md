@@ -10,7 +10,7 @@ Our Big Rock plugin sets up WordPress to work with our custom page builder, it n
 ## Custom Site Plugin
 Rather than adding all of your functions into the functions.php file you should ask the following question.
 
-- If this site was to be reskinned tomorrow would this function be required?
+> If this site were to be reskinned tomorrow would this function be required?
 
 If the answer was yes, you need to add the code to this plugin rather than within the functions.php file. There is an example custom post type and taxonomy which cn be used as a base.
 

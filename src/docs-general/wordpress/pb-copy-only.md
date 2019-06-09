@@ -7,9 +7,9 @@
 	- There are 3 options, these being Center, Left & Right
 - Theme
 	- Returns one of 3 options, this ensures that all of the sections remain on brand.
-	- primary
- 	- secondary
-	- alternative
+		- primary
+		- secondary
+		- alternative
 - Background Images
 	- Landscape
 	- Portrait
@@ -22,12 +22,12 @@
 
 ## WordPress Theme
 Main template:
-- THEME/templates/pb-copy-only.php
+- ```wp-content/THEME/templates/pb-copy-only.php```
 
 ## Scss files
 
 Main file:
-- scss/components/_pb-copy-only.scss
+- ```src/scss/components/_pb-copy-only.scss```
 
 Be also aware of:
-- scss/components/_pb-copy.scss
+- ```src/scss/components/_pb-copy.scss```
