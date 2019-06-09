@@ -32,3 +32,6 @@ There is a very basic grid been put in place, you'll find this in the following 
 ## Framework theme
 Many of the modules allow you to select a theme which returns either ```primary```, ```secondary``` or ```alternative```. This is to allow you to add an alternative background colour on the modules to help breakup the pages.
 - ```src/scss/objects/theme.scss```
+
+## Unused Modules
+Remove any un-used modules which haven't been reskinned / designed 
