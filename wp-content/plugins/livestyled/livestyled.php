@@ -28,3 +28,10 @@
 	 * EXAMPLE OF HOW TO SET ONE UP!
 	 * include( plugin_dir_path(__FILE__) . 'inc/custom-post-taxonomies/_example.php' );
 	 **/
+
+
+	/**
+	 * Extending plugins
+	 */
+	include( plugin_dir_path(__FILE__) . 'inc/plugins/acf-pro.php' );
+	
