@@ -8,7 +8,6 @@
 * [JavaScript](./js.md)
 * [HTML](./html.md)
 * [Scss](./scss.md)
-	* [Theme](./theme.md)
 * [Gulp](./gulp.md)
 * [GDPR](./gdpr.md)
 * [Analytics & Tracking](./tracking/analytics.md)
