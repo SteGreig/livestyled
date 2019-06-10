@@ -7,6 +7,8 @@ If you don't know what [Local JSON](https://www.advancedcustomfields.com/resourc
 
 Never under any circumstances change fields on staging or production. The fields must always be synced from dev using the JSON files so that they are managed within version control.
 
+You'll need to sync (from within the custom fields menus) the fields after you have set up the site.
+
 ## Keep it tidy
 The backend / dashboard should remain tidy for the end user so take advantage of the layout options ACF offers.
 
