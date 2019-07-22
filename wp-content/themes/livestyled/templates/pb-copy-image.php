@@ -1,13 +1,17 @@
 <?php
 /**
  * Stanard config
- */	
+ */
 	$sectionAlignment = get_sub_field( 'ci_section_alignment' );
 	$sectionTheme = get_sub_field( 'ci_theme' );
 /**
  * Image
  */
 	$sectionImage = get_sub_field( 'ci_image' );
+/**
+ * Video
+ */
+	$sectionVideo = get_sub_field( 'ci_video' );
 /**
  * Copy
  */	
@@ -23,19 +27,19 @@
 ?>
 
 <article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?>" id="section-<?php echo $section; ?>">
-	
-<section class="container">
+		
+	<section class="container">
 
-	<div class="grid grid--2">
-		<?php 
-			if( $sectionAlignment === 'left' ):
-				include( 'pb-copy-image--copy.php' );
-				include( 'pb-copy-image--image.php' );
-			else:
-				include( 'pb-copy-image--image.php' );	
-				include( 'pb-copy-image--copy.php' );
-			endif;
-		?>
+		<div class="grid grid--2">
+			<?php 
+				if( $sectionAlignment === 'left' ):
+					include( 'pb-copy-image--copy.php' );
+					include( 'pb-copy-image--image.php' );
+				else:
+					include( 'pb-copy-image--image.php' );
+					include( 'pb-copy-image--copy.php' );
+				endif;
+			?>
 		</div>
 		
 	</section>

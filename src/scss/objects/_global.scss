@@ -1,14 +1,15 @@
-body {
-
-	font-family: 'Open Sans', sans-serif;
+*, *:after, *:before {
+	box-sizing: border-box;
 }
 
-h1, h2, h3 { font-family: 'Roboto', sans-serif; }
+body {
+	font-family: $primaryFont, sans-serif;
+}
 
 .container {
 	width: 100%;
 	box-sizing: border-box;
-	padding: 35px;
+	padding: 0 20px;
 
 	@include lg-up {
 		max-width: 1000px;
@@ -21,9 +22,25 @@ h1, h2, h3 { font-family: 'Roboto', sans-serif; }
 	
 }
 
+.global-main > .section:first-child {
+	padding-top: 100px;
+
+	@include md-up {
+		padding-top: 120px;
+	}
+
+	@include lg-up {
+		padding-top: 140px;
+	}
+
+	@include xl-up {
+		padding-top: 160px;
+	}
+}
+
 .section__header {}
 
-.section__sub0header {}
+.section__sub-header {}
 
 .overlay {
 

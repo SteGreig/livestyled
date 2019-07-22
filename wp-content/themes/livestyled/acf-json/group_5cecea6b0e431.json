@@ -377,7 +377,8 @@
                             "choices": {
                                 "center": "Center",
                                 "left": "Left",
-                                "right": "Right"
+                                "right": "Right",
+                                "header-left": "Align heading to left \/ Copy to right"
                             },
                             "default_value": [],
                             "allow_null": 0,
@@ -723,7 +724,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "60",
+                                "width": "30",
                                 "class": "",
                                 "id": ""
                             },
@@ -735,6 +736,25 @@
                             "min_size": "",
                             "max_width": "",
                             "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5d30c174dd1d1",
+                            "label": "Video",
+                            "name": "ci_video",
+                            "type": "file",
+                            "instructions": "Upload as MP4. Animated illustration videos also require a static placeholder image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
                             "max_size": "",
                             "mime_types": ""
                         },
@@ -2850,5 +2870,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559763488
+    "modified": 1563485151
 }

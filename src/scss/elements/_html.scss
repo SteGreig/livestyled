@@ -149,7 +149,9 @@ ol {
 /**
 	IMAGES
 */
-// img {}
+img {
+	max-width: 100%;
+}
 
 // figure {}
 
@@ -195,4 +197,10 @@ ol {
 
 // output {}
 
-// button {}
+button {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	border: none;
+    padding: 0;
+    background: none;
+}

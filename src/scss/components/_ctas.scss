@@ -2,15 +2,14 @@
 
 	box-sizing: border-box;
 	display: inline-block;
-	margin: 10px 0;
 	text-align: center;
 	text-decoration: none;
-	background: $Black;
+	background: $highlightRed;
 	color: $White;
+	border-radius: 25px;
+	width: 100%;
 
-	width: 100%; 
 	@include sm-up {
-		margin: 10px;
 		width: auto; 
 	}
 
@@ -42,6 +41,32 @@
 		color: $White;
 		padding: 20px 40px;
 		
+	}
+
+	&--white {
+		background-color: $White;
+		color: $primary;
+	}
+
+	&--dark-blue {
+		background-color: $primary;
+		color: $White;
+	}
+
+	&--ghost {
+		background-color: transparent;
+		border: 1px solid $highlightRed;
+		color: $highlightRed;
+
+		&.cta--white {
+			border-color: $White;
+			color: $White;
+		}
+
+		&.cta--dark-blue {
+			border-color: $primary;
+			color: $primary;
+		}
 	}
 
 }

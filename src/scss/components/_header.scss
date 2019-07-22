@@ -1,0 +1,91 @@
+// --------------------------------------------------------------------------------------------------
+// Header
+// --------------------------------------------------------------------------------------------------
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    transition: .3s;
+
+    @include md-up {
+        padding: 35px;
+    }
+
+    @include lg-up {
+        padding: 35px 50px;
+    }
+
+    &--sticky {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: $primary;
+    }
+
+    &__contact-cta {
+        display: none;
+        margin-left: auto;
+
+        @include md-up {
+            display: block;
+        }
+    }
+}
+
+.mob-nav-toggle {
+    margin-left: auto;
+
+    .icon {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    @include md-up {
+        display: none;
+    }
+}
+
+.site-logo__img {
+    width: 30px;
+    display: block;
+}
+
+.desktop-nav {
+    display: none;
+
+    @include md-up {
+        display: block;
+        margin-left: 30px;
+    }
+
+    @include lg-up {
+        margin-left: 60px;
+    }
+
+    > ul > li {
+        display: inline-block;
+    }
+
+    // Hide Home and Contact links from desktop nav
+    > ul > li:first-child,
+    > ul > li:last-child {
+        display: none;
+    }
+
+    > ul > li > a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 12px;
+        font-weight: 300;
+
+        @include lg-up {
+            padding: 15px 16px;
+        }
+    }
+
+    .sub-menu {
+        display: none;
+    }
+}

@@ -1,22 +1,23 @@
 .theme {
 	
 	&--primary { 
-		color: $Black;	
+		background-color: $primary;
+		color: $White;
 
-		.overlay { color: $White; }
+		//.overlay { color: $White; }
 
 	}
 
 	&--secondary {
-		background: $CornflowerBlue;
-		color: $White;
+		background-color: $secondary;
+		color: $primary;
 	}
 
 	&--alternative { 
-		background: $MintCream;
-		color: $DarkSlateGrey; 
+		background-color: $alternative;
+		color: $primary; 
 
-		.overlay { color: $White; }
+		//.overlay { color: $White; }
 		
 	}
 
