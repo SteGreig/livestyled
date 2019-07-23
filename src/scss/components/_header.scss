@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     padding: 20px;
-    transition: .3s;
+    transition: .3s padding;
 
     @include md-up {
         padding: 35px;
@@ -19,8 +19,8 @@
     }
 
     &--sticky {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background-color: $primary;
     }
 
@@ -52,6 +52,8 @@
     display: block;
 }
 
+
+// DESKTOP NAV
 .desktop-nav {
     display: none;
 
@@ -66,6 +68,15 @@
 
     > ul > li {
         display: inline-block;
+        position: relative;
+
+        &:hover > a {
+            color: $highlightBlue;
+        }
+
+        &.menu-item--active > a {
+            color: $highlightRed;
+        }
     }
 
     // Hide Home and Contact links from desktop nav
@@ -75,17 +86,57 @@
     }
 
     > ul > li > a {
+        display: block;
         color: #fff;
         text-decoration: none;
-        padding: 15px 12px;
+        padding: 8px 12px;
         font-weight: 300;
+        font-size: 1rem;
 
         @include lg-up {
-            padding: 15px 16px;
+            padding: 12px 16px;
         }
     }
 
     .sub-menu {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-radius: 20px;
+        background-color: #fff;
+        overflow: hidden;
+        box-shadow: 0 5px 10px rgba(#000, .1);
+
+        a {
+            padding: 10px 20px;
+            color: $primary;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid rgba($primary, .15);
+            white-space: nowrap;
+            transition: .3s;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: rgba($highlightBlue, .1);
+            }
+        }
+
+        li.menu-item--active a {
+            color: $highlightRed;
+        }
+
+        li:last-child a {
+            border-bottom: none;
+        }
     }
+}
+
+.desktop-nav > ul > li > a:hover + .sub-menu,
+.desktop-nav .sub-menu:hover {
+    opacity: 1;
+    visibility: visible;
 }

@@ -289,6 +289,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d37643025696",
+                                            "label": "CTA Style",
+                                            "name": "bfb_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "red": "Red",
+                                                "white": "White",
+                                                "dark-blue": "Dark Blue",
+                                                "light-blue": "Light Blue",
+                                                "red cta--ghost": "Red Outline",
+                                                "white cta--ghost": "White Outline",
+                                                "dark-blue cta--ghost": "Dark Blue Outline",
+                                                "light-blue cta--ghost": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -592,6 +625,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d37648a25697",
+                                            "label": "CTA Style",
+                                            "name": "co_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Red": "Red",
+                                                "White": "White",
+                                                "Dark Blue": "Dark Blue",
+                                                "Light Blue": "Light Blue",
+                                                "Red Outline": "Red Outline",
+                                                "White Outline": "White Outline",
+                                                "Dark Blue Outline": "Dark Blue Outline",
+                                                "Light Blue Outline": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -871,6 +937,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d3764ab25698",
+                                            "label": "CTA Style",
+                                            "name": "ci_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "red": "Red",
+                                                "white": "White",
+                                                "dark-blue": "Dark Blue",
+                                                "light-blue": "Light Blue",
+                                                "red cta--ghost": "Red Outline",
+                                                "white cta--ghost": "White Outline",
+                                                "dark-blue cta--ghost": "Dark Blue Outline",
+                                                "light-blue cta--ghost": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -1124,6 +1223,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d3764c425699",
+                                            "label": "CTA Style",
+                                            "name": "cgf_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Red": "Red",
+                                                "White": "White",
+                                                "Dark Blue": "Dark Blue",
+                                                "Light Blue": "Light Blue",
+                                                "Red Outline": "Red Outline",
+                                                "White Outline": "White Outline",
+                                                "Dark Blue Outline": "Dark Blue Outline",
+                                                "Light Blue Outline": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -1404,6 +1536,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d3764f52569a",
+                                            "label": "CTA Style",
+                                            "name": "cv_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Red": "Red",
+                                                "White": "White",
+                                                "Dark Blue": "Dark Blue",
+                                                "Light Blue": "Light Blue",
+                                                "Red Outline": "Red Outline",
+                                                "White Outline": "White Outline",
+                                                "Dark Blue Outline": "Dark Blue Outline",
+                                                "Light Blue Outline": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -1703,6 +1868,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d3765122569b",
+                                            "label": "CTA Style",
+                                            "name": "cb_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Red": "Red",
+                                                "White": "White",
+                                                "Dark Blue": "Dark Blue",
+                                                "Light Blue": "Light Blue",
+                                                "Red Outline": "Red Outline",
+                                                "White Outline": "White Outline",
+                                                "Dark Blue Outline": "Dark Blue Outline",
+                                                "Light Blue Outline": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -1906,6 +2104,39 @@
                                     "ui": 1,
                                     "ui_on_text": "",
                                     "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5d37653b2569c",
+                                    "label": "CTA Style",
+                                    "name": "cbp_cta_style",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Red": "Red",
+                                        "White": "White",
+                                        "Dark Blue": "Dark Blue",
+                                        "Light Blue": "Light Blue",
+                                        "Red Outline": "Red Outline",
+                                        "White Outline": "White Outline",
+                                        "Dark Blue Outline": "Dark Blue Outline",
+                                        "Light Blue Outline": "Light Blue Outline"
+                                    },
+                                    "default_value": [
+                                        "Red"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
                                 },
                                 {
                                     "key": "field_5cf2674d03a1e",
@@ -2205,6 +2436,39 @@
                                             "ui": 1,
                                             "ui_on_text": "",
                                             "ui_off_text": ""
+                                        },
+                                        {
+                                            "key": "field_5d37655f2569d",
+                                            "label": "CTA Style",
+                                            "name": "com_cta_style",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Red": "Red",
+                                                "White": "White",
+                                                "Dark Blue": "Dark Blue",
+                                                "Light Blue": "Light Blue",
+                                                "Red Outline": "Red Outline",
+                                                "White Outline": "White Outline",
+                                                "Dark Blue Outline": "Dark Blue Outline",
+                                                "Light Blue Outline": "Light Blue Outline"
+                                            },
+                                            "default_value": [
+                                                "Red"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "return_format": "value",
+                                            "ajax": 0,
+                                            "placeholder": ""
                                         }
                                     ]
                                 }
@@ -2870,5 +3134,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563485151
+    "modified": 1563912504
 }

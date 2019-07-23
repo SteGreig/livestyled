@@ -1,5 +1,6 @@
 
 .grid {
+	width: 100%;
 	
 	@include md-up { 
 		display: flex;

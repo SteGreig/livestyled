@@ -1,5 +1,6 @@
 // --------------------------------------------------------------------------------------------------
-// Mobile Menu
+// Mobile Navigation
+// @author Stephen Greig
 // --------------------------------------------------------------------------------------------------
 //SVG Icons
 var iconClose = "<svg class='icon icon-times'><use xlink:href='"+themeURL+"/assets/img/icons-sprite.svg#icon-times'></use></svg>";

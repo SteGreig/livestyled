@@ -1,0 +1,54 @@
+// --------------------------------------------------------------------------------------------------
+// Hero
+// This CSS is designed to adjust the first section on the page to be the "hero" section, whether
+// it's the 'Copy & Image' module, or the 'Full Bleed Banner' module etc.
+// It applies the padding-top required to accommodate the fixed header, and is given a 100vh height
+// on mobile
+// --------------------------------------------------------------------------------------------------
+
+.global-main > .section:first-child {
+	padding-top: 60px;
+
+	> .container {
+        height: calc(100vh - 60px);
+        
+        @include md-up {
+            height: auto;
+        }
+	}
+
+    // To accommodate copy & image on mobile
+	.grid--2 {
+		height: 100%;
+
+		> .block:first-child {
+            height: 45%;
+            
+            @include md-up {
+                height: auto;
+            }
+		}
+
+		> .block:last-child {
+            height: 55%;
+            
+            @include md-up {
+                height: auto;
+            }
+		}
+    }
+
+    img {
+        max-height: 100%;
+    }
+
+	@include md-up {
+        padding-top: 100px;
+        padding-bottom: 40px;
+		min-height: auto;
+	}
+
+	@include lg-up {
+		padding-top: 120px;
+	}
+}

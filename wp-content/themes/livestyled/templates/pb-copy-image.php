@@ -28,9 +28,9 @@
 
 <article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?>" id="section-<?php echo $section; ?>">
 		
-	<section class="container">
+	<section class="container flexbox">
 
-		<div class="grid grid--2">
+		<div class="grid grid--2 flexbox flex-wrap align-items-center">
 			<?php 
 				if( $sectionAlignment === 'left' ):
 					include( 'pb-copy-image--copy.php' );

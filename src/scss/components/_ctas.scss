@@ -8,9 +8,23 @@
 	color: $White;
 	border-radius: 25px;
 	width: 100%;
+	transition: .3s;
+
+	&:hover {
+		transform: scale(1.05);
+	}
 
 	@include sm-up {
-		width: auto; 
+		width: auto;
+	}
+
+	+ .cta {
+		margin-top: 10px;
+
+		@include sm-up {
+			width: auto; 
+			margin: 0 0 0 20px;
+		}
 	}
 
 	&--sm {	
@@ -23,14 +37,15 @@
 	&--md {
 		@include font-size(12, 16);
 		
-		padding: 10px 20px; 
+		padding: 10px 25px; 
 	
 	}
 	
 	&--lg { 
 		@include font-size(14, 18);
 		
-		padding: 20px 40px;
+		padding: 15px 40px;
+		border-radius: 40px;
 		
 	}
 
@@ -39,7 +54,7 @@
 		
 		background: $Crimson;
 		color: $White;
-		padding: 20px 40px;
+		padding: 15px 40px;
 		
 	}
 
@@ -50,6 +65,11 @@
 
 	&--dark-blue {
 		background-color: $primary;
+		color: $White;
+	}
+
+	&--light-blue {
+		background-color: $highlightBlue;
 		color: $White;
 	}
 
@@ -66,6 +86,11 @@
 		&.cta--dark-blue {
 			border-color: $primary;
 			color: $primary;
+		}
+
+		&.cta--light-blue {
+			border-color: $highlightBlue;
+			color: $highlightBlue;
 		}
 	}
 

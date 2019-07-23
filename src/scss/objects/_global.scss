@@ -4,12 +4,13 @@
 
 body {
 	font-family: $primaryFont, sans-serif;
+	font-size: 1.1rem;
 }
 
 .container {
 	width: 100%;
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 20px;
 
 	@include lg-up {
 		max-width: 1000px;
@@ -17,30 +18,45 @@ body {
 	}
 
 	@include xl-up {
-		max-width: 1200px;
+		max-width: 1340px;
 	}
 	
 }
 
-.global-main > .section:first-child {
-	padding-top: 100px;
+.section__header {
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 0;
 
 	@include md-up {
-		padding-top: 120px;
+		font-size: 2.5rem;
 	}
 
 	@include lg-up {
-		padding-top: 140px;
+		font-size: 3rem;
 	}
 
 	@include xl-up {
-		padding-top: 160px;
+		font-size: 4rem;
 	}
 }
 
-.section__header {}
+.section__sub-header {
+	font-weight: 700;
+	font-size: 1.05rem;
 
-.section__sub-header {}
+	@include md-up {
+		font-size: 1.2rem;
+	}
+
+	@include lg-up {
+		font-size: 1.5rem;
+	}
+}
+
+.section__header + .section__sub-header {
+	margin-top: 10px;
+}
 
 .overlay {
 
