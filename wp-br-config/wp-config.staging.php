@@ -11,9 +11,9 @@
  */
 
 define( 'DB_HOST', 'localhost' );
-define( 'DB_NAME', '' );
-define( 'DB_USER', '' );
-define( 'DB_PASSWORD', '' );
+define( 'DB_NAME', 'livestyl_staging' );
+define( 'DB_USER', 'livestyl_wp' );
+define( 'DB_PASSWORD', '4Pd8lo{VpX9n' );
 
 define( 'DISALLOW_FILE_EDIT', true );
 define( 'DISALLOW_FILE_MODS', true );
