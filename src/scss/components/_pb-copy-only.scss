@@ -1,3 +1,30 @@
-.section--copy {
-	
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Copy Only
+// --------------------------------------------------------------------------------------------------
+
+.section--copy-only.align--header-left {
+    @include xl-up {
+        padding: 100px 0;
+    }
+}
+
+.section__header--copy-only {
+    text-transform: none;
+    
+    &:only-child {
+        margin-bottom: 1em;
+
+        @include md-up {
+            margin: 0;
+        }
+    }
+
+    @include xl-up {
+		font-size: 3.5rem;
+    }
+    
+    // For when the text is in a single column, and there is no subheading
+    + .section__copy {
+        margin-top: 1.4em;
+    }
 }

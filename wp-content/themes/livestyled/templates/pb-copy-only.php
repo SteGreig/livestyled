@@ -73,33 +73,44 @@
 <?php if( $sectionImagesActive ): ?>
 	<section class="overlay">
 <?php else: ?>
-	<section class="container">
+<section class="container <?php if ( $sectionAlignment == 'header-left' ): echo "grid grid--2"; else: echo "container--900"; endif; ?>">
 <?php endif; ?>
-		
-		<?php if( $sectionHeader ) : ?>
-		<h1 class="banner__header"><?php echo $sectionHeader; ?></h1>
+
+		<?php if ( $sectionAlignment == 'header-left' ): ?>
+		<div class="block block--2-col">
 		<?php endif; ?>
 
-		<?php if( $sectionSubHeader ) : ?>
-		<h2 class="banner__sub-header"><?php echo $sectionSubHeader; ?></h2>
+			<?php if( $sectionHeader ) : ?>
+			<h1 class="section__header section__header--copy-only"><?php echo $sectionHeader; ?></h1>
+			<?php endif; ?>
+
+			<?php if( $sectionSubHeader ) : ?>
+			<h2 class="section__sub-header"><?php echo $sectionSubHeader; ?></h2>
+			<?php endif; ?>
+
+		<?php if ( $sectionAlignment == 'header-left' ): ?>
+		</div>
 		<?php endif; ?>
 
-		<?php if( $sectionCopy ) :  echo $sectionCopy;  endif; ?>
 
-		<?php 
-			if( $sectionCtaRepeater ) :
-				foreach( $sectionCtaRepeater as $cta ):
-					$ctaText = $cta['co_cta_text'];
-					$ctaUrl = $cta['co_cta_url'];
-					if( $cta['co_new_window'] ):
-					?>
-				<a class="cta cta--<?php echo $sectionCtaSize;?>" href="<?php echo $ctaUrl; ?>" target="_blank" rel="noopener nofollow"><?php echo $ctaText; ?></a>
-			<?php	else: ?>
-				<a class="cta cta--<?php echo $sectionCtaSize;?>" href="<?php echo $ctaUrl; ?>"><?php echo $ctaText; ?></a>
-				<?php endif;	
-				endforeach;
-			endif;
-		?>
+		<div class="<?php if ( $sectionAlignment == 'header-left' ): echo "block block--2-col"; endif; ?> section__copy">
+
+			<?php if( $sectionCopy ) :  echo $sectionCopy;  endif; ?>
+
+			<?php 
+				if( $sectionCtaRepeater ) :
+					foreach( $sectionCtaRepeater as $cta ):
+						$ctaText = $cta['co_cta_text'];
+						$ctaUrl = $cta['co_cta_url'];
+						$ctaStyle = $cta['co_cta_style'];
+						?>
+					<a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaUrl; ?>" <?php if($cta['co_new_window']): ?> target="_blank" rel="noopener nofollow"<?php endif; ?>><?php echo $ctaText; ?></a>
+					<?php
+					endforeach;
+				endif;
+			?>
+
+		</div>
 
 	</section>
 

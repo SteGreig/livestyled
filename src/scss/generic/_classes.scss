@@ -72,3 +72,21 @@
 .block--30-0 {
 	padding: 30px 0;
 }
+
+.block--2-col:first-child {
+	@include md-up {
+        padding-right: 25px;
+    }
+    @include lg-up {
+        padding-right: 35px;
+    }
+}
+
+.block--2-col:last-child {
+    @include md-up {
+        padding-left: 25px;
+	}
+	@include lg-up {
+        padding-right: 35px;
+    }
+}

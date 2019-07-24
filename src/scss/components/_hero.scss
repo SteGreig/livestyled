@@ -6,7 +6,7 @@
 // on mobile
 // --------------------------------------------------------------------------------------------------
 
-.global-main > .section:first-child {
+.global-main > .section--1 {
 	padding-top: 60px;
 
 	> .container {
@@ -36,6 +36,22 @@
                 height: auto;
             }
 		}
+    }
+
+    .section__header {
+        text-transform: uppercase;
+
+        @include xl-up {
+            font-size: 4rem;
+        }
+    }
+
+    .section__sub-header {
+        text-transform: uppercase;
+    
+        @include md-down {
+            font-size: 1.05rem;
+        }
     }
 
     img {

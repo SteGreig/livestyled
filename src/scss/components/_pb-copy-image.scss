@@ -12,11 +12,6 @@
 
 .section__header--copy-image {
     font-weight: 900;
-    text-transform: uppercase;
-}
-
-.section__sub-header--copy-image {
-    text-transform: uppercase;
 }
 
 .section__copy--copy-image {
@@ -29,18 +24,6 @@
     }
 
     @include lg-up {
-        margin: 30px 0;
-    }
-}
-
-.block--copy-image:first-child {
-    @include md-up {
-        padding-right: 20px;
-    }
-}
-
-.block--copy-image:last-child {
-    @include md-up {
-        padding-left: 20px;
+        margin-top: 30px;
     }
 }

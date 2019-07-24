@@ -640,14 +640,14 @@
                                                 "id": ""
                                             },
                                             "choices": {
-                                                "Red": "Red",
-                                                "White": "White",
-                                                "Dark Blue": "Dark Blue",
-                                                "Light Blue": "Light Blue",
-                                                "Red Outline": "Red Outline",
-                                                "White Outline": "White Outline",
-                                                "Dark Blue Outline": "Dark Blue Outline",
-                                                "Light Blue Outline": "Light Blue Outline"
+                                                "red": "Red",
+                                                "white": "White",
+                                                "dark-blue": "Dark Blue",
+                                                "light-blue": "Light Blue",
+                                                "red cta--ghost": "Red Outline",
+                                                "white cta--ghost": "White Outline",
+                                                "dark-blue cta--ghost": "Dark Blue Outline",
+                                                "light-blue cta--ghost": "Light Blue Outline"
                                             },
                                             "default_value": [
                                                 "Red"
@@ -1238,14 +1238,14 @@
                                                 "id": ""
                                             },
                                             "choices": {
-                                                "Red": "Red",
-                                                "White": "White",
-                                                "Dark Blue": "Dark Blue",
-                                                "Light Blue": "Light Blue",
-                                                "Red Outline": "Red Outline",
-                                                "White Outline": "White Outline",
-                                                "Dark Blue Outline": "Dark Blue Outline",
-                                                "Light Blue Outline": "Light Blue Outline"
+                                                "red": "Red",
+                                                "white": "White",
+                                                "dark-blue": "Dark Blue",
+                                                "light-blue": "Light Blue",
+                                                "red cta--ghost": "Red Outline",
+                                                "white cta--ghost": "White Outline",
+                                                "dark-blue cta--ghost": "Dark Blue Outline",
+                                                "light-blue cta--ghost": "Light Blue Outline"
                                             },
                                             "default_value": [
                                                 "Red"
@@ -1551,14 +1551,14 @@
                                                 "id": ""
                                             },
                                             "choices": {
-                                                "Red": "Red",
-                                                "White": "White",
-                                                "Dark Blue": "Dark Blue",
-                                                "Light Blue": "Light Blue",
-                                                "Red Outline": "Red Outline",
-                                                "White Outline": "White Outline",
-                                                "Dark Blue Outline": "Dark Blue Outline",
-                                                "Light Blue Outline": "Light Blue Outline"
+                                                "red": "Red",
+                                                "white": "White",
+                                                "dark-blue": "Dark Blue",
+                                                "light-blue": "Light Blue",
+                                                "red cta--ghost": "Red Outline",
+                                                "white cta--ghost": "White Outline",
+                                                "dark-blue cta--ghost": "Dark Blue Outline",
+                                                "light-blue cta--ghost": "Light Blue Outline"
                                             },
                                             "default_value": [
                                                 "Red"
@@ -3134,5 +3134,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563912504
+    "modified": 1564006833
 }
