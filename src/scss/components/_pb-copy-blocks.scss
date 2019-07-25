@@ -1,0 +1,97 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Copy Blocks
+// --------------------------------------------------------------------------------------------------
+
+.section--copy-blocks {
+
+    .grid {
+        margin-top: 20px;
+
+        @include md-up {
+            margin-top: 40px;
+        }
+    }
+}
+
+// For when the copy blocks need to be stacked on top of each other on mobile
+.copy-blocks--stacked {
+
+    .copy-block {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include md-up {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// For when the copy blocks need to be positioned side-by-side on mobile and swipable
+@include md-down {
+    .copy-blocks--mob-side-by-side {
+
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .grid--mob-side-by-side {
+        @include flex-wrap(nowrap);
+        overflow-x: scroll;
+        padding: 20px;
+
+        .block {
+            @include flex(none);
+            width: 85%;
+            max-width: 350px;
+            padding: 25px;
+            margin-right: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,.15);
+        }
+    }
+}
+
+.copy-block {
+    @include flex-direction(column);
+    transition: .3s;
+    
+    @include md-up {
+        padding: 25px;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(0,0,0,.15);
+        }
+    }
+
+    @include lg-up {
+        padding: 40px;
+    }
+
+    img {
+        padding: 0 15px;
+        margin-bottom: 30px;
+        filter: drop-shadow(2px 7px 5px rgba(0,0,0,.1));
+    }
+
+    &__title {
+        margin: 0 0 10px;
+        color: $highlightRed;
+        @include font-size(17);
+    }
+
+    p {
+        margin: 0 0 30px;
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .cta {
+        margin-top: auto;
+    }
+}

@@ -9,6 +9,7 @@
     width: 100%;
     padding: 20px;
     transition: .3s padding;
+    z-index: 1000;
 
     @include md-up {
         padding: 35px;

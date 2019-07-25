@@ -4,6 +4,7 @@
  */	
 	$sectionAlignment = get_sub_field( 'cb_alignment' );
 	$sectionTheme = get_sub_field( 'cb_theme' );
+	$sectionMobLayout = get_sub_field( 'cb_mobile_layout' );
 /**
  * Copy
  */	
@@ -24,7 +25,7 @@
 	endif;
 ?>
 
-<article class="section section--copy section--copy-blocks section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> align--<?php echo $sectionAlignment; ?>" id="section-<?php echo $section; ?>">
+<article class="section section--copy section--copy-blocks section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> align--<?php echo $sectionAlignment; ?> copy-blocks--mob-<?php echo $sectionMobLayout; ?>" id="section-<?php echo $section; ?>">
 	
 <section class="container">
 		
@@ -38,7 +39,7 @@
 
 		<?php if( $sectionCopy ) :  echo $sectionCopy;  endif; ?>
 
-		<section class="grid grid--<?php echo $grid; ?>">
+		<section class="grid grid--<?php echo $grid; ?> grid--mob-<?php echo $sectionMobLayout; ?>">
 		<?php
 			foreach( $sectionBlocks as $block ) :
 				$blockAlignment = $block['cb_block_alignment'];
@@ -53,17 +54,19 @@
 					$blockCtaExternal = true;
 				endif;
 		?>
-				<article class="block align--<?php echo $blockAlignment; ?>">
+				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox align-items-center">
 
+					<?php if($blockImageUrl): ?>
 					<img class="rwd" src="<?php echo $blockImageUrl;?>" alt="">
+					<?php endif; ?>
 						
 					<?php if( $blockHeader ) : ?>
-					<h3><?php echo $blockHeader; ?></h3>
+					<h3 class="copy-block__title"><?php echo $blockHeader; ?></h3>
 					<?php endif; ?>
 
 					<?php if( $blockCopy ): echo $blockCopy; endif; ?>
 						
-					<a class="cta cta--sm"  href="<?php echo $blockCtaUrl; ?>" <?php if( $blockCtaExternal ): echo ' target="_blank" rel="noopener nofollow"'; endif;?>><?php echo $blockCtaText; ?></a>
+					<a class="cta cta--md"  href="<?php echo $blockCtaUrl; ?>" <?php if( $blockCtaExternal ): echo ' target="_blank" rel="noopener nofollow"'; endif;?>><?php echo $blockCtaText; ?></a>
 
 				</article>
 
