@@ -6,11 +6,19 @@
 
 		//.overlay { color: $White; }
 
+		a:not(.cta) {
+			color: $White;
+		}
+
 	}
 
 	&--secondary {
 		background-color: $secondary;
 		color: $primary;
+
+		a:not(.cta) {
+			color: $primary;
+		}
 	}
 
 	&--alternative { 
@@ -18,6 +26,10 @@
 		color: $primary; 
 
 		//.overlay { color: $White; }
+
+		a:not(.cta) {
+			color: $primary;
+		}
 		
 	}
 

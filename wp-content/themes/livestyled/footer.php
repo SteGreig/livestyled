@@ -1,5 +1,7 @@
 
 	</main>
+
+	<?php get_template_part( 'templates/footer' ); ?>
 	
 	<script>
 		var themeURL = "<?php echo get_stylesheet_directory_uri(); ?>";
