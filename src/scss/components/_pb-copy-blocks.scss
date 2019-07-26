@@ -77,6 +77,10 @@
         padding: 0 15px;
         margin-bottom: 30px;
         filter: drop-shadow(2px 7px 5px rgba(0,0,0,.1));
+
+        @include xl-up {
+            padding: 0 25px;
+        }
     }
 
     &__title {
@@ -93,5 +97,6 @@
 
     .cta {
         margin-top: auto;
+        min-width: 150px;
     }
 }
