@@ -52,7 +52,7 @@
     fill: currentColor;
 }
 
-/* For lazy loaded elements */
+// For lazy loaded elements
 .lazyload,
 .lazyloading {
 	opacity: 0;
@@ -61,6 +61,25 @@
 .lazyloaded {
     opacity: 1;
     transition: opacity 300ms;
+}
+// ---
+
+
+.grayscale {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+	opacity: .2;
+	transition: .8s;
+
+	&:hover {
+		opacity: 1;
+		-webkit-filter: grayscale(0);
+		filter: grayscale(0);
+	}
+}
+
+.clearfix {
+	@include cf;
 }
 
 

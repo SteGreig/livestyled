@@ -1,4 +1,4 @@
-<section class="block">
+<section class="block clearfix">
 	<?php
 		$gravityform = get_sub_field( 'cgf_form' );
 		$gravityformName = $gravityform['title'];

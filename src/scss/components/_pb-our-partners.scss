@@ -1,0 +1,18 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Our Partners
+// --------------------------------------------------------------------------------------------------
+
+.section__header--our-partners {
+    color: #e1dfdf;
+    margin-bottom: 20px;
+}
+
+.our-partners__logo {
+    width: 200px;
+    padding: 10px 15px;
+}
+
+// Add faint top border when it follows another section with a white background
+.theme--secondary + .section--our-partners {
+    border-top: 1px solid #eee;
+}

@@ -3,7 +3,7 @@
  * Stanard config
  */	
 	$sectionAlignment = get_sub_field( 'cgf_section_alignment' );
-	$sectionTheme = get_sub_field( 'cfg_theme' );
+	$sectionTheme = get_sub_field( 'cgf_theme' );
 /**
  * Image
  */
@@ -22,21 +22,14 @@
 	$sectionCtaRepeater = $sectionCtas['cgf_ctas_repeater'];
 ?>
 
-<article class="section section--copy section--copy-form section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?>" id="section-<?php echo $section; ?>">
+<article class="section section--copy section--copy-form section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> align--center" id="section-<?php echo $section; ?>">
 	
-<section class="container">
+	<section class="container container--600">
 
-	<div class="grid grid--2">
-		<?php 
-			if( $sectionAlignment === 'left' ):
-				include( 'pb-copy-form--copy.php' );
-				include( 'pb-copy-form--gravity.php' );
-			else:
-				include( 'pb-copy-form--gravity.php' );	
-				include( 'pb-copy-form--copy.php' );
-			endif;
+		<?php
+			include( 'pb-copy-form--copy.php' );
+			include( 'pb-copy-form--gravity.php' );
 		?>
-		</div>
 		
 	</section>
 	

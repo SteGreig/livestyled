@@ -15,6 +15,7 @@
 	include( plugin_dir_path(__FILE__) . 'inc/custom/tracking-gtm.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/display-svg-icon.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/allow-svg-upload.php' );
+	include( plugin_dir_path(__FILE__) . 'inc/custom/remove-gravity-forms-css.php' );
 
 	
 	

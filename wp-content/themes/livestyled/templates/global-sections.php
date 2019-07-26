@@ -57,6 +57,10 @@
 				elseif( get_row_layout() == 'google_map' ):
 	
 					include( 'pb-google-map.php' );
+
+				elseif( get_row_layout() == 'our_partners_section' ):
+
+					include( 'pb-our-partners.php' );
 	
 			endif;
 	
