@@ -54,7 +54,7 @@
 					$blockCtaExternal = true;
 				endif;
 		?>
-				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox align-items-center">
+				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox <?php if($sectionAlignment == 'center'): echo "align-items-center"; endif; ?>">
 
 					<?php if($blockImageUrl): ?>
 					<img class="rwd lazyload" data-src="<?php echo $blockImageUrl;?>" alt="">
@@ -65,8 +65,10 @@
 					<?php endif; ?>
 
 					<?php if( $blockCopy ): echo $blockCopy; endif; ?>
-						
+					
+					<?php if($blockCtaText): ?>
 					<a class="cta cta--md"  href="<?php echo $blockCtaUrl; ?>" <?php if( $blockCtaExternal ): echo ' target="_blank" rel="noopener nofollow"'; endif;?>><?php echo $blockCtaText; ?></a>
+					<?php endif; ?>
 
 				</article>
 

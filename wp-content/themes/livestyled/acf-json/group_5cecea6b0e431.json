@@ -2990,6 +2990,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d3c71a69e176": {
+                    "key": "layout_5d3c71a69e176",
+                    "name": "testimonials_section",
+                    "label": "Testimonials Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d3c71a69e177",
+                            "label": "Show Testimonials Section",
+                            "name": "t_show_testimonials_section",
+                            "type": "true_false",
+                            "instructions": "Check this box to display the featured testimonials section (you can add\/edit the actual testimonials in the Site Config section)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -3014,5 +3043,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564179367
+    "modified": 1564242401
 }

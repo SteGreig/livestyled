@@ -61,6 +61,10 @@
 				elseif( get_row_layout() == 'our_partners_section' ):
 
 					include( 'pb-our-partners.php' );
+
+				elseif( get_row_layout() == 'testimonials_section' ):
+
+					include( 'pb-testimonials.php' );
 	
 			endif;
 	

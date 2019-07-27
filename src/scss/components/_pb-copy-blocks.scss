@@ -14,7 +14,7 @@
 }
 
 // For when the copy blocks need to be stacked on top of each other on mobile
-.copy-blocks--stacked {
+.copy-blocks--mob-stacked {
 
     .copy-block {
         margin-bottom: 40px;
@@ -93,6 +93,10 @@
         margin: 0 0 30px;
         font-size: 1.15rem;
         line-height: 1.3;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
     }
 
     .cta {
