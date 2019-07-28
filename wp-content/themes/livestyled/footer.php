@@ -2,6 +2,9 @@
 	</main>
 
 	<?php get_template_part( 'templates/footer' ); ?>
+
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script defer src="<?php bloginfo('template_directory'); ?>/assets/js/libs/jquery-2.2.4.min.js"><\/script>')</script>
 	
 	<script>
 		var themeURL = "<?php echo get_stylesheet_directory_uri(); ?>";

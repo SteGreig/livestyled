@@ -13,6 +13,10 @@
 
     .cta {
         margin-top: 25px;
+
+        @include lg-up {
+            margin-top: 40px;
+        }
     }
 }
 

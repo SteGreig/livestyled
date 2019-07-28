@@ -209,7 +209,9 @@
                                         "md": "Medium",
                                         "lg": "Large"
                                     },
-                                    "default_value": [],
+                                    "default_value": [
+                                        "md"
+                                    ],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -545,7 +547,9 @@
                                         "md": "Medium",
                                         "lg": "Large"
                                     },
-                                    "default_value": [],
+                                    "default_value": [
+                                        "md"
+                                    ],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -857,7 +861,9 @@
                                         "md": "Medium",
                                         "lg": "Large"
                                     },
-                                    "default_value": [],
+                                    "default_value": [
+                                        "md"
+                                    ],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -1100,7 +1106,9 @@
                                         "md": "Medium",
                                         "lg": "Large"
                                     },
-                                    "default_value": [],
+                                    "default_value": [
+                                        "md"
+                                    ],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -1622,7 +1630,9 @@
                                         "md": "Medium",
                                         "lg": "Large"
                                     },
-                                    "default_value": [],
+                                    "default_value": [
+                                        "md"
+                                    ],
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -3385,5 +3395,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564318923
+    "modified": 1564347074
 }
