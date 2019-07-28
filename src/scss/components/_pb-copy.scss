@@ -2,6 +2,11 @@
 // Copy
 // --------------------------------------------------------------------------------------------------
 
+.section__header + .section__copy,
+.section__sub-header + .section__copy {
+    margin-top: 20px;
+}
+
 .section__copy {
     font-weight: 300;
     line-height: 1.4;

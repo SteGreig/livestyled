@@ -1,0 +1,52 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Copy & Image
+// --------------------------------------------------------------------------------------------------
+
+.section--copy-image-boxed {
+    padding: 0;
+
+    .block:first-child {
+        @include md-up {
+            @include justify-content(flex-end);
+        }
+    }
+
+    .cta {
+        margin-top: 25px;
+    }
+}
+
+.section:not(.section--copy-image-boxed) + .section--copy-image-boxed {
+    border-top: 1px solid #eee;
+}
+
+.box-sub-container {
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+
+    @include sm-up {
+        padding: 60px 40px;
+    }
+
+    @include md-up {
+        max-width: 700px;
+        text-align: left;
+    }
+
+    @include lg-up {
+        padding: 60px;
+    }
+
+    @include xl-up {
+        padding: 80px 100px;
+    }
+}
+
+.block--boxed-image {
+    @include order(1);
+
+    @include md-up {
+        @include order(0);
+    }
+}

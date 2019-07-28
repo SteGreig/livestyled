@@ -60,6 +60,7 @@ body {
 .section__sub-header {
 	font-weight: 700;
 	color: $highlightBlue;
+	margin: 0;
 
 	@include md-up {
 		font-size: 1.2rem;

@@ -18,6 +18,10 @@
 	
 					include( 'pb-copy-image.php' );
 
+				elseif( get_row_layout() == 'copy_image_boxed' ):
+
+					include( 'pb-copy-image-boxed.php' );
+
 				elseif( get_row_layout() == 'copy_gravity_form' ):
 				
 					include( 'pb-copy-gravity-form.php' );
