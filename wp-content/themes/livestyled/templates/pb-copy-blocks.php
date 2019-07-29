@@ -57,7 +57,9 @@
 				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox <?php if($sectionAlignment == 'center'): echo "align-items-center"; endif; ?>">
 
 					<?php if($blockImageUrl): ?>
-					<img class="rwd lazyload" data-src="<?php echo $blockImageUrl;?>" alt="">
+					<div class="copy-block__img-wrap flexbox align-items-center">
+						<img class="rwd lazyload" data-src="<?php echo $blockImageUrl;?>" alt="">
+					</div>
 					<?php endif; ?>
 						
 					<?php if( $blockHeader ) : ?>

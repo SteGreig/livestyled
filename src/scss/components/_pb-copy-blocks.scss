@@ -73,10 +73,25 @@
         padding: 40px;
     }
 
+    &__img-wrap {
+        width: 100%;
+        height: 130px;
+        padding-bottom: 20px;
+
+        @include sm-up {
+            height: 200px;
+        }
+
+        @include xl-up {
+            padding-bottom: 30px;
+        }
+    }
+
     img {
         padding: 0 15px;
-        margin-bottom: 30px;
         filter: drop-shadow(2px 7px 5px rgba(0,0,0,.1));
+        width: 100%;
+        max-height: 100%;
 
         @include xl-up {
             padding: 0 25px;
