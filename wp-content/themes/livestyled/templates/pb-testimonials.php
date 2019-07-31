@@ -11,24 +11,24 @@
 
 			<?php // Client Logos
 			// ----------------------------------------- ?>
-			<div class="testimonials__logos">
+			<ul class="testimonials__logos tabs-nav">
 			<?php while( has_sub_field('testimonials', 'option') ):
 
 				if(get_sub_field('t_logo')): ?>
 
-					<div class="testimonials__logo tabs-panel flexbox align-items-center justify-content-center">
+					<li class="testimonials__logo flexbox align-items-center justify-content-center">
 						<img class="rwd lazyload testimonials__logo-img" data-src="<?php echo get_sub_field('t_logo')['url']; ?>" alt="<?php the_sub_field('t_client_name', 'option') ?>" />
-					</div>
+					</li>
 
 				<?php else: ?>
 
-					<div class="testimonials__logo tabs-panel flexbox align-items-center justify-content-center">
+					<li class="testimonials__logo flexbox align-items-center justify-content-center">
 						<?php the_sub_field('t_client_name', 'option') ?>
-					</div>
+					</li>
 
 			<?php endif;
 			endwhile; ?>
-			</div>
+			</ul>
 
 
 			<?php // Nav Controls (dots)
