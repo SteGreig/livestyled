@@ -2,61 +2,72 @@
 	
 	@include font-size(10, 16);
 
-	position: absolute;
-	top: -1000px;
+	transform: translateY(100%);
 	transition-timing-function: ease-in;
-	transition: 0.25s;
+	transition: .25s;
+	padding: 0;
+	bottom: 0;
+	left:0;
+	z-index: 2000;
+	position: fixed;
+	width: 100vw;
+	height: 60vh;
+	color: $White;
+	text-align: center;
+	visibility: hidden;
+	background: rgba(darken($primary,10%),.95);
+
+	@include lg-up {
+		height: 45vh;
+	}
 
 	&--active {
-
-		background: rgba($Black, .8);
-		color: $White;
-		top: 0;
-		bottom: 0;
-		right:0;
-		left:0;
-		width: 100vw;
-		height: 100vh;
-		z-index: 100;
-		transition: 0.25s;
-		transition-timing-function: ease-out;
-		position: fixed;
-		text-align: center;
-
+		transform: translateY(0);
+		visibility: visible;
 	}
 
 }
 
 .section--gdpr-outer {
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-
+	width: 100%;
 }
 
 .section--gdpr-inner {
 
-	@include font-size(14, 20);
-
-	background: $White;
-	color: $Black;
-	width: calc(100vw - 40px);
+	font-size: 1.2rem;
+	color: #fff;
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto;
 	box-sizing: border-box;
 	padding: 20px;
-	border: 1px solid $Black;
-	border-radius: 5px;
 	position: relative;
+	@include align-content(center);
 
-	a { color: $Crimson; }
+	.btn {
+		cursor: pointer;
+	}
+
+	.btn--accept {
+		background-color: #5bc386;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	a,
+	.btn--decline {
+		color: $highlightRed;
+		font-size: .9rem;
+		margin: 0 10px;
+		text-decoration: underline;
+	}
+
+	p {
+		margin: 0 0 25px;
+	}
 
 	@include md-up {
-		
-		@include font-size(18, 26);
-		
-		width: 500px;
-	
+		width: 100%;
 	}
 
 }
