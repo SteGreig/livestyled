@@ -1,6 +1,6 @@
 <?php if (get_sub_field('t_show_testimonials_section')): ?>
 
-<article class="section section--testimonials section--<?php echo $section; ?> align--center" id="section-<?php echo $section; ?>">
+<article class="section section--testimonials section--<?php echo $section; ?> align--center theme--primary-tint" id="section-<?php echo $section; ?>">
 	
 	<section class="container container--1150">
 

@@ -18,7 +18,7 @@
 	background: rgba(darken($primary,10%),.95);
 
 	@include lg-up {
-		height: 45vh;
+		height: 50vh;
 	}
 
 	&--active {
@@ -52,6 +52,11 @@
 		background-color: #5bc386;
 		width: 100%;
 		margin-bottom: 20px;
+
+		&:hover {
+			background-color: darken(#5bc386, 8%);
+			transform: scale(1);
+		}
 	}
 
 	a,
@@ -60,6 +65,11 @@
 		font-size: .9rem;
 		margin: 0 10px;
 		text-decoration: underline;
+		transition: .3s;
+
+		&:hover {
+			opacity: .8;
+		}
 	}
 
 	p {
@@ -72,6 +82,9 @@
 
 }
 
-.gdpr__header {	@include font-size(18, 26); }
+.gdpr__header {
+	font-size: 1.8rem;
+	line-height: 1.3;
+}
 
 

@@ -185,6 +185,8 @@ $alternative: $WhiteSmoke;
 $highlightBlue: #78ccd4;
 $highlightRed: #ed5954;
 
+$primaryTint: adjust-hue(lighten($primary, 10%),-14deg);
+
 
 /// @name Social Media Colours
 /// Social media colours have been named, then mapped to the social network name.

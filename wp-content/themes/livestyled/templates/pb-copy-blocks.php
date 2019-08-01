@@ -39,7 +39,7 @@
 
 		<?php if( $sectionCopy ) :  echo $sectionCopy;  endif; ?>
 
-		<section class="grid grid--<?php echo $grid; ?> grid--mob-<?php echo $sectionMobLayout; ?>">
+		<section class="grid grid--<?php echo $grid; ?> grid--mob-<?php echo $sectionMobLayout; ?> hide-scrollbar">
 		<?php
 			foreach( $sectionBlocks as $block ) :
 				$blockAlignment = $block['cb_block_alignment'];

@@ -12,6 +12,11 @@
 
 	}
 
+	&--primary-tint {
+		background-color: $primaryTint;
+		color: $White;
+	}
+
 	&--secondary {
 		background-color: $secondary;
 		color: $primary;

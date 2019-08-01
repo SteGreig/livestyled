@@ -3343,6 +3343,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5d436195d8fc1": {
+                    "key": "layout_5d436195d8fc1",
+                    "name": "our_clients_section",
+                    "label": "Our Clients Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d436195d8fc2",
+                            "label": "Show Our Clients Section",
+                            "name": "oc_show_our_clients_section",
+                            "type": "true_false",
+                            "instructions": "Check this box to display the Our Clients section (you can edit the logos in the Site Config section)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d3c71a69e176": {
                     "key": "layout_5d3c71a69e176",
                     "name": "testimonials_section",
@@ -3395,5 +3424,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564347074
+    "modified": 1564697024
 }
