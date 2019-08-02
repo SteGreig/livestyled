@@ -16,19 +16,25 @@ for (var i=0; i<=tabsCount; i++) {
             $(this).addClass('active');
             $(this).parents('.testimonials__wrap').find('.tabs-nav li:nth-child('+i+')').addClass('active');
             $('.tabs-panel:nth-child('+i+')').addClass('active');
+            clearInterval(interval);
+            timer()
         });
     })(i);
 }
 
-setInterval(function(){
 
-    var active = $(".testimonials__logos .active").removeClass('active');
-    if(active.next() && active.next().length){ active .next().addClass('active'); } else{ active.siblings(":first").addClass('active'); }
+var interval;
+var timer = function(){
+    interval = setInterval(function(){
+        var active = $(".testimonials__logos .active").removeClass('active');
+        if(active.next() && active.next().length){ active .next().addClass('active'); } else{ active.siblings(":first").addClass('active'); }
 
-    var active2 = $(".testimonials__nav .active").removeClass('active');
-    if(active2.next() && active2.next().length){ active2 .next().addClass('active'); } else{ active2.siblings(":first").addClass('active'); }
+        var active2 = $(".testimonials__nav .active").removeClass('active');
+        if(active2.next() && active2.next().length){ active2 .next().addClass('active'); } else{ active2.siblings(":first").addClass('active'); }
 
-    var active3 = $(".testimonials__quotes .active").removeClass('active');
-    if(active3.next() && active3.next().length){ active3 .next().addClass('active'); } else{ active3.siblings(":first").addClass('active'); }
+        var active3 = $(".testimonials__quotes .active").removeClass('active');
+        if(active3.next() && active3.next().length){ active3 .next().addClass('active'); } else{ active3.siblings(":first").addClass('active'); }
+    },6000);
+};
 
-}, 7000);​
+timer();
