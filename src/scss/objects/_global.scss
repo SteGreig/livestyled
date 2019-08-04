@@ -24,6 +24,7 @@ body {
 
 .container--1150 { max-width: 1150px; }
 .container--900 { max-width: 900px; }
+.container--700 { max-width: 700px; }
 .container--600 { max-width: 600px; }
 
 .section {
@@ -99,6 +100,10 @@ body {
 	&--right {
 		align-items: center;
 		justify-content: flex-end;
+	}
+
+	&--primary {
+		background: $primary;
 	}
 
 }

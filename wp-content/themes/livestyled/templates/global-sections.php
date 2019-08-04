@@ -33,10 +33,6 @@
 				elseif( get_row_layout() == 'copy_blocks' ):
 	
 					include( 'pb-copy-blocks.php' );
-				
-				elseif( get_row_layout() == 'copy_block_picker' ):
-	
-					include( 'pb-copy-block-picker.php' );
 
 				elseif( get_row_layout() == 'compare' ):
 	
@@ -62,17 +58,21 @@
 	
 					include( 'pb-google-map.php' );
 
-				elseif( get_row_layout() == 'our_partners_section' ):
+				elseif( get_row_layout() == 'our_partners_section' && get_sub_field('op_show_our_partners_section')):
 
 					include( 'pb-our-partners.php' );
 
-				elseif( get_row_layout() == 'our_clients_section' ):
+				elseif( get_row_layout() == 'our_clients_section' && get_sub_field('oc_show_our_clients_section')):
 
 					include( 'pb-our-clients.php' );
 
-				elseif( get_row_layout() == 'testimonials_section' ):
+				elseif( get_row_layout() == 'testimonials_section' && get_sub_field('t_show_testimonials_section')):
 
 					include( 'pb-testimonials.php' );
+
+				elseif( get_row_layout() == 'request_demo_section' && get_sub_field('rd_show_request_demo') ):
+
+					include( 'pb-request-demo-form.php' );
 	
 			endif;
 	

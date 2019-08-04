@@ -17,10 +17,10 @@
                 if( $sectionCtaRepeater ) :
                     foreach( $sectionCtaRepeater as $cta ):
                         $ctaText = $cta['cib_cta_text'];
-                        $ctaUrl = $cta['cib_cta_url'];
+                        $ctaLink = $cta['cib_cta_link'];
                         $ctaStyle = $cta['cib_cta_style'];
                         ?>
-                    <a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaUrl; ?>" <?php if($cta['cib_new_window']): ?> target="_blank" rel="noopener nofollow"<?php endif; ?>><?php echo $ctaText; ?></a>
+                        <a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaLink['url']; ?>" target="<?php echo esc_attr($ctaLink['target'] ? $ctaLink['target'] : '_self'); ?>"><?php echo $ctaLink['title']; ?></a>
                     <?php
                     endforeach;
                 endif;

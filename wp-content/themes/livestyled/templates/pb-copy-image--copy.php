@@ -13,11 +13,10 @@
 		<?php 
 			if( $sectionCtaRepeater ) :
 				foreach( $sectionCtaRepeater as $cta ):
-					$ctaText = $cta['ci_cta_text'];
-					$ctaUrl = $cta['ci_cta_url'];
+					$ctaLink = $cta['ci_cta_link'];
 					$ctaStyle = $cta['ci_cta_style'];
 					?>
-				<a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaUrl; ?>" <?php if($cta['ci_new_window']): ?> target="_blank" rel="noopener nofollow"<?php endif; ?>><?php echo $ctaText; ?></a>
+				<a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaLink['url']; ?>" target="<?php echo esc_attr($ctaLink['target'] ? $ctaLink['target'] : '_self'); ?>"><?php echo $ctaLink['title']; ?></a>
 				<?php
 				endforeach;
 			endif;

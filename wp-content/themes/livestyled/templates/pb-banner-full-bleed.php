@@ -82,14 +82,10 @@
 			<?php 
 				if( $bannerCtaRepeater ) :
 					foreach( $bannerCtaRepeater as $cta ):
-						$ctaText = $cta['bfb_cta_text'];
-						$ctaUrl = $cta['bfb_cta_url'];
-						if( $cta['bfb_new_window'] ):
+						$ctaLink = $cta['bfb_cta_link'];
 						?>
-					<a class="cta cta--<?php echo $bannerCtaSize;?>" href="<?php echo $ctaUrl; ?>" target="_blank" rel="noopener nofollow"><?php echo $ctaText; ?></a>
-				<?php	else: ?>
-					<a class="cta cta--<?php echo $bannerCtaSize;?>" href="<?php echo $ctaUrl; ?>"><?php echo $ctaText; ?></a>
-					<?php endif;	
+						<a class="cta cta--<?php echo $bannerCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaLink['url']; ?>" target="<?php echo esc_attr($ctaLink['target'] ? $ctaLink['target'] : '_self'); ?>"><?php echo $ctaLink['title']; ?></a>
+					<?php
 					endforeach;
 				endif;
 			?>

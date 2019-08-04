@@ -48,11 +48,8 @@
 				$blockHeader = $block['cb_block_header'];
 				$blockCopy = $block['cb_block_content'];
 				$blockCta = $block['cb_cta'];
-				$blockCtaText = $blockCta['cb_cta_text'];
-				$blockCtaUrl = $blockCta['cb_cta_url'];
-				if( $blockCta['cb_new_window'] ):
-					$blockCtaExternal = true;
-				endif;
+				$blockCtaLink = $blockCta['cb_cta_link'];
+				$blockCtaStyle = $blockCta['cb_cta_style'];
 		?>
 				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox <?php if($sectionAlignment == 'center'): echo "align-items-center"; endif; ?>">
 
@@ -68,13 +65,13 @@
 
 					<?php if( $blockCopy ): echo $blockCopy; endif; ?>
 					
-					<?php if($blockCtaText): ?>
-					<a class="cta cta--md"  href="<?php echo $blockCtaUrl; ?>" <?php if( $blockCtaExternal ): echo ' target="_blank" rel="noopener nofollow"'; endif;?>><?php echo $blockCtaText; ?></a>
+					<?php if($blockCtaLink): ?>
+					<a class="cta cta--md cta--<?php echo $blockCtaStyle; ?>"  href="<?php echo $blockCtaLink['url']; ?>" target="<?php echo esc_attr($blockCtaLink['target'] ? $blockCtaLink['target'] : '_self'); ?>"><?php echo $blockCtaLink['title']; ?></a>
 					<?php endif; ?>
 
 				</article>
 
-		<?php $blockCtaExternal = false; endforeach; ?>
+		<?php endforeach; ?>
 		</section>
 
 	</section>

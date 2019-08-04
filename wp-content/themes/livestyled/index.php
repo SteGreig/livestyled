@@ -26,10 +26,25 @@
 </article>
 
 
+<article class="section theme--secondary" id="section-2">
+		
+	<section class="container flexbox">
+
+		<?php
+		if( have_posts() ): ?>
+			<ul class="post-list grid grid--3 flexbox flex-wrap">
+			<?php while( have_posts() ): the_post();
+				get_template_part( 'templates/blog-post' );
+			endwhile; ?>
+			</ul>
+		<?php endif; ?>
+
+	</section>
+
+</article>
+
+
 <?php
-if( have_posts() ):
-	while( have_posts() ): the_post();
-		get_template_part( 'templates/global', 'archives' );
-	endwhile;
-endif;
+include( 'templates/pb-request-demo-form.php' );
+
 get_footer();

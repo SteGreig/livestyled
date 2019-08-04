@@ -1,4 +1,4 @@
-<?php if (get_sub_field('op_show_our_partners_section')):
+<?php
 	
 	$sectionPartners = get_field( 'partners', 'option' );
 	$count = count( $sectionPartners );
@@ -36,5 +36,3 @@
 	</section>
 
 </article>
-
-<?php endif; ?>

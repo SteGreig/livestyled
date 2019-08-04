@@ -1,4 +1,3 @@
-<?php if (get_sub_field('oc_show_our_clients_section')): ?>
 
 <article class="section section--our-clients section--<?php echo $section; ?> align--center theme--primary-tint hide-scrollbar" id="section-<?php echo $section; ?>">
 	
@@ -25,5 +24,3 @@
 	</section>
 
 </article>
-
-<?php endif; ?>

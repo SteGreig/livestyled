@@ -101,10 +101,10 @@
 				if( $sectionCtaRepeater ) :
 					foreach( $sectionCtaRepeater as $cta ):
 						$ctaText = $cta['co_cta_text'];
-						$ctaUrl = $cta['co_cta_url'];
+						$ctaLink = $cta['co_cta_link'];
 						$ctaStyle = $cta['co_cta_style'];
 						?>
-					<a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaUrl; ?>" <?php if($cta['co_new_window']): ?> target="_blank" rel="noopener nofollow"<?php endif; ?>><?php echo $ctaText; ?></a>
+						<a class="cta cta--<?php echo $sectionCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaLink['url']; ?>" target="<?php echo esc_attr($ctaLink['target'] ? $ctaLink['target'] : '_self'); ?>"><?php echo $ctaLink['title']; ?></a>
 					<?php
 					endforeach;
 				endif;
