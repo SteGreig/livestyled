@@ -15,3 +15,11 @@ $(document).scroll(function () {
 		$('.header').removeClass('header--sticky');
 	}
 });
+
+
+// Give header blue backround if the first section is light (or if there are no sections at all)
+$('.global-main > .section--1.theme--secondary').parent().prev().addClass('theme--primary');
+$('.global-main > .section--1.theme--alternative').parent().prev().addClass('theme--primary');
+if ( $('.global-main').children().length === 0 ) {
+	$('.header').addClass('theme--primary');
+}

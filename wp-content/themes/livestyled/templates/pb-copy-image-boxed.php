@@ -15,6 +15,7 @@
 /**
  * Copy
  */	
+    $sectionHeaderIcon = get_sub_field( 'cib_header_icon' );
 	$sectionHeader = get_sub_field( 'cib_main_header' );
 	$sectionSubHeader = get_sub_field( 'cib_sub_header' );
     $sectionCopy = get_sub_field( 'cib_copy' );

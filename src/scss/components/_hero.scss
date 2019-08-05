@@ -6,19 +6,32 @@
 // --------------------------------------------------------------------------------------------------
 
 .global-main > .section--1 {
-    padding: 60px 0 0;
+    padding: 100px 0 50px;
 
     @include md-up {
-        
-	}
+        padding: 130px 0 100px;
+    }
 
-	> .container {
-        height: calc(100vh - 60px);
-	}
+    > .container {
+        min-height: 100vh;
+    }
+    
+    &.section--copy-image {
+        padding: 60px 0 0;
+
+        > .container {
+            height: calc(100vh - 60px);
+            min-height: auto;
+        }
+    }
 
     // To accommodate copy & image on mobile
 	.grid--2 {
-		height: 100%;
+        height: 100%;
+        
+        @include md-up {
+            height: auto;
+        }
 
 		> .block:first-child {
             height: 43%;

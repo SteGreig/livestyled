@@ -18,21 +18,7 @@
 	include( plugin_dir_path(__FILE__) . 'inc/custom/gravity-forms-cleanup.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/defer-scripts.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/remove-p-tag-from-images.php' );
-
-	function excerpt($limit) {
-		return wp_trim_words(get_the_excerpt(), $limit);
-	}
-	
-	function content($limit) {
-	  $content = explode(' ', get_the_content(), $limit);
-	  if (count($content)>=$limit) {
-		array_pop($content);
-		$content = implode(" ",$content).'...';
-	  } else {
-		$content = implode(" ",$content);
-	  }  
-	  return $content;
-	}
+	include( plugin_dir_path(__FILE__) . 'inc/custom/limit-content-length.php' );
 
 	
 	

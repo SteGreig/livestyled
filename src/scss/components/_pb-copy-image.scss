@@ -8,6 +8,10 @@
     @include md-up {
         text-align: left;
     }
+
+    img[src$=".svg"] {
+        width: 100%;
+    }
 }
 
 .section__header--copy-image {

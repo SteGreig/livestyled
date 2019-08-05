@@ -18,6 +18,42 @@
             margin-top: 40px;
         }
     }
+
+    ul, ol {
+        overflow: hidden;
+    }
+
+    li {
+        position: relative;
+        padding-left: 30px;
+
+        &:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: $highlightBlue;
+            margin-right: 10px;
+            display: inline-block;
+
+            @include md-up {
+                position: absolute;
+                position: absolute;
+                top: 7px;
+                left: 0;
+            }
+
+            @include xl-up {
+                top: 12px;
+            }
+        }
+
+        @include xl-up {
+            width: 50%;
+            float: left;
+            padding: 10px 0 10px 30px;
+        }
+    }
 }
 
 .section:not(.section--copy-image-boxed) + .section--copy-image-boxed {
@@ -52,5 +88,15 @@
 
     @include md-up {
         @include order(0);
+    }
+}
+
+.section__header-icon {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto 30px;
+
+    @include md-up {
+        margin: 0 0 30px;
     }
 }

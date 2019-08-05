@@ -2,6 +2,10 @@
 
     <div class="box-sub-container">
 
+        <?php if( $sectionHeaderIcon ) : ?>
+        <img class="section__header-icon lazyload" data-src="<?php echo $sectionHeaderIcon['url']; ?>" alt="<?php echo $sectionHeader; ?>">
+        <?php endif; ?>
+
         <?php if( $sectionHeader ) : ?>
         <h1 class="section__header section__header--copy-image"><?php echo $sectionHeader; ?></h1>
         <?php endif; ?>

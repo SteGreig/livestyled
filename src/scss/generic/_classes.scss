@@ -98,6 +98,9 @@
     }
     @include lg-up {
         padding-right: 35px;
+	}
+	@include xl-up {
+        padding-right: 50px;
     }
 }
 
@@ -106,6 +109,9 @@
         padding-left: 25px;
 	}
 	@include lg-up {
-        padding-right: 35px;
+        padding-left: 35px;
+	}
+	@include xl-up {
+        padding-left: 50px;
     }
 }
