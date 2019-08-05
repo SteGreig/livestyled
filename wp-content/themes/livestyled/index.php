@@ -32,13 +32,19 @@
 
 		<?php
 		if( have_posts() ): ?>
-			<ul class="post-list grid grid--3 flexbox flex-wrap">
+			<ul class="post-list flexbox flex-wrap">
 			<?php while( have_posts() ): the_post();
 				get_template_part( 'templates/blog-post' );
 			endwhile; ?>
 			</ul>
 		<?php endif; ?>
 
+	</section>
+
+	<section class="container flexbox justify-content-center">
+		<?php if(function_exists('wp_paginate')) {
+			wp_paginate();
+		} ?>
 	</section>
 
 </article>
