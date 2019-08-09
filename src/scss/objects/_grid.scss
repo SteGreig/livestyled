@@ -41,4 +41,17 @@
 		
 	}
 
+	&--5 {
+
+		display: flex;
+		flex-wrap: wrap;
+		
+		.block { width: 50%; }
+		
+		@include md-up {
+			.block { width: 20%; }
+		}
+		
+	}
+
 }

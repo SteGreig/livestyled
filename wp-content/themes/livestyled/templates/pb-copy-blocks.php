@@ -16,7 +16,9 @@
 */
 	$sectionBlocks = get_sub_field( 'cb_blocks' );
 	$count = count( $sectionBlocks );
-	if( $count === 4 || $count === 8 ):
+	if( $count === 5 ):
+		$grid = 5;
+	elseif( $count === 4 || $count === 8 ):
 		$grid = 4;
 	elseif( $count === 3 || $count === 6 ):
 		$grid = 3;
@@ -27,7 +29,7 @@
 
 <article class="section section--copy section--copy-blocks section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> align--<?php echo $sectionAlignment; ?> copy-blocks--mob-<?php echo $sectionMobLayout; ?>" id="section-<?php echo $section; ?>">
 	
-<section class="container">
+	<section class="container">
 		
 		<?php if( $sectionHeader ) : ?>
 		<h1 class="section__header"><?php echo $sectionHeader; ?></h1>
@@ -51,7 +53,7 @@
 				$blockCtaLink = $blockCta['cb_cta_link'];
 				$blockCtaStyle = $blockCta['cb_cta_style'];
 		?>
-				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox <?php if($sectionAlignment == 'center'): echo "align-items-center"; endif; ?>">
+				<article class="block align--<?php echo $blockAlignment; ?> copy-block flexbox <?php if($sectionAlignment == 'center'): echo "align-items-center"; endif; ?> <?php if(!$blockCtaLink): echo "no-hover"; endif; ?>">
 
 					<?php if($blockImageUrl): ?>
 					<div class="copy-block__img-wrap flexbox align-items-center">

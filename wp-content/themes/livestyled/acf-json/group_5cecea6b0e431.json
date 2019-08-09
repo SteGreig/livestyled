@@ -2892,6 +2892,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5d4ca1f14e490": {
+                    "key": "layout_5d4ca1f14e490",
+                    "name": "job_vacancies_section",
+                    "label": "Job Vacancies Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d4ca1f14e491",
+                            "label": "Show Job Vacancies Section",
+                            "name": "jv_show_job_vacancies_section",
+                            "type": "true_false",
+                            "instructions": "Check this box to display the Job Vacancies section (you can add\/edit the actual job vacancies by editing the Careers page)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d46d09fbfd7b": {
                     "key": "layout_5d46d09fbfd7b",
                     "name": "request_demo_section",
@@ -2944,5 +2973,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565040864
+    "modified": 1565303688
 }

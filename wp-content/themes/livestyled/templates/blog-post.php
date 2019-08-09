@@ -1,7 +1,7 @@
 
 <li class="blog-post flexbox">
 
-    <div class="blog-post__img-wrap">
+    <a href="<?php the_permalink(); ?>" class="blog-post__img-wrap">
         <?php
         if (has_post_thumbnail()):
             $imgURL = get_the_post_thumbnail_url(get_the_ID(), 'large');
@@ -10,7 +10,7 @@
         endif;
         ?>
         <img class="blog-post__img lazyload" data-src="<?php echo $imgURL; ?>" alt="<?php the_title(); ?>" />
-    </div>
+    </a>
 
     <div class="blog-post__copy flexbox">
         <h3 class="blog-post__title">

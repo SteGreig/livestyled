@@ -69,6 +69,10 @@
 				elseif( get_row_layout() == 'testimonials_section' && get_sub_field('t_show_testimonials_section')):
 
 					include( 'pb-testimonials.php' );
+				
+				elseif( get_row_layout() == 'job_vacancies_section' && get_sub_field('jv_show_job_vacancies_section')):
+
+					include( 'pb-job-vacancies.php' );
 
 				elseif( get_row_layout() == 'request_demo_section' && get_sub_field('rd_show_request_demo') ):
 

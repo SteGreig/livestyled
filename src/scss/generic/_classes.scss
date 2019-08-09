@@ -92,6 +92,10 @@
 	padding: 30px 0;
 }
 
+.p0 {
+	padding: 0;
+}
+
 .block--2-col:first-child {
 	@include md-up {
         padding-right: 25px;

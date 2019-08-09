@@ -24,6 +24,11 @@
 		a:not(.cta) {
 			color: $primary;
 		}
+
+		// Add faint top border when it follows another section with a white background
+		+ .theme--secondary {
+			border-top: 1px solid #eee;
+		}
 	}
 
 	&--alternative { 

@@ -28,6 +28,7 @@
     // To accommodate copy & image on mobile
 	.grid--2 {
         height: 100%;
+        @include align-content(center);
         
         @include md-up {
             height: auto;
@@ -38,6 +39,7 @@
             
             @include md-up {
                 height: auto;
+                height: 85%;
             }
 		}
 

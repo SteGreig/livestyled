@@ -1,13 +1,13 @@
 // --------------------------------------------------------------------------------------------------
-// Page Builder - Our Partners
+// Page Builder - Job Vacancies
 // --------------------------------------------------------------------------------------------------
 
-.section__header--our-partners {
-    color: #e1dfdf;
-    margin-bottom: 20px;
-}
+.vacancy {
+    box-shadow: 3px 5px 20px rgba($primary,.15);
+    margin: 0 15px;
+    padding: 25px;
 
-.our-partners__logo {
-    width: 200px;
-    padding: 10px 15px;
+    &__job-title {
+        font-size: 1.5rem;
+    }
 }

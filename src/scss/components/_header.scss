@@ -78,6 +78,7 @@
         &.menu-item--active > a {
             color: $highlightRed;
             text-decoration: underline;
+            font-weight: 700;
         }
     }
 

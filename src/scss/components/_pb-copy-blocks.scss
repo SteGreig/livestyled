@@ -64,7 +64,7 @@
     @include md-up {
         padding: 25px;
 
-        &:hover {
+        &:not(.no-hover):hover {
             box-shadow: 0 0 20px rgba(0,0,0,.15);
         }
     }

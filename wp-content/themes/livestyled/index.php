@@ -7,7 +7,7 @@
 		<div class="grid grid--2 flexbox flex-wrap align-items-center">
 			
 			<div class="block block--2-col flexbox justify-content-center">
-				<img loading="lazy" class="lazyload" data-src="<?php echo wp_get_attachment_url(158); ?>" alt="illustration">
+				<img loading="lazy" class="lazyload" data-src="<?php echo wp_get_attachment_url(1021); ?>" alt="illustration">
 			</div>
 
 			<div class="block block--20-0 block--2-col">
