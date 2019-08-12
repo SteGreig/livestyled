@@ -30,7 +30,7 @@
 
 <article class="section section--copy section--copy-image-boxed section--<?php echo $section; ?>" id="section-<?php echo $section; ?>">
 
-    <div class="grid grid--2 flexbox flex-wrap container p0">
+    <div class="grid grid--2 flexbox flex-wrap">
         <?php 
             if( $sectionAlignment === 'left' ):
                 include( 'pb-copy-image-boxed--copy.php' );

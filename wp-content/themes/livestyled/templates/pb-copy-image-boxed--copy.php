@@ -1,4 +1,4 @@
-<div class="block theme--<?php echo $sectionCopyTheme; ?> flexbox align-items-center">
+<div class="block theme--<?php echo $sectionCopyTheme; ?> flexbox justify-content-center align-items-center">
 
     <div class="box-sub-container">
 

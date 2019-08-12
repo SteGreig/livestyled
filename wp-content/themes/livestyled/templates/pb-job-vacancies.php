@@ -4,11 +4,11 @@
 
 		<h3 class="section__header">Open Roles</h3>
 
-		<section class="vacancies__wrap tabs flexbox align-items-center">
+		<section class="vacancies-wrap tabs flexbox flex-wrap justify-content-center">
 
             <?php while(have_rows('vacancies')): the_row(); ?>
 
-			<div class="vacancy">
+			<div class="vacancy align--left">
 
                 <h3 class="vacancy__job-title"><?php the_sub_field('job_title'); ?></h3>
 

@@ -4,7 +4,7 @@
 
 .section--copy-blocks {
 
-    .grid {
+    .section__header + .grid {
         margin-top: 20px;
 
         @include md-up {
@@ -63,6 +63,7 @@
     
     @include md-up {
         padding: 25px;
+        max-width: 400px;
 
         &:not(.no-hover):hover {
             box-shadow: 0 0 20px rgba(0,0,0,.15);
@@ -76,14 +77,14 @@
     &__img-wrap {
         width: 100%;
         height: 130px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
 
         @include sm-up {
             height: 200px;
         }
 
         @include xl-up {
-            padding-bottom: 30px;
+            padding-bottom: 40px;
         }
     }
 
@@ -99,9 +100,10 @@
     }
 
     &__title {
-        margin: 0 0 10px;
+        margin: 0 0 15px;
         color: $highlightRed;
-        @include font-size(17);
+        font-size: 1.7rem;
+        line-height: 1.2;
     }
 
     p {
