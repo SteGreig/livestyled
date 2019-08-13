@@ -2789,6 +2789,35 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5d53068cd2eb7": {
+                    "key": "layout_5d53068cd2eb7",
+                    "name": "how_we_deliver_section",
+                    "label": "How We Deliver Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d53068cd2eb8",
+                            "label": "Show 'How We Deliver' Section",
+                            "name": "hwd_show_how_we_deliver_section",
+                            "type": "true_false",
+                            "instructions": "Check this box to display the How We Deliver section (you can edit the acutal content in the Site Config section)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d3b608c2a569": {
                     "key": "layout_5d3b608c2a569",
                     "name": "our_partners_section",
@@ -2933,6 +2962,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d531aa58d24c": {
+                    "key": "layout_5d531aa58d24c",
+                    "name": "latest_posts_section",
+                    "label": "Latest Posts Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d531aa58d24d",
+                            "label": "Show Latest Posts Section",
+                            "name": "lp_show_latest_posts",
+                            "type": "true_false",
+                            "instructions": "Check this box to display the Latest Posts section (This will display the three latest news posts)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -2957,5 +3015,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565644549
+    "modified": 1565727546
 }

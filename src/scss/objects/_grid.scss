@@ -33,7 +33,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		
-		.block { width: 50%; }
+		.block { width: 100%; }
+
+		@include sm-up {
+			.block { width: 50%; }
+		}
 		
 		@include md-up {
 			.block { width: 25%; }

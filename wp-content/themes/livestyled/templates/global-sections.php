@@ -58,6 +58,10 @@
 	
 					include( 'pb-google-map.php' );
 
+				elseif( get_row_layout() == 'how_we_deliver_section' && get_sub_field('hwd_show_how_we_deliver_section')):
+
+					include( 'pb-how-we-deliver.php' );
+
 				elseif( get_row_layout() == 'our_partners_section' && get_sub_field('op_show_our_partners_section')):
 
 					include( 'pb-our-partners.php' );
@@ -73,6 +77,10 @@
 				elseif( get_row_layout() == 'job_vacancies_section' && get_sub_field('jv_show_job_vacancies_section')):
 
 					include( 'pb-job-vacancies.php' );
+
+				elseif( get_row_layout() == 'latest_posts_section' && get_sub_field('lp_show_latest_posts_section')):
+
+					include( 'pb-latest-posts.php' );
 
 				elseif( get_row_layout() == 'request_demo_section' && get_sub_field('rd_show_request_demo') ):
 
