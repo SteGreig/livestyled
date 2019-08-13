@@ -37,6 +37,10 @@
 .align--left { text-align: left; }
 .align--right { text-align: right; }
 
+.w100 {
+	width: 100%;
+}
+
 .flexbox { @include flexbox; }
 .align-items-center { @include align-items(center); }
 .justify-content-center { @include justify-content(center); }
@@ -93,7 +97,7 @@
 }
 
 .p0 {
-	padding: 0;
+	padding: 0 !important;
 }
 
 .block--2-col:first-child {

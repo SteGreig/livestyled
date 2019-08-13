@@ -4,6 +4,11 @@
 
 .section--copy-blocks {
 
+    &.align--full-width {
+        padding-bottom: 0;
+        text-align: center;
+    }
+
     .section__header + .grid {
         margin-top: 20px;
 
@@ -14,18 +19,15 @@
 }
 
 // For when the copy blocks need to be stacked on top of each other on mobile
-.copy-blocks--mob-stacked {
+.copy-block--mob-stacked {
+    margin-bottom: 40px;
 
-    .copy-block {
-        margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        @include md-up {
-            margin-bottom: 0;
-        }
+    @include md-up {
+        margin-bottom: 0;
     }
 }
 
@@ -105,6 +107,7 @@
         color: $highlightRed;
         font-size: 1.7rem;
         line-height: 1.2;
+        width: 100%;
     }
 
     p {
@@ -123,6 +126,41 @@
     }
 }
 
+
+// For copy blocks with background colours
+.copy-block--boxed {
+    padding: 25px;
+
+    @include lg-up {
+        padding: 40px;
+    }
+}
+
+
+// Full width copy blocks (e.g. Enterprise vs Pro section on How We Work page
+.copy-block--full {
+    margin: 0;
+    max-width: none;
+
+    @include md-up {
+        padding: 45px;
+    }
+
+    @include lg-up {
+        padding: 100px 60px;
+    }
+
+    > * {
+        max-width: 400px;
+    }
+
+    &.theme--alternative + &.theme--alternative {
+        background-color: darken($alternative, 5%);
+    }
+}
+
+
+// Modified for How We Deliver section (on Verticals sub pages
 .copy-block--hwd {
     @include md-up {
         position: relative;

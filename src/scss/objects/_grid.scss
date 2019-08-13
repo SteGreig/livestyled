@@ -7,10 +7,23 @@
 		flex-wrap: wrap;
 	}
 
+	$blockMargin : 3%;
+
+	.block--margins {
+		margin-right: $blockMargin;
+	}
+
 	&--2 {
 		.block { width: 100%; }
+
 		@include md-up {
 			.block { width: 50%; }
+
+			.block--margins {
+				width: 47%;
+
+				&:nth-child(2n) { margin: 0; }
+			}
 		}
 
 	}
@@ -24,6 +37,12 @@
 		
 		@include md-up {
 			.block { width: 33%; }
+
+			.block--margins {
+				width: 31.333%;
+
+				&:nth-child(3n) { margin: 0; }
+			}
 		}
 		
 	}
@@ -37,10 +56,23 @@
 
 		@include sm-up {
 			.block { width: 50%; }
+
+			.block--margins {
+				width: 47%;
+
+				&:nth-child(2n) { margin: 0; }
+			}
 		}
 		
 		@include md-up {
 			.block { width: 25%; }
+
+			.block--margins {
+				width: 22.75%;
+
+				&:nth-child(2n) { margin-right: $blockMargin; }
+				&:nth-child(4n) { margin: 0; }
+			}
 		}
 		
 	}
@@ -51,9 +83,22 @@
 		flex-wrap: wrap;
 		
 		.block { width: 50%; }
+
+		.block--margins {
+			width: 47%;
+
+			&:nth-child(2n) { margin: 0; }
+		}
 		
 		@include md-up {
 			.block { width: 20%; }
+
+			.block--margins {
+				width: 17.6%;
+
+				&:nth-child(2n) { margin: $blockMargin; }
+				&:nth-child(5n) { margin: 0; }
+			}
 		}
 		
 	}

@@ -78,7 +78,7 @@
 
 					include( 'pb-job-vacancies.php' );
 
-				elseif( get_row_layout() == 'latest_posts_section' && get_sub_field('lp_show_latest_posts_section')):
+				elseif( get_row_layout() == 'latest_posts_section' && get_sub_field('lp_show_latest_posts')):
 
 					include( 'pb-latest-posts.php' );
 

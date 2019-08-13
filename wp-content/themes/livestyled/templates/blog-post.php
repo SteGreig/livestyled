@@ -1,5 +1,5 @@
 
-<li class="blog-post flexbox">
+<li class="blog-post block p0 flexbox">
 
     <a href="<?php the_permalink(); ?>" class="blog-post__img-wrap">
         <?php

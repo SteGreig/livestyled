@@ -1322,7 +1322,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "30",
+                                "width": "20",
                                 "class": "",
                                 "id": ""
                             },
@@ -1333,6 +1333,33 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_5d532ad7e9c9a",
+                            "label": "Header Case",
+                            "name": "cb_header_case",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "15",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "uppercase": "Uppercase",
+                                "normal-case": "Normal Case"
+                            },
+                            "default_value": [
+                                "uppercase"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_5cee43365e99a",
                             "label": "Sub Header",
                             "name": "cb_sub_header",
@@ -1341,7 +1368,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "25",
+                                "width": "20",
                                 "class": "",
                                 "id": ""
                             },
@@ -1393,7 +1420,8 @@
                             "choices": {
                                 "center": "Center",
                                 "left": "Left",
-                                "right": "Right"
+                                "right": "Right",
+                                "full-width": "Full Width"
                             },
                             "default_value": [],
                             "allow_null": 0,
@@ -1477,7 +1505,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "25",
+                                        "width": "15",
                                         "class": "",
                                         "id": ""
                                     },
@@ -1495,6 +1523,35 @@
                                     "placeholder": ""
                                 },
                                 {
+                                    "key": "field_5d533144c25d5",
+                                    "label": "Block Background",
+                                    "name": "cb_block_background",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "none": "None",
+                                        "primary": "Primary",
+                                        "secondary": "Secondary",
+                                        "alternative": "Alternative"
+                                    },
+                                    "default_value": [
+                                        "none"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
                                     "key": "field_5cee439b5e9a0",
                                     "label": "Block Image",
                                     "name": "cb_block_image",
@@ -1503,7 +1560,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "25",
+                                        "width": "20",
                                         "class": "",
                                         "id": ""
                                     },
@@ -3015,5 +3072,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565727546
+    "modified": 1565733265
 }
