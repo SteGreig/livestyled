@@ -17,6 +17,13 @@ $(document).scroll(function () {
 });
 
 
+$(".scroll-arrow").click(function() {
+	$("html, body").animate({
+	scrollTop: $("#section-2").offset().top - 62
+	}, 650);
+});
+
+
 // Give header blue backround if the first section is light (or if there are no sections at all)
 $('.global-main > .section--1.theme--secondary').parent().prev().addClass('theme--primary');
 $('.global-main > .section--1.theme--alternative').parent().prev().addClass('theme--primary');

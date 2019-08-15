@@ -1,9 +1,10 @@
 <?php
 get_header();
+get_template_part( 'templates/global', 'social-icons' );
 get_template_part( 'templates/banner--hero' );
 ?>
 
-<article class="section section--copy" id="section--2">
+<article class="section section--copy" id="section-2">
 
     <section class="container container--900">
     

@@ -57,7 +57,7 @@
 				$blockCtaLink = $blockCta['cb_cta_link'];
 				$blockCtaStyle = $blockCta['cb_cta_style'];
 		?>
-				<article class="block copy-block flexbox copy-block--mob-<?php echo $sectionMobLayout; ?> theme--<?php echo $blockTheme; ?> align--<?php echo $blockAlignment; ?> <?php if($blockTheme != "none" && $sectionAlignment != "full-width"): echo "copy-block--boxed block--margins no-hover"; endif; ?> <?php if($sectionAlignment == 'center'): echo "align-items-center"; elseif($sectionAlignment == 'full-width'): echo "copy-block--full align-items-center"; endif; ?> <?php if(!$blockCtaLink): echo "no-hover"; endif; ?>">
+				<article class="block copy-block flexbox copy-block--mob-<?php echo $sectionMobLayout; ?> theme--<?php echo $blockTheme; ?> align--<?php echo $blockAlignment; ?> <?php if($blockTheme != "none" && $sectionAlignment != "full-width"): echo "copy-block--boxed block--margins"; endif; ?> <?php if($sectionAlignment == 'center'): echo "align-items-center"; elseif($sectionAlignment == 'full-width'): echo "copy-block--full align-items-center"; endif; ?> <?php if(!$blockCtaLink || $sectionAlignment == "full-width" || $blockTheme != "none"): echo "no-hover"; endif; ?>">
 
 					<?php if($blockImageUrl): ?>
 					<div class="copy-block__img-wrap flexbox align-items-center">

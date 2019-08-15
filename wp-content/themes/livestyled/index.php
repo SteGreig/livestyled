@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+get_header();
+get_template_part( 'templates/global', 'social-icons' );
+?>
 
 <article class="section section--copy section--copy-image section--1 theme--primary" id="section-1">
 		
@@ -20,6 +23,8 @@
 			</div>
 
 		</div>
+
+		<button class="scroll-arrow"><?php icon('angle-down'); ?></button>
 		
 	</section>
 	

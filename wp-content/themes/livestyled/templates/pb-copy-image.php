@@ -41,6 +41,10 @@
 				endif;
 			?>
 		</div>
+
+		<?php if($section == 1): ?>
+		<button class="scroll-arrow"><?php icon('angle-down'); ?></button>
+		<?php endif; ?>
 		
 	</section>
 	

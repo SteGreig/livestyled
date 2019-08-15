@@ -55,9 +55,7 @@ $bannerPortraitUrl = wp_get_attachment_image_src($thumb_id, 'image-max-9x16', tr
             <p class="blog-hero__date"><?php the_time('M j, Y'); ?></p>
             <?php endif; ?>
 
-            <a class="banner__scroll" href="#section--2">
-                <span></span>
-            </a>
+			<button class="scroll-arrow"><?php icon('angle-down'); ?></button>
 
         </div>
 
