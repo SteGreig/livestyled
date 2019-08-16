@@ -26,29 +26,17 @@
 				
 					include( 'pb-copy-gravity-form.php' );
 
-				elseif( get_row_layout() == 'copy_video' ):
-	
-					include( 'pb-copy-video.php' );
-
 				elseif( get_row_layout() == 'copy_blocks' ):
 	
 					include( 'pb-copy-blocks.php' );
-
-				elseif( get_row_layout() == 'compare' ):
-	
-					include( 'pb-compare.php' );
 
 				elseif( get_row_layout() == 'full_width_video' ):
 	
 					include( 'pb-full-width-video.php' );
 
-				elseif( get_row_layout() == 'quote' ):
-	
-					include( 'pb-quote.php' );
-				
-				elseif( get_row_layout() == 'accordion' ):
-	
-					include( 'pb-accordion.php' );
+				elseif( get_row_layout() == 'tabbed_content' ):
+
+					include( 'pb-tabbed-content.php' );
 
 				elseif( get_row_layout() == 'gallery' ):
 	

@@ -316,7 +316,7 @@ for (var i=0; i<=tabsCount; i++) {
             $('.tabs-panel').removeClass('active');
             $('.tabs-nav li').removeClass('active');
             $(this).addClass('active');
-            $(this).parents('.testimonials__wrap').find('.tabs-nav li:nth-child('+i+')').addClass('active');
+            $(this).parents('.tabs').find('.tabs-nav li:nth-child('+i+')').addClass('active');
             $('.tabs-panel:nth-child('+i+')').addClass('active');
             clearInterval(interval);
             timer()
@@ -324,7 +324,7 @@ for (var i=0; i<=tabsCount; i++) {
     })(i);
 }
 
-
+// Auto rotate through testimonial tabs
 var interval;
 var timer = function(){
     interval = setInterval(function(){

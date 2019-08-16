@@ -1,8 +1,10 @@
 <?php
 get_header();
 get_template_part( 'templates/global', 'social-icons' );
+get_template_part( 'templates/pb-copy-image' );
 ?>
 
+<?php /*
 <article class="section section--copy section--copy-image section--1 theme--primary" id="section-1">
 		
 	<section class="container flexbox">
@@ -29,6 +31,7 @@ get_template_part( 'templates/global', 'social-icons' );
 	</section>
 	
 </article>
+*/ ?>
 
 
 <article class="section theme--secondary" id="section-2">

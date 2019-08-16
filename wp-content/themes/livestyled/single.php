@@ -1,7 +1,7 @@
 <?php
 get_header();
 get_template_part( 'templates/global', 'social-icons' );
-get_template_part( 'templates/banner--hero' );
+get_template_part( 'templates/pb-banner-full-bleed' );
 ?>
 
 <article class="section section--copy" id="section-2">

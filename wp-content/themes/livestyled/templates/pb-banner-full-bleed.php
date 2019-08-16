@@ -28,6 +28,25 @@
 	$bannerCtas = get_sub_field( 'bfb_ctas' );
 	$bannerCtaSize = $bannerCtas['bfb_cta_size'];
 	$bannerCtaRepeater = $bannerCtas['bta_ctas_repeater'];
+
+
+
+// -----------------------------------------------
+// For single Blog posts and single Case Studies
+// -----------------------------------------------
+if(is_single()) {
+	$section = 1;
+	$bannerHeight = 100;
+	$bannerAlignment = center;
+
+	$bannerImagesActive = true;
+	$thumb_id = get_post_thumbnail_id();
+	$bannerLandscapeUrl = wp_get_attachment_image_src($thumb_id, 'image-max-16x9', true)[0];
+	$bannerPortraitUrl = wp_get_attachment_image_src($thumb_id, 'image-max-9x16', true)[0];
+
+	$bannerHeader = get_the_title();
+}
+// -----------------------------------------------
 ?>
 
 
@@ -69,13 +88,17 @@
 
 <article class="banner banner--<?php echo $bannerHeight; ?> banner--<?php echo $section; ?> align--<?php echo $bannerAlignment; ?>" id="section-<?php echo $section; ?>">
 	
-	<section class="overlay overlay--<?php echo $bannerAlignment; ?>">
+	<section class="overlay overlay--<?php echo $bannerAlignment; ?> <?php if(is_single() && !$thumb_id): echo "overlay--primary"; endif; ?>">
 
-		<div>
+		<div class="<?php if(is_single()): echo "container--blog-hero"; endif; ?>">
 
 			<?php if( $bannerHeader ) : ?>
-			<h1 class="banner__header"><?php echo $bannerHeader; ?></h1>
+			<h1 class="section__header"><?php echo $bannerHeader; ?></h1>
 			<?php endif; ?>
+
+			<?php if(is_singular('post')): ?>
+            <p class="blog-hero__date"><?php the_time('M j, Y'); ?></p>
+            <?php endif; ?>
 
 			<?php if( $bannerCopy ) : echo $bannerCopy;  endif; ?>
 
@@ -90,15 +113,11 @@
 				endif;
 			?>
 
-			<?php if( $bannerHeight === '100' ): ?>
-				<a class="banner__scroll" href="#section--<?php echo $section + 1;?>">
-					<span></span>
-					<span></span>
-					<span></span>
-				</a>
-				<?php endif; ?>
+			<?php if( $bannerHeight == '100' && $section == 1 ): ?>
+			<button class="scroll-arrow"><?php icon('angle-down'); ?></button>
+			<?php endif; ?>
 
-			</div>
+		</div>
 
 	</section>
 

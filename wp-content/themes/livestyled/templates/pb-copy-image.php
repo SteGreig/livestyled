@@ -7,11 +7,11 @@
 /**
  * Image
  */
-	$sectionImage = get_sub_field( 'ci_image' );
+	$sectionImage = get_sub_field( 'ci_image' )['url'];
 /**
  * Video
  */
-	$sectionVideo = get_sub_field( 'ci_video' );
+	$sectionVideo = get_sub_field( 'ci_video' )['url'];
 /**
  * Copy
  */	
@@ -24,6 +24,22 @@
 	$sectionCtas = get_sub_field( 'ci_ctas' );
 	$sectionCtaSize = $sectionCtas['ci_cta_size'];
 	$sectionCtaRepeater = $sectionCtas['ci_ctas_repeater'];
+
+
+// ------------------------------
+// For main Blog page
+// ------------------------------
+if(is_home()) {
+	$section = 1;
+	$sectionAlignment = "right";
+	$sectionTheme = "primary";
+	
+	$sectionImage = wp_get_attachment_url(1021);
+	
+	$sectionHeader = "Blog";
+	$sectionCopy = "Our award-winning platform enables venues to become ‘smart’ by helping them recognise, understand and reward their customers digitally.";
+}
+// ------------------------------
 ?>
 
 <article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?>" id="section-<?php echo $section; ?>">
