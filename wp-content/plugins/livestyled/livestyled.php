@@ -22,11 +22,8 @@
 
 	
 	
-	/// Custom Post Types	
-	/**
-	 * EXAMPLE OF HOW TO SET ONE UP!
-	 * include( plugin_dir_path(__FILE__) . 'inc/custom-post-types/_example.php' );
-	 **/
+	/// Custom Post Types
+	include( plugin_dir_path(__FILE__) . 'inc/custom-post-types/_case-studies.php' );
 
 
 	/// Custom Taxonomies

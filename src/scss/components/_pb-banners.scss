@@ -16,5 +16,10 @@
 .banner .overlay {
 	position: absolute; 
 	display: flex;
+	background: rgba($primary, .5);
+
+	&--primary {
+		background-color: $primary;
+	}
 }
 

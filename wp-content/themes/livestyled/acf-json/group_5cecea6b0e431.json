@@ -2242,18 +2242,18 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d46d09fbfd7b": {
-                    "key": "layout_5d46d09fbfd7b",
-                    "name": "request_demo_section",
-                    "label": "Request a Demo Section",
+                "layout_5d531aa58d24c": {
+                    "key": "layout_5d531aa58d24c",
+                    "name": "latest_posts_section",
+                    "label": "Latest Posts Section",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d46d09fbfd7c",
-                            "label": "Show Request a Demo Section",
-                            "name": "rd_show_request_demo",
+                            "key": "field_5d531aa58d24d",
+                            "label": "Show Latest Posts Section",
+                            "name": "lp_show_latest_posts",
                             "type": "true_false",
-                            "instructions": "Check this box to display the \"Request a demo\" section (The form and intro copy can be edited in the Forms section)",
+                            "instructions": "Check this box to display the Latest Posts section (This will display the three latest news posts)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2271,18 +2271,71 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d531aa58d24c": {
-                    "key": "layout_5d531aa58d24c",
-                    "name": "latest_posts_section",
-                    "label": "Latest Posts Section",
+                "layout_5d5943b6da694": {
+                    "key": "layout_5d5943b6da694",
+                    "name": "featured_case_studies",
+                    "label": "Featured Case Studies",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d531aa58d24d",
-                            "label": "Show Latest Posts Section",
-                            "name": "lp_show_latest_posts",
+                            "key": "field_5d5943b6da695",
+                            "label": "Featured Case Studies",
+                            "name": "fcs_featured_case_studies",
+                            "type": "repeater",
+                            "instructions": "Add up to 3 featured case studies",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 3,
+                            "layout": "table",
+                            "button_label": "Add Featured Case Study",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d59447ada696",
+                                    "label": "Case Study",
+                                    "name": "fcs_case_study",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "case-studies"
+                                    ],
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "object",
+                                    "ui": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d46d09fbfd7b": {
+                    "key": "layout_5d46d09fbfd7b",
+                    "name": "request_demo_section",
+                    "label": "Request a Demo Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d46d09fbfd7c",
+                            "label": "Show Request a Demo Section",
+                            "name": "rd_show_request_demo",
                             "type": "true_false",
-                            "instructions": "Check this box to display the Latest Posts section (This will display the three latest news posts)",
+                            "instructions": "Check this box to display the \"Request a demo\" section (The form and intro copy can be edited in the Forms section)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2323,5 +2376,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565988132
+    "modified": 1566132305
 }

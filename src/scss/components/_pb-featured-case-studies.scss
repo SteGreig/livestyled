@@ -1,0 +1,247 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Featured Case Studies
+// --------------------------------------------------------------------------------------------------
+
+.fcs-tabs {
+    @include flex-direction(column);
+    margin-top: 30px;
+
+    @include md-up {
+        @include flex-direction(row);
+    }
+
+    &__nav {
+        @include order(1);
+        @include align-items(flex-end);
+        margin-top: 50px;
+
+        @include md-up {
+            @include order(0);
+            @include flex-direction(column);
+        }
+    }
+
+    &__nav-item {
+        margin: 0 20px;
+        font-size: 1.4rem;
+        line-height: 1;
+        position: relative;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover {
+            color: $highlightBlue;
+        }
+
+        @include md-up {
+            margin: 15px 0;
+            width: 33px;
+        }
+
+        &.active {
+            color: $highlightBlue;
+            font-weight: 900;
+            font-size: 1.8rem;
+
+            &:before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background-color: $highlightBlue;
+                border-radius: 50%;
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include md-up {
+                    top: 50%;
+                    left: 135%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &__panel {
+        display: none;
+        @include flex-direction(column);
+        @include align-items(center);
+        width: 100%;
+
+        &.active {
+            display: block;
+            @include flexbox;
+        }
+
+        @include md-up {
+            @include flex-direction(row);
+            @include flex-wrap(wrap);
+        }
+    }
+
+    &__text-wrap {
+
+        @include md-up {
+            width: 50%;
+            text-align: left;
+        }
+
+        @include lg-up {
+            width: 54%;
+            max-width: 570px;
+            padding-left: 120px;
+            margin-left: auto;
+        }
+
+        @include xl-up {
+            margin: 0 auto;
+        }
+
+        .fcs-tabs__cta {
+            display: none;
+
+            @include md-up {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__title {
+        color: $highlightBlue;
+        font-size: 1.6rem;
+
+        @include xl-up {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__excerpt {
+        max-width: 600px;
+
+        @include xl-up {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+    }
+
+    &__stats {
+        color: $highlightRed;
+        padding: 0 15px;
+        margin: 30px 0;
+
+        @include md-up {
+            padding: 0;
+        }
+    }
+
+    &__stat {
+        margin-bottom: 20px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include lg-up {
+            @include flexbox;
+            @include align-items(center);
+            margin-bottom: 10px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 106%;
+                height: 4px;
+                width: 200px;
+                border-top: 4px dotted $highlightBlue;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__stat-number {
+        font-size: 3rem;
+        font-weight: 900;
+        margin: 0;
+
+        @include lg-up {
+            width: 50%;
+        }
+    }
+
+    &__stat-text {
+        margin: 0;
+        font-size: 1.3rem;
+        line-height: 1.3;
+
+        @include lg-up {
+            width: 50%;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__img-wrap {
+        position: relative;
+        z-index: 10;
+        @include order(1);
+        width: 180px;
+        height: 310px;
+        margin: 0 auto;
+        perspective: 1000px;
+        perspective-origin: 150% -130%;
+
+        @include md-up {
+            @include order(0);
+        }
+
+        @include lg-up {
+            transform: translateX(30%) translateY(-40px);
+            width: 280px;
+            height: 460px;
+            perspective-origin: 100% -110%;
+            perspective: 1000px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 55%;
+            left: 46%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 224px;
+            height: 235px;
+            border-radius: 50%;
+            background: $highlightBlue;
+
+            @include lg-up {
+                top: 62%;
+                left: 42%;
+                width: 135%;
+                height: 86%;
+            }
+        }
+    }
+
+    &__img {
+        transform: rotateX(75deg) rotateY(20deg) rotateZ(-40deg);
+        height: 100%;
+        width: 100%;
+        filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.4));
+
+        @include lg-up {
+            transform: rotateX(85deg) rotateY(20deg) rotateZ(-40deg);
+        }
+    }
+
+    &__cta {
+        margin-top: 60px;
+        @include order(2)
+
+        @include md-up {
+            display: none;
+            margin-top: 20px;
+        }
+    }
+}

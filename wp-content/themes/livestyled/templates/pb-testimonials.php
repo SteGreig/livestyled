@@ -9,7 +9,7 @@
 
 			<?php // Client Logos
 			// ----------------------------------------- ?>
-			<ul class="testimonials__logos tabs-nav">
+			<ul class="testimonials__logos tabs-nav tabs-auto-rotate">
 			<?php while( has_sub_field('testimonials', 'option') ):
 
 				if(get_sub_field('t_logo')): ?>
@@ -31,7 +31,7 @@
 
 			<?php // Nav Controls (dots)
 			// ----------------------------------------- ?>
-			<ul class="testimonials__nav tabs-nav">
+			<ul class="testimonials__nav tabs-nav tabs-auto-rotate">
 			<?php while( has_sub_field('testimonials', 'option') ): ?>
 				<li class="testimonials__nav-item"></li>
 			<?php endwhile; ?>
@@ -40,7 +40,7 @@
 
 			<?php // Testimonial Quotes
 			// ----------------------------------------- ?>
-			<div class="testimonials__quotes">
+			<div class="testimonials__quotes tabs-auto-rotate">
 			<?php while( has_sub_field('testimonials', 'option') ): ?>
 				<blockquote class="testimonials__quote tabs-panel">
 					<p><?php echo get_sub_field('t_quote', 'option'); ?></p>

@@ -46,6 +46,10 @@
 	
 					include( 'pb-google-map.php' );
 
+				elseif( get_row_layout() == 'featured_case_studies' ):
+
+					include( 'pb-featured-case-studies.php' );
+
 				elseif( get_row_layout() == 'how_we_deliver_section' && get_sub_field('hwd_show_how_we_deliver_section')):
 
 					include( 'pb-how-we-deliver.php' );

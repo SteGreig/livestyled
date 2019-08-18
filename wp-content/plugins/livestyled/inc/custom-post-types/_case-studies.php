@@ -1,11 +1,11 @@
 <?php
 
-	function br_cpt_example() {
-		$plural = 'Examples';
-		$single = 'Example';
-		$slug = 'example';
+	function br_cpt_case_studies() {
+		$plural = 'Case Studies';
+		$single = 'Case Study';
+		$slug = 'case-studies';
 		// @link https://developer.wordpress.org/resource/dashicons/
-		$dashicon = 'dashicons-awards';
+		$dashicon = 'dashicons-portfolio';
 		$menu_position = 5;
     $labels = array(
 			'name' => $plural,
@@ -28,7 +28,7 @@
 			'label' => $plural,
 			'description' =>  $plural,
 			'labels' => $labels,
-			'supports' => array( 'title', 'author', 'thumbnail', 'excerpt' ),
+			'supports' => array( 'title', 'thumbnail', 'excerpt' ),
 			'hierarchical' => false,
 			'public' => true,
 			'show_ui' => true,
@@ -43,8 +43,9 @@
 			'has_archive' => true,
 			'exclude_from_search' => false,
 			'publicly_queryable' => true,
-			'capability_type' => 'post'
+			'capability_type' => 'post',
+			'has_archive' => true
 		);
     register_post_type( $slug , $args );
 	}
-	add_action( 'init', 'br_cpt_example', 0 );
+	add_action( 'init', 'br_cpt_case_studies', 0 );

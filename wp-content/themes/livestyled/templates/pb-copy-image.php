@@ -40,6 +40,21 @@ if(is_home()) {
 	$sectionCopy = "Our award-winning platform enables venues to become ‘smart’ by helping them recognise, understand and reward their customers digitally.";
 }
 // ------------------------------
+
+// ------------------------------
+// For main Case Studies page
+// ------------------------------
+if(is_archive('case-studies')) {
+	$section = 1;
+	$sectionAlignment = "right";
+	$sectionTheme = "primary";
+	
+	$sectionImage = wp_get_attachment_url(1021);
+	
+	$sectionHeader = "Case Studies";
+	$sectionCopy = "Our award-winning platform enables venues to become ‘smart’ by helping them recognise, understand and reward their customers digitally.";
+}
+// ------------------------------
 ?>
 
 <article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?>" id="section-<?php echo $section; ?>">
