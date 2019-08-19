@@ -17,6 +17,7 @@ $(document).scroll(function () {
 });
 
 
+// Hero Scroll Arrow
 $(".scroll-arrow").click(function() {
 	$("html, body").animate({
 	scrollTop: $("#section-2").offset().top - 62

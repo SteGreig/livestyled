@@ -77,6 +77,10 @@
 				elseif( get_row_layout() == 'request_demo_section' && get_sub_field('rd_show_request_demo') ):
 
 					include( 'pb-request-demo-form.php' );
+
+				elseif( get_row_layout() == 'scroll_to_section_menu') :
+
+					include( 'pb-scroll-to-section-menu.php' );
 	
 			endif;
 	

@@ -2352,6 +2352,99 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d5af8d265b40": {
+                    "key": "layout_5d5af8d265b40",
+                    "name": "scroll_to_section_menu",
+                    "label": "Scroll-to-section Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d5af9b465b42",
+                            "label": "Menu Items",
+                            "name": "stsm_menu_items",
+                            "type": "repeater",
+                            "instructions": "To find out which section numbers you need to link to, if you look to the left you will see that each section is numbered in order.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Menu Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d5afa0565b43",
+                                    "label": "Menu Item Text",
+                                    "name": "stsm_menu_item_text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5d5afa3565b44",
+                                    "label": "Section to link to",
+                                    "name": "stsm_section_link",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "#section-1": "#section-1",
+                                        "#section-2": "#section-2",
+                                        "#section-3": "#section-3",
+                                        "#section-4": "#section-4",
+                                        "#section-5": "#section-5",
+                                        "#section-6": "#section-6",
+                                        "#section-7": "#section-7",
+                                        "#section-8": "#section-8",
+                                        "#section-9": "#section-9",
+                                        "#section-10": "#section-10",
+                                        "#section-11": "#section-11",
+                                        "#section-12": "#section-12",
+                                        "#section-13": "#section-13",
+                                        "#section-14": "#section-14",
+                                        "#section-15": "#section-15",
+                                        "#section-16": "#section-16",
+                                        "#section-17": "#section-17",
+                                        "#section-18": "#section-18",
+                                        "#section-19": "#section-19",
+                                        "#section-20": "#section-20"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -2376,5 +2469,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566132305
+    "modified": 1566243839
 }

@@ -17,6 +17,7 @@ $(document).scroll(function () {
 });
 
 
+// Hero Scroll Arrow
 $(".scroll-arrow").click(function() {
 	$("html, body").animate({
 	scrollTop: $("#section-2").offset().top - 62
@@ -300,6 +301,27 @@ $('.mob-nav-underlay,.mob-nav-close').click(function() {
     $('.mob-nav,.mob-nav-underlay').removeClass('active');
     $('body').removeClass('fixed');
 });
+// --------------------------------------------------------------------------------------------------
+// Scroll to Section Menu
+// --------------------------------------------------------------------------------------------------
+
+var navItemsCount = $('.scroll-menu__list-item').length;
+
+for (var i=0; i<=navItemsCount; i++) {
+    (function(i){
+        $('.scroll-menu__list-item:nth-child('+i+') a').click(function() {
+
+            event.preventDefault();
+
+            var link = $(this).attr('href');
+
+            $("html, body").animate({
+                scrollTop: $(link).offset().top - 62
+            }, 650);
+
+        });
+    })(i);
+}
 // --------------------------------------------------------------------------------------------------
 // Tabs
 // --------------------------------------------------------------------------------------------------

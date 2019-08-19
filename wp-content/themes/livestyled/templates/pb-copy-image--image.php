@@ -1,4 +1,4 @@
-<div class="block block--2-col flexbox justify-content-center align-items-center">
+<div class="block block--2-col <?php if ($sectionVideo){echo "block--video"; }?> flexbox justify-content-center align-items-center">
 
     <?php if($sectionVideo): ?>
         <video autoplay muted class="rwd"><source src="<?php echo $sectionVideo;?>" type="video/mp4"></video>

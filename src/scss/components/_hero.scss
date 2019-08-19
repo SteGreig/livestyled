@@ -40,6 +40,10 @@
             @include md-up {
                 height: auto;
                 height: 85%;
+
+                &.block--video {
+                    height: 100%;
+                }
             }
 		}
 
