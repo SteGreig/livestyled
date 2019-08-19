@@ -1,10 +1,10 @@
 <?php
 
-	function br_tax_example() {
+	function br_tax_case_study_categories() {
 
-		$plural = 'Example Taxonomies';
-		$single = 'Example Taxonomy';
-		$slug = 'example-taxonomy';
+		$plural = 'Case Study Categories';
+		$single = 'Case Study Category';
+		$slug = 'case-study-category';
 
 		$labels = array(
 			'name' =>  $plural,
@@ -36,9 +36,9 @@
       'show_admin_column' => true,
       'update_count_callback' => '_update_post_term_count',
       'query_var' => true,
-      'rewrite' => array( 'slug' => 'tags' ),
+      'rewrite' => array( 'slug' => 'case-study-categories' ),
 		);
-		register_taxonomy( $slug, array( 'post', 'example' ), $args );
+		register_taxonomy( $slug, array( 'case-studies' ), $args );
 
 		add_filter('manage_edit-' . $slug . '_columns', function ( $columns ) {
 			if( isset( $columns['description'] ) )
@@ -48,4 +48,4 @@
 
 	}
 
-	add_action( 'init', 'br_tax_example', 0 );
+	add_action( 'init', 'br_tax_case_study_categories', 0 );

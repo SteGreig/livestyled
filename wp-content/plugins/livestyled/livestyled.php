@@ -27,10 +27,7 @@
 
 
 	/// Custom Taxonomies
-	/**
-	 * EXAMPLE OF HOW TO SET ONE UP!
-	 * include( plugin_dir_path(__FILE__) . 'inc/custom-post-taxonomies/_example.php' );
-	 **/
+	 include( plugin_dir_path(__FILE__) . 'inc/custom-post-taxonomies/_case-study-categories.php' );
 
 
 	/**

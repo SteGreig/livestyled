@@ -6,7 +6,7 @@
 
 		//.overlay { color: $White; }
 
-		a:not(.cta) {
+		.section__copy a:not(.cta) {
 			color: $White;
 		}
 
@@ -21,7 +21,7 @@
 		background-color: $secondary;
 		color: $primary;
 
-		a:not(.cta) {
+		.section__copy a:not(.cta) {
 			color: $primary;
 		}
 
@@ -37,7 +37,7 @@
 
 		//.overlay { color: $White; }
 
-		a:not(.cta) {
+		.section__copy a:not(.cta) {
 			color: $primary;
 		}
 		

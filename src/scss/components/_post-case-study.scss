@@ -1,15 +1,27 @@
 // --------------------------------------------------------------------------------------------------
-// Blog Post Item
+// Case Study Item
 // --------------------------------------------------------------------------------------------------
 
-.blog-post {
-    box-shadow: 3px 5px 18px rgba($primary, .18);
-    @include flex-direction(column);
-    margin-bottom: 30px;
-    transition: .4s;
+.post-list--sectioned {
+    margin: 30px 0;
 
-    &:hover {
-        box-shadow: 3px 0px 22px rgba($primary, .25);
+    + a {
+        color: $highlightBlue;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    @include md-up {
+        margin: 45px 0;
+    }
+}
+
+.post--case-study {
+    @include flex-direction(column);
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
     }
 
     .grid--mob-side-by-side & {
@@ -19,6 +31,7 @@
     @include sm-up {
         float: left;
         margin-right: 5%;
+        margin-bottom: 0;
         width: 47.5%;
 
         &:nth-child(2n) { margin-right: 0; }
@@ -26,36 +39,19 @@
         .grid--3 &:nth-child(2n) { margin-right: 20px; }
     }
 
-    @include md-up {
-        &:nth-child(3n) { margin-right: 0; }
-        .grid--3 &:nth-child(2n) { margin-right: 5%; }
-    }
-
-    @include lg-up {
-        width: 30%;
-        margin-bottom: 5%;
-
-        &:nth-child(2n) { margin-right: 5%; }
-        &:nth-child(3n) { margin-right: 0; }
-    }
-
     &__img {
         display: block;
+        box-shadow: 3px 5px 20px rgba($primary, .5);
     }
 
     &__copy {
-        padding: 25px;
         @include flex-direction(column);
         @include align-items(flex-start);
         @include flex(1);
-
-        @include lg-up {
-            padding: 35px;
-        }
     }
 
     &__title {
-        margin: 0;
+        margin: 25px 0 0;
         font-size: 1.5rem;
 
         @include xl-up {
@@ -66,20 +62,24 @@
     &__title-link {
         text-decoration: none;
         transition: .25s;
+        color: $highlightRed;
 
         &:hover {
             opacity: .8;
         }
     }
 
-    &__date {
+    &__cat {
         color: $highlightBlue;
-        margin: 10px 0 0;
+        margin: 5px 0 0;
         font-size: 1.2rem;
         font-weight: 300;
-
-        @include lg-up {
-            margin-top: 20px;
+        font-style: italic;
+        
+        a {
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
         }
     }
 
@@ -91,6 +91,7 @@
 
         @include lg-up {
             margin: 20px 0 30px;
+            font-size: 1.2rem;
         }
     }
 

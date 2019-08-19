@@ -19,7 +19,7 @@
                 <ul class="flexbox w100">
                 <?php while ($arr_posts->have_posts()):
                     $arr_posts->the_post();
-                        include('blog-post.php');
+                        include('post-blog.php');
                     endwhile; ?>
                 </ul>
             <?php endif; ?>

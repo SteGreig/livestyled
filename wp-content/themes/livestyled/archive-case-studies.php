@@ -5,25 +5,48 @@ get_template_part( 'templates/pb-copy-image' );
 ?>
 
 <article class="section theme--secondary" id="section-2">
-		
-	<section class="container flexbox">
 
-		<?php
-		if( have_posts() ): ?>
-			<ul class="post-list flexbox flex-wrap">
-			<?php while( have_posts() ): the_post();
-				get_template_part( 'templates/blog-post' );
-			endwhile; ?>
+	<?php
+	$args = array(
+		'post_type' => 'case-study-category'
+	);
+	$terms = get_terms( $args );
+
+	foreach ( $terms as $term ):
+		if($term->name != "Uncategorised"): ?>
+
+		<section class="container">
+
+			<h2 class="section__header section__header--normal-case"><?php echo $term->name; ?></h2>
+
+			<?php
+			$args = array(
+				'posts_per_page' => -1,
+				'post_type' => 'case-studies', // you can change it according to your custom post type
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'case-study-category', // you can change it according to your taxonomy
+						'field' => 'term_id', // this can be 'term_id', 'slug' & 'name'
+						'terms' => $term->term_id,
+					)
+				)
+			);
+			$posts = get_posts($args);
+			?>
+
+			<ul class="post-list post-list--sectioned flexbox flex-wrap">
+				<?php $n=0; foreach($posts as $post):
+					if ($n++ == 2) break;
+					get_template_part( 'templates/post-case-study' );
+				endforeach; ?>
 			</ul>
-		<?php endif; ?>
 
-	</section>
+			<a href="<?php echo get_term_link($term->term_id); ?>">More from this category</a>
 
-	<section class="container flexbox justify-content-center">
-		<?php if(function_exists('wp_paginate')) {
-			wp_paginate();
-		} ?>
-	</section>
+		</section>
+
+	<?php endif;
+	endforeach; ?>
 
 </article>
 
