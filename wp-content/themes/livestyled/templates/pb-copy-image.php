@@ -57,7 +57,7 @@ if(is_archive('case-studies')) {
 // ------------------------------
 ?>
 
-<article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?>" id="section-<?php echo $section; ?>">
+<article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> <?php if($sectionVideo): echo "section--has-video"; endif; ?>" id="section-<?php echo $section; ?>">
 		
 	<section class="container flexbox">
 

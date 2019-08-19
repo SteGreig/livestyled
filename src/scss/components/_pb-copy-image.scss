@@ -17,8 +17,13 @@
 
     video {
         max-height: 100%;
+        //box-shadow: 0 0 100px #2d2552, 0 0 100px #2d2552, 0 0 50px #2d2552;
     }
 }
+
+// CSS Selector hacks to target different browsers and match the bg colour to the video colour
+.theme--primary.section--has-video:not(*:root) { background-color: #2d2552; }
+@-moz-document url-prefix() { .theme--primary.section--has-video { background-color: #271e45; } }
 
 .section__header--copy-image {
     font-weight: 900;

@@ -26,7 +26,7 @@ for (var i=0; i<=tabsCount; i++) {
 var interval;
 var timer = function(){
     interval = setInterval(function(){
-        var active = $(".tabs-auto-rotat .active").removeClass('active');
+        var active = $(".tabs-auto-rotate .active").removeClass('active');
         if(active.next() && active.next().length){ active .next().addClass('active'); } else{ active.siblings(":first-child").addClass('active'); }
     },6000);
 };
