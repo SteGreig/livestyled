@@ -1,0 +1,32 @@
+// --------------------------------------------------------------------------------------------------
+// Meet the Team Section
+// --------------------------------------------------------------------------------------------------
+
+.team-members {
+    margin-top: 40px;
+
+    @include lg-up {
+        margin-top: 70px;
+    }
+}
+
+.team-member {
+    margin-bottom: 30px;
+
+    @include lg-up {
+        text-align: left;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 10px 0 0;
+    }
+
+    &__job-title {
+        color: $highlightRed;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 5px 0 10px;
+    }
+}

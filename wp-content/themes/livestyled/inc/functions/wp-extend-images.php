@@ -15,5 +15,6 @@
 /** ADD ADDITIONAL IMAGE CROPS BELOW HERE */
 		add_image_size( 'image-16x9', '600', '388', array( 'center', 'center' ) );	
 		add_image_size( 'image-9x16', '388', '600', array( 'center', 'center' ) );	
+		add_image_size( 'image-400x400', '400', '400', array( 'center', 'center' ) );	
 
 	}

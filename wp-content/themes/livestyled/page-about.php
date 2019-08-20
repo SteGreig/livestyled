@@ -11,30 +11,40 @@ get_template_part( 'templates/global', 'sections' );
 
 
 // Content Sections
-$n=1; while(have_rows('content_sections')): the_row(); $n++; ?>
+$section=1; while(have_rows('content_sections')): the_row(); $section++; ?>
 
-    <article class="section section--copy section--copy-only section--<?php echo $n; ?> align--header-left <?php if($n % 2 == 0){ echo "theme--secondary"; } else { echo "theme--alternative"; } ?>" id="section-<?php echo $n; ?>">
+    <article class="section section--copy section--copy-only section--about-content section--<?php echo $section; ?> align--header-left <?php if($section % 2 == 0){ echo "theme--secondary"; } else { echo "theme--alternative"; } ?>" id="section-<?php echo $section; ?>">
 
         <section class="container container--1150 grid grid--2">
 
             <div class="block block--2-col">
                 <h1 class="section__header section__header--copy-only section__header--normal-case"><?php the_sub_field('cs_heading'); ?></h1>
-                <img src="<?php echo get_sub_field('cs_image_1')['sizes']['large']; ?>" alt="">
+
+                <?php if(get_sub_field('cs_image_1')): ?>
+                <img class="about-content__img about-content__img--1" src="<?php echo get_sub_field('cs_image_1')['sizes']['large']; ?>" alt="<?php the_sub_field('cs_heading'); ?> 1">
+                <?php endif; ?>
             </div>
 
             <div class="block block--2-col section__copy">
                 <?php the_sub_field('cs_content'); ?>
-                <img src="<?php echo get_sub_field('cs_image_2')['sizes']['large']; ?>" alt="">
+
+                <?php if(get_sub_field('cs_image_2')): ?>
+                <img class="about-content__img about-content__img--2" src="<?php echo get_sub_field('cs_image_2')['sizes']['large']; ?>" alt="<?php the_sub_field('cs_heading'); ?> 2">
+                <?php endif; ?>
             </div>
 
         </section>
 
     </article>
 
-<?php endwhile; ?>
+<?php endwhile;
 
+include( 'templates/meet-the-team.php' );
 
-<?php
+include( 'templates/awards.php' );
+
+include( 'templates/our-offices.php' );
+
 include( 'templates/pb-request-demo-form.php' );
 
 get_footer();
