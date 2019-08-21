@@ -26,36 +26,24 @@
 	$sectionCtaRepeater = $sectionCtas['ci_ctas_repeater'];
 
 
-// ------------------------------
+// ------------------------------------------------------------------------------------
 // For main Blog page
-// ------------------------------
-if(is_home()) {
+// ------------------------------------------------------------------------------------
+if(is_home() || is_archive('case-studies') || is_404()) {
 	$section = 1;
 	$sectionAlignment = "right";
 	$sectionTheme = "primary";
-	
-	$sectionImage = wp_get_attachment_url(1021);
-	
-	$sectionHeader = "Blog";
-	$sectionCopy = "Our award-winning platform enables venues to become ‘smart’ by helping them recognise, understand and reward their customers digitally.";
-}
-// ------------------------------
 
-// ------------------------------
-// For main Case Studies page
-// ------------------------------
-if(is_archive('case-studies')) {
-	$section = 1;
-	$sectionAlignment = "right";
-	$sectionTheme = "primary";
+	if(is_home()) { $pg = "blog"; } elseif(is_archive('case-studies')) { $pg = "case_studies"; } elseif(is_404()) { $pg = "404"; }
 	
-	$sectionImage = wp_get_attachment_url(1021);
+	$sectionImage = get_field($pg.'_hero_image', 'option')['url'];
 	
-	$sectionHeader = "Case Studies";
-	$sectionCopy = "Our award-winning platform enables venues to become ‘smart’ by helping them recognise, understand and reward their customers digitally.";
+	$sectionHeader = get_field($pg.'_hero_heading', 'option');
+	$sectionCopy = get_field($pg.'_hero_text', 'option');
 }
-// ------------------------------
+// ------------------------------------------------------------------------------------
 ?>
+
 
 <article class="section section--copy section--copy-image section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> <?php if($sectionVideo): echo "section--has-video"; endif; ?>" id="section-<?php echo $section; ?>">
 		
@@ -73,7 +61,7 @@ if(is_archive('case-studies')) {
 			?>
 		</div>
 
-		<?php if($section == 1): ?>
+		<?php if($section == 1 && !is_404()): ?>
 		<button class="scroll-arrow"><?php icon('angle-down'); ?></button>
 		<?php endif; ?>
 		

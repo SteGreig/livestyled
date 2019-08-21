@@ -23,7 +23,7 @@ endif;
                 <div class="block block--margins copy-block--mob-stacked award-block">
                     
                     <?php if(get_sub_field('awards_event_logo')): ?>
-                    <img class="award-block__logo" src="<?php echo get_sub_field('awards_event_logo')['sizes']['large']; ?>" alt="<?php the_sub_field('awards_event_name'); ?> logo">
+                    <img class="award-block__logo lazyload" data-src="<?php echo get_sub_field('awards_event_logo')['sizes']['large']; ?>" alt="<?php the_sub_field('awards_event_name'); ?> logo">
                     <?php endif; ?>
 
                     <?php if(get_sub_field('awards_event_name')): ?>

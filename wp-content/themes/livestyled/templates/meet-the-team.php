@@ -21,7 +21,7 @@ endif;
                 <div class="block block--margins team-member">
                     
                     <?php if(get_sub_field('mtt_picture')): ?>
-                    <img class="team-member__pic" src="<?php echo get_sub_field('mtt_picture')['sizes']['image-400x400']; ?>" alt="<?php the_sub_field('mtt_name'); ?> profile picture">
+                    <img class="team-member__pic lazyload" data-src="<?php echo get_sub_field('mtt_picture')['sizes']['image-400x400']; ?>" alt="<?php the_sub_field('mtt_name'); ?> profile picture">
                     <?php endif; ?>
 
                     <p class="team-member__name"><?php the_sub_field('mtt_name'); ?></p>

@@ -21,7 +21,7 @@ $section=1; while(have_rows('content_sections')): the_row(); $section++; ?>
                 <h1 class="section__header section__header--copy-only section__header--normal-case"><?php the_sub_field('cs_heading'); ?></h1>
 
                 <?php if(get_sub_field('cs_image_1')): ?>
-                <img class="about-content__img about-content__img--1" src="<?php echo get_sub_field('cs_image_1')['sizes']['large']; ?>" alt="<?php the_sub_field('cs_heading'); ?> 1">
+                <img class="about-content__img about-content__img--1 lazyload" data-src="<?php echo get_sub_field('cs_image_1')['sizes']['large']; ?>" alt="<?php the_sub_field('cs_heading'); ?> 1">
                 <?php endif; ?>
             </div>
 
@@ -29,7 +29,7 @@ $section=1; while(have_rows('content_sections')): the_row(); $section++; ?>
                 <?php the_sub_field('cs_content'); ?>
 
                 <?php if(get_sub_field('cs_image_2')): ?>
-                <img class="about-content__img about-content__img--2" src="<?php echo get_sub_field('cs_image_2')['sizes']['large']; ?>" alt="<?php the_sub_field('cs_heading'); ?> 2">
+                <img class="about-content__img about-content__img--2 lazyload" data-src="<?php echo get_sub_field('cs_image_2')['sizes']['large']; ?>" alt="<?php the_sub_field('cs_heading'); ?> 2">
                 <?php endif; ?>
             </div>
 
@@ -44,6 +44,8 @@ include( 'templates/meet-the-team.php' );
 include( 'templates/awards.php' );
 
 include( 'templates/our-offices.php' );
+
+include( 'templates/in-the-press.php' );
 
 include( 'templates/pb-request-demo-form.php' );
 

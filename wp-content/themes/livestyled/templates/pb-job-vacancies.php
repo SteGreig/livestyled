@@ -1,38 +1,33 @@
-<article class="section section--vacancies section--<?php echo $section; ?> align--center theme--secondary" id="section-<?php echo $section; ?>">
-	
-	<section class="container">
+<article class="section section--scrollable section--<?php echo $section; ?> align--center theme--secondary" id="section-<?php echo $section; ?>">
 
-		<h3 class="section__header">Open Roles</h3>
+    <h3 class="section__header">Open Roles</h3>
 
-		<section class="vacancies-wrap tabs flexbox flex-wrap justify-content-center">
+    <section class="media-blocks-wrap media-blocks-wrap--scrollable tabs flexbox hide-scrollbar scroll-touch drag-scroll">
 
-            <?php while(have_rows('vacancies')): the_row(); ?>
+        <?php while(have_rows('vacancies')): the_row(); ?>
 
-			<div class="vacancy align--left">
+        <div class="media-block align--left">
 
-                <h3 class="vacancy__job-title"><?php the_sub_field('job_title'); ?></h3>
+            <h3 class="media-block__title"><?php the_sub_field('job_title'); ?></h3>
 
-                <?php if(get_sub_field('salary')): ?>
-                <p class="vacancy__salary"><?php the_sub_field('salary'); ?></p>
-                <?php endif; ?>
+            <?php if(get_sub_field('salary')): ?>
+            <p class="media-block__meta"><?php the_sub_field('salary'); ?></p>
+            <?php endif; ?>
 
-                
-                <?php if(get_sub_field('description')): ?>
-                <div class="vacancy__desc">
-                    <?php the_sub_field('description'); ?>
-                </div>
-                <?php endif; ?>
-
-                <?php if(get_sub_field('job_spec')): ?>
-                <a target="_blank" class="cta cta--md cta--red" href="<?php echo get_sub_field('job_spec')['url'] ?>">Job Spec</a>
-                <?php endif; ?>
-
+            
+            <?php if(get_sub_field('description')): ?>
+            <div class="media-block__desc">
+                <?php the_sub_field('description'); ?>
             </div>
+            <?php endif; ?>
 
-            <?php endwhile; ?>
+            <?php if(get_sub_field('job_spec')): ?>
+            <a target="_blank" class="cta cta--md cta--red" href="<?php echo get_sub_field('job_spec')['url'] ?>">Job Spec</a>
+            <?php endif; ?>
 
+        </div>
 
-		</section>
+        <?php endwhile; ?>
 
 	</section>
 

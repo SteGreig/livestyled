@@ -1,9 +1,17 @@
 // --------------------------------------------------------------------------------------------------
-// Page Builder - Job Vacancies
+// Media Blocks
+// e.g. uses: Job Vacancies, In The Press
 // --------------------------------------------------------------------------------------------------
 
-.vacancies-wrap {
+.section--scrollable {
+    .section__header {
+        margin-top: 20px;
+    }
+}
+
+.media-blocks-wrap--scrollable {
     margin-top: 30px;
+    padding: 20px 0 20px 20px;
 
     @include md-up {
         @include flex-wrap(nowrap);
@@ -11,30 +19,29 @@
     }
 }
 
-.vacancy {
+.media-block {
     box-shadow: 3px 5px 20px rgba($primary,.15);
     padding: 25px;
     max-width: 400px;
+    @include flex(none);
+    margin-right: 20px;
 
     @include md-up {
         margin: 0 15px;
         padding: 35px;
     }
 
-    + .vacancy {
-        margin-top: 20px;
-
-        @include md-up {
-            margin-top: 0;
-        }
+    &__logo {
+        max-width: 70%;
+        margin-bottom: 10px;
     }
 
-    &__job-title {
-        font-size: 1.5rem;
+    &__title {
+        font-size: 2rem;
         margin: 0;
     }
 
-    &__salary {
+    &__meta {
         color: $highlightBlue;
         font-weight: 700;
         margin: 10px 0 20px;
@@ -42,5 +49,7 @@
 
     &__desc {
         margin-bottom: 30px;
+        font-size: 1.1rem;
+        line-height: 1.4;
     }
 }

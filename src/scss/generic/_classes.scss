@@ -109,6 +109,9 @@
 	}
 	@include xl-up {
         padding-right: 50px;
+	}
+	@include xxl-up {
+        padding-right: 65px;
     }
 }
 
@@ -121,5 +124,38 @@
 	}
 	@include xl-up {
         padding-left: 50px;
+	}
+	@include xxl-up {
+        padding-left: 65px;
     }
+}
+
+
+// Scrollable Classes
+
+.drag-scroll {
+	@include flex-wrap(nowrap);
+    overflow-x: scroll;
+	cursor: pointer;
+	transition: .2s;
+	
+	&.drag-active {
+		transform: scale(1.02);
+	}
+
+	> :first-child { margin-left: auto; }
+	> :last-child { margin-right: auto; }
+}
+
+.hide-scrollbar {
+	scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE10+ */
+
+    &::-webkit-scrollbar { 
+        display: none; 
+    }
+}
+
+.scroll-touch {
+	-webkit-overflow-scrolling: touch;
 }
