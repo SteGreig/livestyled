@@ -1,6 +1,6 @@
 <div class="block block--boxed-image flexbox justify-content-center align-items-center theme--<?php echo $sectionImageTheme; ?>">
 
-    <div class="box-sub-container box-sub-container--image flexbox justify-content-center align-items-center">
+    <div class="box-sub-container box-sub-container--image flexbox justify-content-center align-items-center anim-1000 anim-d-1300" data-animate="fadeInUp">
 
         <?php if($sectionVideo): ?>
             <video autoplay muted class="rwd"><source src="<?php echo $sectionVideo['url'];?>" type="video/mp4"></video>
