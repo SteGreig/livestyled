@@ -6,9 +6,9 @@
         
         <div class="grid grid--2 offices">
 
-            <?php while(have_rows('off_offices')): the_row(); ?>
+            <?php $n=0; while(have_rows('off_offices')): the_row(); $n++; ?>
 
-                <div class="block block--margins copy-block--mob-stacked office">
+                <div class="block block--margins copy-block--mob-stacked office anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp"">
                     
                     <?php if(get_sub_field('off_google_map_embed_code')): ?>
                     <div class="office__map-wrap">

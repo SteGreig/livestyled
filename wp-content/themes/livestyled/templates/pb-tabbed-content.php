@@ -8,9 +8,9 @@
 			<?php // Tabs
 			// ----------------------------------------- ?>
 			<ul class="tabs-nav pb-tabbed__nav flexbox justify-content-space-between hide-scrollbar scroll-touch">
-            <?php while( has_sub_field('tc_tabs') ): ?>
+            <?php $n=0; while( has_sub_field('tc_tabs') ): $n++ ?>
             
-                <li class="pb-tabbed__nav-item flexbox align-items-center justify-content-center">
+                <li class="pb-tabbed__nav-item flexbox align-items-center justify-content-center anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp">
 
 				    <?php if(get_sub_field('tc_tab_icon')): ?>
                     <img class="rwd lazyload pb-tabbed__icon" data-src="<?php echo get_sub_field('tc_tab_icon')['url']; ?>" alt="<?php the_sub_field('tc_tab_label') ?> icon" />

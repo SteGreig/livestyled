@@ -90,14 +90,14 @@ if(is_single()) {
 	
 	<section class="overlay overlay--<?php echo $bannerAlignment; ?> <?php if(is_single() && !$thumb_id): echo "overlay--primary"; endif; ?>">
 
-		<div class="<?php if(is_single()): echo "container--blog-hero"; endif; ?>">
+		<div class="<?php if(is_single()): echo "container--blog-hero"; endif; ?>"">
 
 			<?php if( $bannerHeader ) : ?>
-			<h1 class="section__header"><?php echo $bannerHeader; ?></h1>
+			<h1 class="section__header anim-750" data-animate="fadeInUp"><?php echo $bannerHeader; ?></h1>
 			<?php endif; ?>
 
 			<?php if(is_singular('post')): ?>
-            <p class="blog-hero__date"><?php the_time('M j, Y'); ?></p>
+            <p class="blog-hero__date anim-1000 anim-d-300" data-animate="fadeInUp"><?php the_time('M j, Y'); ?></p>
             <?php endif; ?>
 
 			<?php if( $bannerCopy ) : echo $bannerCopy;  endif; ?>

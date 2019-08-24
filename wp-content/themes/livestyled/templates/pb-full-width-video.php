@@ -3,7 +3,7 @@
 	$videoId = get_sub_field( 'fwv_video_id' );
 ?>
 
-<article class="section section--video section--<?php echo $section; ?> theme--secondary" id="section-<?php echo $section; ?>">
+<article class="section section--video section--<?php echo $section; ?> theme--secondary anim-500" data-animate="fadeInUp" id="section-<?php echo $section; ?>">
 	
 	<section>
 

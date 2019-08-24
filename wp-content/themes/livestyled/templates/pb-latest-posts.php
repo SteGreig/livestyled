@@ -17,7 +17,7 @@
             
             if ($arr_posts->have_posts()): ?>
                 <ul class="flexbox w100">
-                <?php while ($arr_posts->have_posts()):
+                <?php $n=0; while ($arr_posts->have_posts()): $n++;
                     $arr_posts->the_post();
                         include('post-blog.php');
                     endwhile; ?>

@@ -31,3 +31,11 @@ $('.global-main > .section--1.theme--alternative').parent().prev().addClass('the
 if ( $('.global-main').children().length === 0 ) {
 	$('.header').addClass('theme--primary');
 }
+
+
+// Give the first linked copy-block an active state to show it's clickable
+$('.copy-block:not(.no-hover):first-child').addClass('active');
+$('.copy-block').hover(function() {
+	$(this).siblings().removeClass('active');
+	$(this).removeClass('active');
+});

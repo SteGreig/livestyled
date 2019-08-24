@@ -11,7 +11,7 @@ get_template_part( 'templates/pb-copy-image' );
 		<?php
 		if( have_posts() ): ?>
 			<ul class="post-list flexbox flex-wrap">
-			<?php while( have_posts() ): the_post();
+			<?php $n=0; while( have_posts() ): the_post(); $n++;
 				get_template_part( 'templates/post-blog' );
 			endwhile; ?>
 			</ul>

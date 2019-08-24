@@ -31,9 +31,9 @@
 			$images = get_sub_field('g_gallery');
 			if( $images ): ?>
 			<ul class="gallery grid grid--5 flexbox flex-wrap justify-content-center">
-				<?php foreach( $images as $image ): ?>
+				<?php $n=0; foreach( $images as $image ): $n++; ?>
 					<li class="gallery__item block flexbox justify-content-center">
-						<img class="gallery__img lazyload rwd" data-src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img class="gallery__img lazyload rwd anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp" data-src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</li>
 				<?php endforeach; ?>
 			</ul>

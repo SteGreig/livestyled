@@ -17,7 +17,7 @@
 
 		<h3 class="section__header section__header--our-partners">Our Partners</h3>
 
-		<section class="grid grid--<?php echo $grid;?> align-items-center">
+		<section class="grid grid--<?php echo $grid;?> align-items-center anim-500" data-animate="fadeInUp">
 
 			<?php while( has_sub_field('partners', 'option') ): ?>
 

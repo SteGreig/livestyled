@@ -7,6 +7,10 @@
 
 	<link rel="stylesheet" href="https://use.typekit.net/ocg4wmb.css">
 
+	<style>
+	.mob-nav,.section--gdpr{display:none;}
+	</style>
+
 	<?php wp_head(); ?>
 </head>
 <body>

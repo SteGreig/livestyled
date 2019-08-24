@@ -1,5 +1,5 @@
 
-<li class="post--case-study block p0 flexbox">
+<li class="post--case-study block p0 flexbox anim-500" data-animate="fadeInUp">
 
     <a href="<?php the_permalink(); ?>" class="post--case-study__img-wrap">
         <?php

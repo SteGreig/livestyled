@@ -18,7 +18,7 @@
 
 <article class="section section--copy section--copy-form section--<?php echo $section; ?> theme--<?php echo $sectionTheme; ?> align--center" id="section-<?php echo $section; ?>">
 	
-	<section class="container container--600">
+	<section class="container container--600 anim-500 anim-d-200" data-animate="fadeInUp">
 
 		<?php
 			include( 'pb-copy-form--copy.php' );

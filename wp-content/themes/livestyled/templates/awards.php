@@ -18,9 +18,9 @@ endif;
         
         <div class="grid grid--<?php echo $grid; ?> awards">
 
-            <?php while(have_rows('awards')): the_row(); ?>
+            <?php $n=0; while(have_rows('awards')): the_row(); $n++; ?>
 
-                <div class="block block--margins copy-block--mob-stacked award-block">
+                <div class="block block--margins copy-block--mob-stacked award-block anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp">
                     
                     <?php if(get_sub_field('awards_event_logo')): ?>
                     <img class="award-block__logo lazyload" data-src="<?php echo get_sub_field('awards_event_logo')['sizes']['large']; ?>" alt="<?php the_sub_field('awards_event_name'); ?> logo">

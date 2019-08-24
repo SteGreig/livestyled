@@ -16,9 +16,9 @@ endif;
         
         <div class="grid grid--<?php echo $grid; ?> team-members">
 
-            <?php while(have_rows('team_members')): the_row(); ?>
+            <?php $n=0; while(have_rows('team_members')): the_row(); $n++; ?>
 
-                <div class="block block--margins team-member">
+                <div class="block block--margins team-member anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp">
                     
                     <?php if(get_sub_field('mtt_picture')): ?>
                     <img class="team-member__pic lazyload" data-src="<?php echo get_sub_field('mtt_picture')['sizes']['image-400x400']; ?>" alt="<?php the_sub_field('mtt_name'); ?> profile picture">

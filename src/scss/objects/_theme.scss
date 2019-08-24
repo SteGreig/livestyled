@@ -26,7 +26,7 @@
 		}
 
 		// Add faint top border when it follows another section with a white background
-		+ .theme--secondary {
+		+ .theme--secondary:not(.section--copy-blocks) {
 			border-top: 1px solid #eee;
 		}
 	}

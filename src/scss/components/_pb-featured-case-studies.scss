@@ -205,10 +205,10 @@
         }
 
         @include lg-up {
-            transform: translateX(30%) translateY(-40px);
+            transform: translateX(30%) translateY(-20px);
             width: 280px;
-            height: 460px;
-            perspective-origin: 100% -110%;
+            height: 420px;
+            perspective-origin: 0 0;
             perspective: 1000px;
         }
 
@@ -224,9 +224,9 @@
             background: $highlightBlue;
 
             @include lg-up {
-                top: 62%;
+                top: 60%;
                 left: 42%;
-                width: 135%;
+                width: 125%;
                 height: 86%;
             }
         }
@@ -236,10 +236,10 @@
         transform: rotateX(75deg) rotateY(20deg) rotateZ(-40deg);
         height: 100%;
         width: 100%;
-        filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.4));
+        filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.3));
 
         @include lg-up {
-            transform: rotateX(85deg) rotateY(20deg) rotateZ(-40deg);
+            transform: rotateX(45deg) rotateY(20deg) rotateZ(-25deg);
 
             /*
             &:hover {

@@ -3,7 +3,7 @@
 
 	<h3 class="section__header section__header--our-clients">Our Clients</h3>
 
-	<section class="our-clients__logos grid flexbox align-items-center drag-scroll hide-scrollbar scroll-touch">
+	<section class="our-clients__logos grid flexbox align-items-center drag-scroll hide-scrollbar scroll-touch anim-500" data-animate="fadeInUp">
 
 		<?php while( has_sub_field('clients', 'option') ): ?>
 

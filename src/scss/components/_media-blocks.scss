@@ -4,6 +4,9 @@
 // --------------------------------------------------------------------------------------------------
 
 .section--scrollable {
+    width: 100%;
+    overflow: hidden;
+    
     .section__header {
         margin-top: 20px;
     }

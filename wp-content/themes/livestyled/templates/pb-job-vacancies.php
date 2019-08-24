@@ -4,9 +4,9 @@
 
     <section class="media-blocks-wrap media-blocks-wrap--scrollable tabs flexbox hide-scrollbar scroll-touch drag-scroll">
 
-        <?php while(have_rows('vacancies')): the_row(); ?>
+        <?php $n=0; while(have_rows('vacancies')): the_row(); $n++; ?>
 
-        <div class="media-block align--left">
+        <div class="media-block align--left anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp">
 
             <h3 class="media-block__title"><?php the_sub_field('job_title'); ?></h3>
 

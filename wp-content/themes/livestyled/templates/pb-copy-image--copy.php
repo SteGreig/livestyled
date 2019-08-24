@@ -1,4 +1,4 @@
-<div class="block block--20-0 block--2-col">		
+<div class="block block--20-0 block--2-col anim-750" data-animate="fadeInUp">		
 	<?php if( $sectionHeader ) : ?>
 	<h1 class="section__header section__header--copy-image"><?php echo $sectionHeader; ?></h1>
 	<?php endif; ?>

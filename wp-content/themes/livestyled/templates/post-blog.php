@@ -1,5 +1,5 @@
 
-<li class="post--blog block p0 flexbox">
+<li class="post--blog block p0 flexbox anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp">
 
     <a href="<?php the_permalink(); ?>" class="post--blog__img-wrap">
         <?php

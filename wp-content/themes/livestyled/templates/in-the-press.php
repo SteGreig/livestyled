@@ -4,9 +4,9 @@
 
     <section class="media-blocks-wrap--scrollable flexbox hide-scrollbar scroll-touch drag-scroll">
 
-        <?php while(have_rows('press_items')): the_row(); ?>
+        <?php $n=0; while(have_rows('press_items')): the_row(); $n++; ?>
 
-        <div class="media-block align--left">
+        <div class="media-block align--left anim-500 anim-d-<?php echo $n; ?>00" data-animate="fadeInUp">
 
             <?php if(get_sub_field('press_logo')): ?>
 
