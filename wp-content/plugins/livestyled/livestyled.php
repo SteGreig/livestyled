@@ -20,6 +20,13 @@
 	include( plugin_dir_path(__FILE__) . 'inc/custom/remove-p-tag-from-images.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/limit-content-length.php' );
 
+
+	// Remove main stylesheet so it can be loaded asynchronously via loadCSS
+	function my_deregister_styles() {
+		wp_deregister_style('br-styles');
+	}
+	add_action('wp_print_styles', 'my_deregister_styles', 100);
+
 	
 	
 	/// Custom Post Types

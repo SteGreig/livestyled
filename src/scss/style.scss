@@ -26,36 +26,34 @@
 // TOOLS
 @import 'tools/mixins';
 @import 'tools/functions';
-//@import 'tools/hamburgers';
 
 // GENERIC
 @import 'generic/normalize';
-@import 'generic/classes';
+//@import 'generic/classes'; // In critical.scss
 @import 'generic/wp-align-classes';
 
 // ELEMENTS
 @import 'elements/html';
 
 // OBJECTS
-@import 'objects/global';
-@import 'objects/theme';
-//@import 'objects/hamburgers';
-@import 'objects/grid';
+//@import 'objects/global'; // In critical.scss
+//@import 'objects/theme'; // In critical.scss
+//@import 'objects/grid'; // In critical.scss
 @import 'objects/forms';
-@import 'objects/animations';
+//@import 'objects/animations'; // In critical.scss
 
 // COMPONENTS
-@import 'components/ctas';
+//@import 'components/ctas'; // In critical.scss
 @import 'components/mobile-nav';
-@import 'components/header';
-@import 'components/hero';
+//@import 'components/header'; // In critical.scss
+//@import 'components/hero'; // In critical.scss
 @import 'components/gdpr';
 @import 'components/pb-banners';
 @import 'components/pb-banners-full-bleed';
 @import 'components/pb-copy';
 @import 'components/pb-copy-blocks';
 @import 'components/pb-copy-only';
-@import 'components/pb-copy-image';
+//@import 'components/pb-copy-image'; // In critical.scss
 @import 'components/pb-copy-image-boxed';
 @import 'components/pb-full-width-video';
 @import 'components/pb-google-maps';

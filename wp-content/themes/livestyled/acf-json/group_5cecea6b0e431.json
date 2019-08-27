@@ -3,6 +3,23 @@
     "title": "Page Builder",
     "fields": [
         {
+            "key": "field_5d65a41ffd5e4",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<a target=\"_blank\" href=\"http:\/\/dev.livestyled.com\/livestyled-modules.png\">Click here for help and example usage of the various modules<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_5cecea74b1e09",
             "label": "Sections",
             "name": "sections",
@@ -1979,124 +1996,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5cf5fe8fea1b4": {
-                    "key": "layout_5cf5fe8fea1b4",
-                    "name": "google_map",
-                    "label": "Google Map",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cf5fe8fea1b5",
-                            "label": "Header",
-                            "name": "gm_main_header",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5cf5fe8fea1b8",
-                            "label": "Alignment",
-                            "name": "gm_section_alignment",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "25",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "center": "Center",
-                                "left": "Left",
-                                "right": "Right"
-                            },
-                            "default_value": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5cf5fe8fea1b9",
-                            "label": "Theme",
-                            "name": "gm_theme",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "25",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "primary": "Primary",
-                                "secondary": "Secondary",
-                                "alternative": "Alternative"
-                            },
-                            "default_value": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5cf5fe8fea1b7",
-                            "label": "Copy",
-                            "name": "gm_copy",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_5cf5feddea1c3",
-                            "label": "Google Map",
-                            "name": "gm_google_map",
-                            "type": "google_map",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "center_lat": "51.52348",
-                            "center_lng": "-0.081884",
-                            "zoom": "",
-                            "height": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5d53068cd2eb7": {
                     "key": "layout_5d53068cd2eb7",
                     "name": "how_we_deliver_section",
@@ -2469,5 +2368,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566243839
+    "modified": 1566942558
 }
