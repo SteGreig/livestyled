@@ -4,7 +4,7 @@
 
 		<h3 class="section__header">Testimonials</h3>
 
-		<section class="testimonials__wrap tabs flexbox align-items-center anim-500" data-animate="fadeInUp">
+		<section class="testimonials__wrap tabs flexbox align-items-center anim-500" data-animate="fadeInUp-disabled">
 
 
 			<?php // Client Logos

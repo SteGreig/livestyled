@@ -236,6 +236,7 @@
         transform: rotateX(75deg) rotateY(20deg) rotateZ(-40deg);
         height: 100%;
         width: 100%;
+        -webkit-filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.3));
         filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.3));
 
         @include lg-up {

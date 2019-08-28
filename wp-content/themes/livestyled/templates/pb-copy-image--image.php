@@ -1,4 +1,4 @@
-<div class="block block--2-col <?php if ($sectionVideo){echo "block--video"; }?> flexbox justify-content-center align-items-center anim-500 anim-d-200" data-animate="fadeInUp">
+<div class="block block--2-col <?php if ($sectionVideo){echo "block--video"; }?> flexbox justify-content-center align-items-center anim-500 anim-d-200" data-animate="fadeInUp-disabled">
 
     <?php if($sectionVideo): ?>
         <video autoplay muted class="rwd hero__video" poster="<?php echo $sectionImage;?>"><source src="<?php echo $sectionVideo;?>" type="video/mp4"></video>

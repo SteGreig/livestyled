@@ -35,7 +35,7 @@
 				$blockHeader = $block['hwd_block_header'];
 				$blockCopy = $block['hwd_block_copy'];
 		?>
-				<article class="block align--center copy-block copy-block--hwd flexbox align-items-center no-hover anim-500" data-animate="fadeInUp">
+				<article class="block align--center copy-block copy-block--hwd flexbox align-items-center no-hover anim-500" data-animate="fadeInUp-disabled">
 
 					<?php if($blockImageUrl): ?>
 					<div class="copy-block__img-wrap copy-block__img-wrap--hwd flexbox align-items-center justify-content-center">

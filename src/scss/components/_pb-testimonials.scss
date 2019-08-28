@@ -82,8 +82,8 @@
 }
 
 .testimonials__logo-img {
-    -webkit-filter: grayscale(1) brightness(100);
-    filter: grayscale(1) brightness(100);
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
 
 .testimonials__quote {

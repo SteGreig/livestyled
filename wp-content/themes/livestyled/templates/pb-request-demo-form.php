@@ -1,6 +1,6 @@
 <article class="section section--copy section--copy-form section--<?php echo $section; ?> theme--primary align--center" id="section-<?php echo $section; ?>">
 	
-	<section class="container container--600 anim-500" data-animate="fadeInUp">
+	<section class="container container--600 anim-500" data-animate="fadeInUp-disabled">
 
 		<?php
 			$form = GFAPI::get_form('1'); // ID for Request a demo form

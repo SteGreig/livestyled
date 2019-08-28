@@ -32,7 +32,7 @@
             }
 
             @include xxl-up {
-                max-width: 1400px;
+                //max-width: 1400px;
             }
         }
 
@@ -90,7 +90,7 @@
         }
 
         @include xxl-up {
-            font-size: 4.8rem;
+            font-size: 4.3rem;
         }
     }
 
@@ -175,7 +175,7 @@
 
 // Social Icons
 .hero-social {
-    position: absolute;
+    position: fixed;
     top: 100vh;
     left: 20px;
     z-index: 100;

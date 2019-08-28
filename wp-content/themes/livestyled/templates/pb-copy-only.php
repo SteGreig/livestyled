@@ -81,7 +81,7 @@
 		<?php endif; ?>
 
 			<?php if( $sectionHeader ) : ?>
-			<h1 class="section__header section__header--copy-only anim-500" data-animate="fadeInUp"><?php echo $sectionHeader; ?></h1>
+			<h1 class="section__header section__header--copy-only anim-500" data-animate="fadeInUp-disabled"><?php echo $sectionHeader; ?></h1>
 			<?php endif; ?>
 
 			<?php if( $sectionSubHeader ) : ?>
@@ -93,7 +93,7 @@
 		<?php endif; ?>
 
 
-		<div class="<?php if ( $sectionAlignment == 'header-left' ): echo "block block--2-col"; endif; ?> section__copy anim-500 anim-d-300" data-animate="fadeInUp">
+		<div class="<?php if ( $sectionAlignment == 'header-left' ): echo "block block--2-col"; endif; ?> section__copy anim-500 anim-d-300" data-animate="fadeInUp-disabled">
 
 			<?php if( $sectionCopy ) :  echo $sectionCopy;  endif; ?>
 

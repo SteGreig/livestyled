@@ -4,7 +4,7 @@
 
         <h2 class="section__header">Case Studies</h2>
         
-            <section class="tabs fcs-tabs flexbox align-items-center anim-500" data-animate="fadeInUp">
+            <section class="tabs fcs-tabs flexbox align-items-center anim-500" data-animate="fadeInUp-disabled">
 
 			<?php // Tabs
 			// ----------------------------------------- ?>

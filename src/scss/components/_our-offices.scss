@@ -21,6 +21,7 @@
         height: 350px;
         display: block;
         box-shadow: 5px 5px 10px rgba($primary, .2);
+        -webkit-filter: grayscale(1);
         filter: grayscale(1);
         opacity: .8;
     }
