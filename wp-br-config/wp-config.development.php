@@ -16,15 +16,16 @@ define( 'DB_USER', 'root' );
 define( 'DB_PASSWORD', 'root' );
 //define( 'DB_PASSWORD', 'mysql' );
 
-// define( 'WP_DEBUG', true );
-// @error_reporting( E_ALL );
-// @ini_set( 'log_errors', true );
-// @ini_set( 'log_errors_max_len', '0' );
-// define( 'WP_DEBUG_LOG', true );
-// define( 'WP_DEBUG_DISPLAY', false );
-// @ini_set( 'display_errors', 0 );
-// define( 'CONCATENATE_SCRIPTS', false );
-// define( 'SAVEQUERIES', true );
-// define( 'SCRIPT_DEBUG', false );
-// define( 'WP_CACHE', false );
-// define( 'WP_AUTO_UPDATE_CORE', false );
+//** DO NOT UNCOMMENT DEBUGGING FROM DEV, ITS IMPORTANT NOTHING GOES LIVE WITH ERRORS */
+define( 'WP_DEBUG', true );
+@error_reporting( E_ALL );
+@ini_set( 'log_errors', true );
+@ini_set( 'log_errors_max_len', '0' );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
+define( 'CONCATENATE_SCRIPTS', false );
+define( 'SAVEQUERIES', true );
+define( 'SCRIPT_DEBUG', false );
+define( 'WP_CACHE', false );
+define( 'WP_AUTO_UPDATE_CORE', false );
