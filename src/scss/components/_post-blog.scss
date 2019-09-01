@@ -26,11 +26,6 @@
         .grid--3 &:nth-child(2n) { margin-right: 20px; }
     }
 
-    @include md-up {
-        &:nth-child(3n) { margin-right: 0; }
-        .grid--3 &:nth-child(2n) { margin-right: 5%; }
-    }
-
     @include lg-up {
         width: 30%;
         margin-bottom: 5%;
@@ -97,5 +92,97 @@
 
     &__cta {
         margin-top: auto;
+    }
+}
+
+
+// Latest Post (on main Blog page)
+.latest-post .post--blog {
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+    margin: 40px 0 0;
+
+    &__copy {
+        padding: 30px 0;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+    }
+
+    &__title-link {
+        color: $highlightRed;
+    }
+
+    &__date {
+        font-size: 1.5rem;
+    }
+
+    &__desc {
+        font-size: 1.2rem;
+    }
+}
+
+
+// Featured Posts (on main Blog page)
+.featured-posts-wrap {
+    margin-top: 30px;
+
+    @include md-up {
+        padding-left: 40px;
+        margin-top: 0;
+    }
+
+    @include lg-up {
+        padding-left: 70px;
+    }
+
+    @include xl-up {
+        padding-left: 110px;
+    }
+
+    .post--blog {
+        width: 100%;
+        box-shadow: none;
+        background: transparent;
+        margin: 20px 0 0;
+        @include flex-direction(row);
+        @include align-items(center);
+
+        &:first-child {
+            margin-top: 40px;
+        }
+
+        &__img-wrap {
+            float: left;
+        }
+
+        &__copy {
+            float: left;
+            width: 70%;
+            padding: 0 0 0 20px;
+        }
+
+        &__title {
+            font-size: 1.3rem;
+
+            @include xl-up {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__title-link {
+            color: $highlightRed;
+        }
+
+        &__desc {
+            margin: 10px 0 0;
+            display: none;
+
+            @include lg-up {
+                display: block;
+            }
+        }
     }
 }

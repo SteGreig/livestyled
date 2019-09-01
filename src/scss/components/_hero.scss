@@ -175,7 +175,7 @@
 
 // Social Icons
 .hero-social {
-    position: fixed;
+    position: absolute;
     top: 100vh;
     left: 20px;
     z-index: 100;
@@ -187,6 +187,10 @@
     @include md-up {
         opacity: 1;
         visibility: visible;
+    }
+
+    @include xl-up {
+        position: fixed;
     }
 
     &__link {

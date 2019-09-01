@@ -28,6 +28,9 @@
     max-width: 400px;
     @include flex(none);
     margin-right: 20px;
+    @include flexbox;
+    @include align-items(flex-start);
+    @include flex-direction(column);
 
     @include md-up {
         margin: 0 15px;
@@ -54,5 +57,9 @@
         margin-bottom: 30px;
         font-size: 1.1rem;
         line-height: 1.4;
+
+        p {
+            margin: 0;
+        }
     }
 }

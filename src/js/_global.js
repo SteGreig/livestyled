@@ -39,3 +39,4 @@ $('.copy-block').hover(function() {
 	$(this).siblings().removeClass('active');
 	$(this).removeClass('active');
 });
+
