@@ -20,6 +20,7 @@
 	include( plugin_dir_path(__FILE__) . 'inc/custom/remove-p-tag-from-images.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/limit-content-length.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/blog-ajax.php' );
+	include( plugin_dir_path(__FILE__) . 'inc/custom/cpt-nav-active-states.php' );
 
 
 	

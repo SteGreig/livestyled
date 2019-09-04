@@ -3,6 +3,25 @@
     "title": "Case Study Options",
     "fields": [
         {
+            "key": "field_5d6edcd46fd3b",
+            "label": "Hero Headline",
+            "name": "hero_headline",
+            "type": "text",
+            "instructions": "Will fall back to the case study title if left blank",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d593832e07df",
             "label": "Key Stats",
             "name": "key_stats",
@@ -84,6 +103,38 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d70308c02f74",
+            "label": "App Store Link",
+            "name": "app_store_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d7030a302f75",
+            "label": "Google Play Link",
+            "name": "google_play_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -103,5 +154,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566133089
+    "modified": 1567633684
 }

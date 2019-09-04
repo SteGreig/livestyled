@@ -99,3 +99,16 @@
         margin-top: auto;
     }
 }
+
+.section--app-download {
+    p {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    img {
+        @include md-up {
+            margin: 20px 20px 0;
+        }
+    }
+}

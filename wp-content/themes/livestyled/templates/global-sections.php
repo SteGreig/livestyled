@@ -2,7 +2,11 @@
 	
 	if( have_rows( 'sections' ) ):
 	
-		$section = 1;
+		if(is_single()) {
+			$section = 2;
+		} else {
+			$section = 1;
+		}
 	
 		while ( have_rows( 'sections' ) ): the_row();
 

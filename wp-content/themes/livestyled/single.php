@@ -4,22 +4,32 @@ get_template_part( 'templates/global', 'social-icons' );
 get_template_part( 'templates/pb-banner-full-bleed' );
 ?>
 
-<article class="section section--copy" id="section-2">
 
-    <section class="container container--900">
+<?php
+if(is_singular('case-studies')):
+    get_template_part( 'templates/global', 'sections' );
+else: ?>
     
-        <div class="section__copy section__copy--blog">
-            <?php
-            if( have_posts() ):
-                while( have_posts() ): the_post();
-                    the_content();
-                endwhile;
-            endif; ?>
-        </div>
+    <article class="section section--copy" id="section-2">
 
-    </section>
+        <section class="container container--900">
+        
+            <div class="section__copy section__copy--blog">
+                <?php
+                if( have_posts() ):
+                    while( have_posts() ): the_post();
+                        the_content();
+                    endwhile;
+                endif; ?>
+            </div>
 
-</article>
+        </section>
+
+    </article>
+
+<?php
+endif;
+?>
 
 
 <?php if (get_the_author_meta('description')): ?>
@@ -48,6 +58,23 @@ get_template_part( 'templates/pb-banner-full-bleed' );
     </section>
 </article>
 <?php endif; ?>
+
+
+<?php if(get_field('app_store_link') || get_field('google_play_link')): ?>
+<article class="section section--app-download theme--secondary align--center">
+    <section class="container">
+
+        <p>Download the app and take a look for yourself.<br> Available on both iOS and Android.</p>
+
+        <div>
+            <a target="_blank" href="<?php the_field('app_store_link'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/app-store.png" alt="Download on the App Store"></a>
+            <a target="_blank" href="<?php the_field('google_play_link'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/google-play.png" alt="Get it on Google Play"></a>
+        </div>
+
+    </section>
+</article>
+<?php endif; ?>
+
 
 <?php
 

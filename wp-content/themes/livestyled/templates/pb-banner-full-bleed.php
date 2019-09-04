@@ -44,7 +44,11 @@ if(is_single()) {
 	$bannerLandscapeUrl = wp_get_attachment_image_src($thumb_id, 'image-max-16x9', true)[0];
 	$bannerPortraitUrl = wp_get_attachment_image_src($thumb_id, 'image-max-9x16', true)[0];
 
-	$bannerHeader = get_the_title();
+	if(get_field('hero_headline')){
+		$bannerHeader = get_field('hero_headline');
+	} else {
+		$bannerHeader = get_the_title();
+	}
 }
 // -----------------------------------------------
 ?>

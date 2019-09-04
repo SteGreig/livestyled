@@ -48,6 +48,18 @@
     li {
         padding: 5px 0;
     }
+
+    blockquote {
+        font-weight: 700;
+        padding: 20px;
+        color: $primary;
+        background-color: $highlightBlue;
+        border-radius: 20px;
+        font-size: 1.4rem;
+        margin-left: 0;
+        margin-right: 0;
+        color: #fff;
+    }
 }
 
 .section__copy--blog {
