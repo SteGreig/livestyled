@@ -26,17 +26,25 @@
         > .container {
             height: calc(100vh - 30px);
             min-height: auto;
+            padding-top: 0;
 
             @include md-up {
                 height: 100vh;
+                padding-top: 20px;
             }
 
-            @include xxl-up {
+            @include xxxl-up {
                 //max-width: 1400px;
             }
         }
 
         img, video {
+            height: 190px;
+
+            @include md-up {
+                height: auto;
+            }
+
             @include lg-up {
                 padding-top: 40px;
             }
@@ -53,11 +61,13 @@
         }
 
 		> .block:first-child {
-            height: 35%;
+            //height: 35%;
+            padding-bottom: 15px;
             
             @include md-up {
                 height: auto;
                 height: 85%;
+                padding-bottom: 0;
 
                 &.block--video {
                     height: 100%;
@@ -67,6 +77,9 @@
 
 		> .block:last-child {
             height: 57%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             
             @include md-up {
                 height: auto;
@@ -89,7 +102,7 @@
             font-size: 4rem;
         }
 
-        @include xxl-up {
+        @include xxxl-up {
             font-size: 4.3rem;
         }
     }
@@ -189,7 +202,7 @@
         visibility: visible;
     }
 
-    @include xl-up {
+    @media screen and (min-width: 1400px) {
         position: fixed;
     }
 

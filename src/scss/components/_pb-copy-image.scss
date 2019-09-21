@@ -13,6 +13,11 @@
     img[src$=".svg"] {
         width: 100%;
         height: 95%;
+        
+        @include md-up {
+            max-height: 480px;
+            max-width: 480px;
+        }
     }
 
     video {

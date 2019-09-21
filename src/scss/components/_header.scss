@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     padding: 20px;
-    transition: .3s padding;
+    transition: .3s;
     z-index: 1000;
 
     @include md-up {
@@ -20,9 +20,13 @@
     }
 
     &--sticky {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         background-color: $primary;
+
+        @include md-up {
+            background-color: darken($primary, 3%);
+        }
     }
 
     &__contact-cta {
@@ -78,7 +82,6 @@
         &.menu-item--active > a {
             color: $highlightRed;
             text-decoration: underline;
-            font-weight: 700;
         }
     }
 

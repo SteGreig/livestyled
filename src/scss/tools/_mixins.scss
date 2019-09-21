@@ -6,7 +6,8 @@ $screen-sm-min: 576px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
-$screen-xxl-min: 1600px;
+$screen-xxl-min: 1400px;
+$screen-xxxl-min: 1600px;
 
 $screen-md-max: 767px;
 
@@ -53,6 +54,15 @@ $screen-md-max: 767px;
 /// @require settings/_breakpoints.scss
 @mixin xxl-up {
   @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-xl-min set inside settings > breakpoints
+/// @example .foo { @include xl-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin xxxl-up {
+  @media (min-width: #{$screen-xxxl-min}) {
     @content;
   }
 }

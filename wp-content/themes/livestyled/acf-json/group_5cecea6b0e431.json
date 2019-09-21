@@ -2344,6 +2344,281 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d83efb0e63f1": {
+                    "key": "layout_5d83efb0e63f1",
+                    "name": "table",
+                    "label": "Table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d83efdae63f3",
+                            "label": "Rows",
+                            "name": "rows",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d83eff3e63f4",
+                                    "label": "Col 1 Options",
+                                    "name": "col_1_options",
+                                    "type": "checkbox",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Standard Text": "Standard Text",
+                                        "List": "List",
+                                        "Heading": "Heading"
+                                    },
+                                    "allow_custom": 0,
+                                    "default_value": [],
+                                    "layout": "vertical",
+                                    "toggle": 0,
+                                    "return_format": "value",
+                                    "save_custom": 0
+                                },
+                                {
+                                    "key": "field_5d83f5a3e63f8",
+                                    "label": "Col 1 List",
+                                    "name": "col_1_list",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5d83eff3e63f4",
+                                                "operator": "==",
+                                                "value": "List"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5d83f643e63f9",
+                                            "label": "Bullet Type",
+                                            "name": "bullet_type",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": [],
+                                            "default_value": [],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "ajax": 0,
+                                            "return_format": "value",
+                                            "placeholder": ""
+                                        },
+                                        {
+                                            "key": "field_5d83f657e63fa",
+                                            "label": "List Item Text",
+                                            "name": "list_item_text",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_5d83f66ae63fb",
+                                    "label": "Col 1 Text",
+                                    "name": "col_1_text",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5d83eff3e63f4",
+                                                "operator": "==",
+                                                "value": "Standard Text"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                },
+                                {
+                                    "key": "field_5d83f68fe63fc",
+                                    "label": "Col 2 Options",
+                                    "name": "col_1_options_copy",
+                                    "type": "checkbox",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Standard Text": "Standard Text",
+                                        "List": "List",
+                                        "Heading": "Heading"
+                                    },
+                                    "allow_custom": 0,
+                                    "default_value": [],
+                                    "layout": "vertical",
+                                    "toggle": 0,
+                                    "return_format": "value",
+                                    "save_custom": 0
+                                },
+                                {
+                                    "key": "field_5d83f693e63fd",
+                                    "label": "Col 2 List",
+                                    "name": "col_1_list_copy",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5d83f68fe63fc",
+                                                "operator": "==",
+                                                "value": "List"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "table",
+                                    "button_label": "",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5d83f694e63fe",
+                                            "label": "Bullet Type",
+                                            "name": "bullet_type",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": [],
+                                            "default_value": [],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "ajax": 0,
+                                            "return_format": "value",
+                                            "placeholder": ""
+                                        },
+                                        {
+                                            "key": "field_5d83f694e63ff",
+                                            "label": "List Item Text",
+                                            "name": "list_item_text",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_5d83f698e6400",
+                                    "label": "Col 2 Text",
+                                    "name": "col_1_text_copy",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5d83f68fe63fc",
+                                                "operator": "==",
+                                                "value": "Standard Text"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -2375,5 +2650,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567546652
+    "modified": 1568929950
 }

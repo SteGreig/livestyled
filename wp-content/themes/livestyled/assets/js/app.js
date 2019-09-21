@@ -41,6 +41,11 @@ $('.copy-block').hover(function() {
 });
 
 
+
+// Give hero section a height that fills the full height of the viewport in px (vh doesn't play well with address bars that hide/show as you scroll on mobile)
+if(window.innerWidth < 768) {
+	$('.global-main>.section--1.section--copy-image>.container').css('height', (window.innerHeight - 30)+"px");
+}
 //https://css-tricks.com/snippets/jquery/simple-jquery-accordion/
 (function ($) {
 
