@@ -17,6 +17,10 @@
         text-align: left;
     }
 
+    &__pic {
+        border-radius: 20px;
+    }
+
     &__name {
         font-size: 1.5rem;
         font-weight: 700;
@@ -24,7 +28,7 @@
     }
 
     &__job-title {
-        color: $highlightRed;
+        color: $highlightPink;
         font-size: 1.2rem;
         font-weight: 300;
         margin: 5px 0 10px;

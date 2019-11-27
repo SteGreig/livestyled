@@ -14,13 +14,13 @@ $panelBg :            $primary;
 $linkBg :             transparent;
 $linkText :           rgba(#fff,.8);
 $linkBorder :         rgba(#fff,.1);
-$linkBgActive :       $highlightRed;
+$linkBgActive :       $highlightPink;
 $linkTextActive :     #fff;
 
 $dropdownArrowBg :    transparent;
 $dropdownArrowText :  inherit;
 
-$closeIconBg :        $highlightRed;
+$closeIconBg :        $highlightPink;
 $closeIconText :      #fff;
 
 .mob-nav {

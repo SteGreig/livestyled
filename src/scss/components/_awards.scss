@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------------------------------
 
 .section--awards {
-    background-color: $highlightBlue;
+    background-color: $highlightGreen;
     color: #fff;
 }
 
@@ -20,6 +20,7 @@
     padding: 40px;
     box-shadow: 5px 5px 10px rgba($primary, .2);
     color: $primary;
+    border-radius: 20px;
 
     &__event-name {
         margin: 30px 0 0;

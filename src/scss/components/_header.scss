@@ -7,26 +7,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     transition: .3s;
     z-index: 1000;
 
-    @include md-up {
-        padding: 35px;
-    }
-
     @include lg-up {
-        padding: 35px 50px;
+        padding: 20px;
     }
 
     &--sticky {
-        padding-top: 15px;
-        padding-bottom: 15px;
         background-color: $primary;
-
-        @include md-up {
-            background-color: darken($primary, 3%);
-        }
     }
 
     &__contact-cta {
@@ -53,8 +43,16 @@
 }
 
 .site-logo__img {
-    width: 30px;
+    width: 130px;
     display: block;
+
+    @include md-up {
+        width: 100px;
+    }
+
+    @include lg-up {
+        width: 130px;
+    }
 }
 
 
@@ -64,11 +62,11 @@
 
     @include md-up {
         display: block;
-        margin-left: 30px;
+        margin-left: 20px;
     }
 
     @include lg-up {
-        margin-left: 60px;
+        margin-left: 30px;
     }
 
     > ul > li {
@@ -76,11 +74,11 @@
         position: relative;
 
         &:hover > a {
-            color: $highlightRed;
+            color: $highlightPink;
         }
 
         &.menu-item--active > a {
-            color: $highlightRed;
+            color: $highlightPink;
             text-decoration: underline;
         }
     }
@@ -95,12 +93,13 @@
         display: block;
         color: #fff;
         text-decoration: none;
-        padding: 8px 12px;
+        padding: 8px 6px;
         font-weight: 300;
-        font-size: 1rem;
+        font-size: .9rem;
 
         @include lg-up {
-            padding: 12px 16px;
+            padding: 12px 14px;
+            font-size: 1rem;
         }
     }
 
@@ -130,7 +129,7 @@
         }
 
         li.menu-item--active a {
-            color: $highlightRed;
+            color: $highlightPink;
         }
 
         li:last-child a {

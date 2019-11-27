@@ -6,7 +6,7 @@
     margin: 30px 0;
 
     + a {
-        color: $highlightBlue;
+        color: $highlightGreen;
         display: inline-block;
         margin-bottom: 40px;
     }
@@ -41,7 +41,8 @@
 
     &__img {
         display: block;
-        box-shadow: 3px 5px 20px rgba($primary, .5);
+        box-shadow: 3px 5px 15px rgba(#000, .1);
+        border-radius: 20px;
     }
 
     &__copy {
@@ -52,17 +53,19 @@
 
     &__title {
         margin: 25px 0 0;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        font-family: Museo;
+        font-weight: 900;
 
         @include xl-up {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
     }
 
     &__title-link {
         text-decoration: none;
         transition: .25s;
-        color: $highlightRed;
+        color: $highlightPink;
 
         &:hover {
             opacity: .8;
@@ -70,7 +73,7 @@
     }
 
     &__cat {
-        color: $highlightBlue;
+        color: $highlightGreen;
         margin: 5px 0 0;
         font-size: 1.2rem;
         font-weight: 300;

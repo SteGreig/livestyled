@@ -55,27 +55,25 @@ html, body {
 }
 
 .section__header {
-	font-weight: 700;
+	font-weight: 900;
 	font-size: 2rem;
+	font-family: Museo;
 	margin: 0;
-	text-transform: uppercase;
 
 	&--normal-case {
 		text-transform: none;
 	}
 
-	@include md-up {
-		font-size: 2.4rem;
-	}
-
 	@include lg-up {
-		font-size: 2.8rem;
+		font-size: 2.2rem;
 	}
 }
 
 .section__sub-header {
-	font-weight: 700;
-	color: $highlightBlue;
+	font-weight: 300;
+	font-family: Museo;
+	font-size: 1rem;
+	color: $highlightGreen;
 	margin: 0;
 
 	@include md-up {

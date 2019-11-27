@@ -1,5 +1,5 @@
 
-<article class="section section--our-clients section--<?php echo $section; ?> align--center theme--primary-tint" id="section-<?php echo $section; ?>">
+<article class="section section--our-clients section--<?php echo $section; ?> align--center theme--secondary" id="section-<?php echo $section; ?>">
 
 	<h3 class="section__header section__header--our-clients">Our Clients</h3>
 

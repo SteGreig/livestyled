@@ -61,7 +61,7 @@
             padding: 25px;
             margin-right: 20px;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,.15);
+            box-shadow: 0 0 20px rgba(0,0,0,.1);
         }
     }
 }
@@ -71,6 +71,7 @@
     transition: .3s;
     padding: 15px;
     text-decoration: none;
+    border-radius: 20px;
     
     @include md-up {
         padding: 25px;
@@ -78,7 +79,7 @@
 
         &:not(.no-hover):hover,
         &.active {
-            box-shadow: 0 0 20px rgba(0,0,0,.15);
+            box-shadow: 0 0 20px rgba(0,0,0,.08);
         }
     }
 
@@ -120,8 +121,10 @@
 
     &__title {
         margin: 0 0 15px;
-        color: $highlightRed;
-        font-size: 1.7rem;
+        color: $highlightPink;
+        font-size: 1.3rem;
+        font-family: Museo;
+        font-weight: 900;
         line-height: 1.2;
         width: 100%;
     }
@@ -233,5 +236,4 @@ a.copy-block:not(.theme--primary) p {
 
 .copy-block__title--hwd {
     color: #fff;
-    font-size: 2rem;
 }

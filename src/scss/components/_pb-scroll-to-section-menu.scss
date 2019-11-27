@@ -16,7 +16,7 @@
     &__list {
         @include flexbox-inline;
         border-radius: 30px;
-        border: 2px solid $highlightRed;
+        border: 2px solid $highlightPink;
         list-style: none;
         padding: 15px 20px;
         overflow-x: scroll;
@@ -28,12 +28,12 @@
     }
 
     &__link {
-        color: $highlightRed;
+        color: $highlightPink;
         text-decoration: none;
         padding: 5px 20px;
 
         &:hover {
-            color: darken($highlightRed, 7%);
+            color: darken($highlightPink, 7%);
         }
     }
 }

@@ -62,7 +62,7 @@
 
 				if($blockCtaLink): $el = "a"; else: $el = "article"; endif;
 		?>
-				<<?php echo $el; ?> href="<?php echo $blockCtaLink['url']; ?>" class="block copy-block flexbox copy-block--mob-<?php echo $sectionMobLayout; ?> theme--<?php echo $blockTheme; ?> align--<?php echo $blockAlignment; ?> <?php if($blockTheme != "none" && $sectionAlignment != "full-width"): echo "copy-block--boxed block--margins"; endif; ?> <?php if($sectionAlignment == 'center'): echo "align-items-center"; elseif($sectionAlignment == 'full-width'): echo "copy-block--full align-items-center"; endif; ?> <?php if(!$blockCtaLink || $sectionAlignment == "full-width" || $blockTheme != "none"): echo "no-hover"; endif; ?> anim-750 anim-d-<?php echo $n*2; ?>00" data-animate="fadeInUp">
+				<<?php echo $el; ?> href="<?php echo $blockCtaLink['url']; ?>" class="block block--margins copy-block flexbox copy-block--mob-<?php echo $sectionMobLayout; ?> theme--<?php echo $blockTheme; ?> align--<?php echo $blockAlignment; ?> <?php if($blockTheme != "none" && $sectionAlignment != "full-width"): echo "copy-block--boxed"; endif; ?> <?php if($sectionAlignment == 'center'): echo "align-items-center"; elseif($sectionAlignment == 'full-width'): echo "copy-block--full align-items-center"; endif; ?> <?php if(!$blockCtaLink || $sectionAlignment == "full-width" || $blockTheme != "none"): echo "no-hover"; endif; ?> anim-750 anim-d-<?php echo $n*2; ?>00" data-animate="fadeInUp">
 
 					<?php if($blockImageUrl): ?>
 					<div class="copy-block__img-wrap flexbox align-items-center">

@@ -2,7 +2,7 @@
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
-	background: $highlightRed;
+	background: $highlightPink;
 	color: $White;
 	border-radius: 25px;
 	width: 100%;
@@ -67,14 +67,14 @@
 	}
 
 	&--light-blue {
-		background-color: $highlightBlue;
+		background-color: $highlightGreen;
 		color: $White;
 	}
 
 	&--ghost {
 		background-color: transparent;
-		border: 1px solid $highlightRed;
-		color: $highlightRed;
+		border: 1px solid $highlightPink;
+		color: $highlightPink;
 
 		&.cta--white {
 			border-color: $White;
@@ -87,8 +87,8 @@
 		}
 
 		&.cta--light-blue {
-			border-color: $highlightBlue;
-			color: $highlightBlue;
+			border-color: $highlightGreen;
+			color: $highlightGreen;
 		}
 	}
 

@@ -30,7 +30,7 @@
         transition: color .3s;
 
         &:hover {
-            color: $highlightBlue;
+            color: $highlightGreen;
         }
 
         @include md-up {
@@ -39,7 +39,7 @@
         }
 
         &.active {
-            color: $highlightBlue;
+            color: $highlightGreen;
             font-weight: 900;
             font-size: 1.8rem;
 
@@ -47,7 +47,7 @@
                 content: "";
                 width: 6px;
                 height: 6px;
-                background-color: $highlightBlue;
+                background-color: $highlightGreen;
                 border-radius: 50%;
                 position: absolute;
                 top: -15px;
@@ -108,7 +108,7 @@
     }
 
     &__title {
-        color: $highlightBlue;
+        color: $highlightGreen;
         font-size: 1.6rem;
 
         @include xl-up {
@@ -126,7 +126,7 @@
     }
 
     &__stats {
-        color: $highlightRed;
+        color: $highlightPink;
         padding: 0 15px;
         margin: 30px 0;
 
@@ -155,7 +155,7 @@
                 right: 106%;
                 height: 4px;
                 width: 200px;
-                border-top: 4px dotted $highlightBlue;
+                border-top: 4px dotted $highlightGreen;
                 z-index: 1;
             }
         }
@@ -221,7 +221,7 @@
             width: 224px;
             height: 235px;
             border-radius: 50%;
-            background: $highlightBlue;
+            background: $highlightGreen;
 
             @include lg-up {
                 top: 60%;

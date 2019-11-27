@@ -85,7 +85,7 @@
 			<?php endif; ?>
 
 			<?php if( $sectionSubHeader ) : ?>
-			<h2 class="section__sub-header"><?php echo $sectionSubHeader; ?></h2>
+			<h2 class="section__sub-header section__sub-header--copy-only"><?php echo $sectionSubHeader; ?></h2>
 			<?php endif; ?>
 
 		<?php if ( $sectionAlignment == 'header-left' ): ?>

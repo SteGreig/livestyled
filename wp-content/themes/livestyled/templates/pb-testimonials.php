@@ -1,4 +1,4 @@
-<article class="section section--testimonials section--<?php echo $section; ?> align--center theme--primary-tint" id="section-<?php echo $section; ?>">
+<article class="section section--testimonials section--<?php echo $section; ?> align--center theme--primary" id="section-<?php echo $section; ?>">
 	
 	<section class="container container--1150">
 

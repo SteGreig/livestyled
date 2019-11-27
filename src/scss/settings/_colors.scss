@@ -179,11 +179,12 @@ $Black: #000000;
 /// @link	http://chir.ag/projects/name-that-color/#FFFFFF
 
 // LIVESTYLED BRAND COLOURS
-$primary: #262147;
+$primary: #0C436A;
 $secondary: $White;
 $alternative: $WhiteSmoke;
-$highlightBlue: #78ccd4;
-$highlightRed: #ed5954;
+$highlightGreen: #7FBC42;
+$highlightPink: #E6427B;
+$darkGrey: #BEBFC0;
 
 $primaryTint: adjust-hue(lighten($primary, 10%),-14deg);
 

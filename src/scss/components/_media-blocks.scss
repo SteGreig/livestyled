@@ -23,7 +23,7 @@
 }
 
 .media-block {
-    box-shadow: 3px 5px 20px rgba($primary,.15);
+    box-shadow: 3px 5px 20px rgba($primary,.1);
     padding: 25px;
     max-width: 400px;
     @include flex(none);
@@ -31,6 +31,7 @@
     @include flexbox;
     @include align-items(flex-start);
     @include flex-direction(column);
+    border-radius: 20px;
 
     @include md-up {
         margin: 0 15px;
@@ -38,19 +39,21 @@
     }
 
     &__logo {
-        max-width: 70%;
+        max-width: 50%;
         margin-bottom: 10px;
     }
 
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        font-family: Museo;
+        font-weight: 900;
         margin: 0;
     }
 
     &__meta {
-        color: $highlightBlue;
+        color: $highlightGreen;
         font-weight: 700;
-        margin: 10px 0 20px;
+        margin: 15px 0 20px;
     }
 
     &__desc {

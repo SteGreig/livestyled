@@ -13,7 +13,7 @@ form {
 
     .validation_message {
         padding: 4px 8px;
-        background-color: $highlightRed;
+        background-color: $highlightPink;
         display: inline-block;
         border-radius: 20px;
         font-size: .9rem;
@@ -52,7 +52,7 @@ form {
         display: inline-block;
         text-align: center;
         text-decoration: none;
-        background: $highlightRed;
+        background: $highlightPink;
         color: $White;
         border-radius: 25px;
         transition: .3s;
@@ -70,7 +70,7 @@ form {
         &:focus,
         &:active {
             outline: none;
-            background-color: darken($highlightRed, 7%);
+            background-color: darken($highlightPink, 7%);
         }
     }
 }

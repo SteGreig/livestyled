@@ -40,7 +40,7 @@
 	<header class="header flexbox align-items-center">
 		<?php if(get_field('logo','option')): ?>
 			<a class="site-logo" href="<?php echo get_site_url(); ?>">
-				<img class="site-logo__img" src="<?php echo get_field('logo', 'option')['url']; ?>" alt="<?php echo get_bloginfo(); ?>">
+				<img class="site-logo__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo get_bloginfo(); ?>">
 			</a>
 		<?php endif; ?>
 
