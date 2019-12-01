@@ -7,16 +7,19 @@
 /**
  * Image setup
  */
-	if( get_sub_field( 'bfb_background_images' ) ):
-		$bannerImages = get_sub_field( 'bfb_background_images' );
-		if( $bannerImages['bfb_landscape'] ):
-			$bannerImagesActive = true;
-			$bannerLandscapeUrl = $bannerImages['bfb_landscape']['sizes']['image-max-16x9'];
-			$bannerPortraitUrl = $bannerImages['bfb_portrait']['sizes']['image-max-9x16'];
-		endif; 
+	if( get_sub_field( 'bfb_background_image' ) ):
+		$bannerImagesActive = true;
+		$bannerLandscapeUrl = get_sub_field( 'bfb_background_image' )['sizes']['image-max-16x9'];
+		$bannerPortraitUrl = get_sub_field( 'bfb_background_image' )['sizes']['image-max-9x16'];
 	else:
 		$bannerImagesActive = false;
-	endif; 
+	endif;
+
+	if(get_sub_field('bfb_show_overlay') == true):
+		$overlayClass = "overlay--dark";
+	else:
+		$overlayClass = "overlay--none";
+	endif;
 /**
  * Copy
  */	
@@ -29,6 +32,27 @@
 	$bannerCtaSize = $bannerCtas['bfb_cta_size'];
 	$bannerCtaRepeater = $bannerCtas['bta_ctas_repeater'];
 
+
+// ------------------------------------------------------------------------------------
+// For main Blog page and main Case Studies page
+// ------------------------------------------------------------------------------------
+if(is_home() || is_archive('case-studies') || is_404()) {
+	$section = 1;
+	$bannerHeight = 100;
+	$bannerAlignment = center;
+
+	if(is_home()) { $pg = "blog"; } elseif(is_archive('case-studies')) { $pg = "case_studies"; } elseif(is_404()) { $pg = "404"; }
+
+	$bannerImagesActive = true;
+	$bannerLandscapeUrl = get_field($pg.'_hero_image', 'option')['sizes']['image-max-16x9'];
+	$bannerPortraitUrl = get_field($pg.'_hero_image', 'option')['sizes']['image-max-9x16'];
+	
+	$bannerHeader = get_field($pg.'_hero_heading', 'option');
+	$bannerCopy = get_field($pg.'_hero_text', 'option');
+
+	$overlayClass = "overlay--dark";
+}
+// ------------------------------------------------------------------------------------
 
 
 // -----------------------------------------------
@@ -43,6 +67,8 @@ if(is_single()) {
 	$thumb_id = get_post_thumbnail_id();
 	$bannerLandscapeUrl = wp_get_attachment_image_src($thumb_id, 'image-max-16x9', true)[0];
 	$bannerPortraitUrl = wp_get_attachment_image_src($thumb_id, 'image-max-9x16', true)[0];
+
+	$overlayClass = "overlay--dark";
 
 	if(get_field('hero_headline')){
 		$bannerHeader = get_field('hero_headline');
@@ -92,9 +118,9 @@ if(is_single()) {
 
 <article class="banner banner--<?php echo $bannerHeight; ?> banner--<?php echo $section; ?> align--<?php echo $bannerAlignment; ?>" id="section-<?php echo $section; ?>">
 	
-	<section class="overlay overlay--<?php echo $bannerAlignment; ?> <?php if(is_single() && !$thumb_id): echo "overlay--primary"; endif; ?>">
+	<section class="overlay overlay--<?php echo $bannerAlignment; ?> <?php if(is_single() && !$thumb_id): echo "overlay--primary"; endif; echo $overlayClass; ?>">
 
-		<div class="<?php if(is_single()): echo "container--blog-hero"; endif; ?>"">
+		<div class="container--blog-hero">
 
 			<?php if( $bannerHeader ) : ?>
 			<h1 class="section__header anim-750" data-animate="fadeInUp-disabled"><?php echo $bannerHeader; ?></h1>
@@ -104,12 +130,17 @@ if(is_single()) {
             <p class="blog-hero__date anim-1000 anim-d-300" data-animate="fadeInUp-disabled"><?php the_time('M j, Y'); ?></p>
             <?php endif; ?>
 
-			<?php if( $bannerCopy ) : echo $bannerCopy;  endif; ?>
+			<?php if( $bannerCopy ) : ?>
+				<div class="banner__copy">
+					<p><?php echo $bannerCopy; ?></p>
+				</div>
+			<?php endif; ?>
 
 			<?php 
 				if( $bannerCtaRepeater ) :
 					foreach( $bannerCtaRepeater as $cta ):
 						$ctaLink = $cta['bfb_cta_link'];
+						$ctaStyle = $cta['bfb_cta_style'];
 						?>
 						<a class="cta cta--<?php echo $bannerCtaSize;?> cta--<?php echo $ctaStyle; ?>" href="<?php echo $ctaLink['url']; ?>" target="<?php echo esc_attr($ctaLink['target'] ? $ctaLink['target'] : '_self'); ?>"><?php echo $ctaLink['title']; ?></a>
 					<?php

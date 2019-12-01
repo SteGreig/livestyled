@@ -58,11 +58,13 @@
 
     &__desc {
         margin-bottom: 30px;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        font-weight: 300;
         line-height: 1.4;
 
         p {
             margin: 0;
+            line-height: 1.4;
         }
     }
 }

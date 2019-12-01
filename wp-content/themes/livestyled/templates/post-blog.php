@@ -22,7 +22,7 @@
         <p class="post--blog__desc">
             <?php echo excerpt('25'); ?>
         </p>
-        <a class="cta cta--red cta--md post--blog__cta" href="<?php the_permalink(); ?>">Read more</a>
+        <a class="cta cta--pink cta--md post--blog__cta" href="<?php the_permalink(); ?>">Read more</a>
     </div>
 
 </li>

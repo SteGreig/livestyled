@@ -4,7 +4,7 @@
 
 body {
 	font-family: $primaryFont, sans-serif;
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 html, body {
@@ -95,9 +95,13 @@ html, body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 35px;
+	padding: 25px;
 
 	@include md-up { padding: 70px; }
+
+	&--none {
+		background: none;
+	}
 
 	&--center {
 		align-items: center;

@@ -30,7 +30,7 @@
             <?php endif; ?>
 
             <?php if(get_sub_field('press_cta')): ?>
-            <a target="_blank" class="cta cta--md cta--red" href="<?php echo get_sub_field('press_cta')['url'] ?>">Read More</a>
+            <a target="_blank" class="cta cta--md cta--pink" href="<?php echo get_sub_field('press_cta')['url'] ?>">Read More</a>
             <?php endif; ?>
 
         </div>

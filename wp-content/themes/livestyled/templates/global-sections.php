@@ -45,6 +45,10 @@
 				elseif( get_row_layout() == 'gallery' ):
 	
 					include( 'pb-gallery.php' );
+
+				elseif( get_row_layout() == 'image_blocks_with_text_overlay' ):
+
+					include( 'pb-image-blocks-with-text-overlay.php' );
 				
 				elseif( get_row_layout() == 'google_map' ):
 	

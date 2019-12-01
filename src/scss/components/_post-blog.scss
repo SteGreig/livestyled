@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------------------------------
 
 .post--blog {
-    box-shadow: 3px 5px 18px rgba($primary, .18);
+    box-shadow: 3px 5px 18px rgba(#000, .1);
     @include flex-direction(column);
     margin-bottom: 30px;
     transition: .4s;
@@ -11,7 +11,7 @@
     overflow: hidden;
 
     &:hover {
-        box-shadow: 3px 0px 22px rgba($primary, .25);
+        box-shadow: 3px 0px 22px rgba(#000, .15);
     }
 
     .grid--mob-side-by-side & {
@@ -75,7 +75,7 @@
     &__date {
         color: $highlightGreen;
         margin: 10px 0 0;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 300;
 
         @include lg-up {
@@ -120,11 +120,11 @@
     }
 
     &__date {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     &__desc {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 

@@ -22,7 +22,7 @@
         <p class="post--case-study__desc">
             <?php echo excerpt('25'); ?>
         </p>
-        <a class="cta cta--red cta--md post--case-study__cta" href="<?php the_permalink(); ?>">View case study</a>
+        <a class="cta cta--pink cta--md post--case-study__cta" href="<?php the_permalink(); ?>">View case study</a>
     </div>
 
 </li>

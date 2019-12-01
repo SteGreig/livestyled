@@ -95,11 +95,11 @@
         text-decoration: none;
         padding: 8px 6px;
         font-weight: 300;
-        font-size: .9rem;
+        font-size: .85rem;
 
         @include lg-up {
             padding: 12px 14px;
-            font-size: 1rem;
+            font-size: .9rem;
         }
     }
 
@@ -112,6 +112,8 @@
         left: 0;
         background-color: lighten($primary, 5%);
         box-shadow: 0 5px 10px rgba(#000, .1);
+        border-radius: 20px;
+        overflow: hidden;
 
         a {
             padding: 10px 20px;
@@ -121,7 +123,7 @@
             border-bottom: 1px solid rgba(#fff, .07);
             white-space: nowrap;
             transition: .3s;
-            font-size: 1rem;
+            font-size: .9rem;
 
             &:hover {
                 background-color: lighten($primary, 3%);

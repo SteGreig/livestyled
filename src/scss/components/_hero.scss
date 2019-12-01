@@ -88,21 +88,18 @@
     }
 
     .section__header {
+        font-size: 2rem;
 
         @include md-up {
-            font-size: 2.6rem;
+            font-size: 2.5rem;
         }
 
         @include lg-up {
-            font-size: 3.2rem;
+            font-size: 2.7rem;
         }
 
         @include xl-up {
-            font-size: 4rem;
-        }
-
-        @include xxxl-up {
-            font-size: 4.3rem;
+            font-size: 3rem;
         }
     }
 
@@ -150,25 +147,32 @@
     .section__header {
         text-transform: none;
         font-weight: 900;
-        font-size: 2.5rem;
+        font-size: 2rem;
 
-        @include sm-up {
-            font-size: 3rem;
+        @include md-up {
+            font-size: 2.5rem;
         }
 
         @include lg-up {
-            font-size: 3.6rem;
+            font-size: 2.7rem;
         }
 
         @include xl-up {
-            font-size: 4rem;
+            font-size: 3rem;
         }
+    }
+
+    .banner__copy {
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 30px;
     }
 }
 
 .blog-hero__date {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-top: 40px;
 }
 
@@ -201,22 +205,19 @@
         visibility: visible;
     }
 
-    @media screen and (min-width: 1400px) {
-        position: fixed;
-    }
-
     &__link {
-        color: $primary;
+        color: #fff;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background-color: $highlightPink;
-        font-size: .9em;
+        border: 3px solid #fff;
+        font-size: .85em;
         margin-top: 20px;
         transition: .3s;
 
         &:hover {
-            background-color: darken($highlightPink, 4%);
+            color: $highlightGreen;
+            border-color: $highlightGreen;
         }
     }
     

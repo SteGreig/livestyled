@@ -44,7 +44,7 @@
 
 .author__name {
     color: $highlightPink;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     margin: 10px 0 20px;
 
     @include md-up {
@@ -55,10 +55,11 @@
 .author__job-title {
     color: $highlightGreen;
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
 }
 
 .author__description {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }

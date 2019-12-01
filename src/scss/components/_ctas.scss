@@ -26,30 +26,30 @@
 	}
 
 	&--sm {	
-		@include font-size(10, 14);
-		
+		font-size: .85rem;
+		line-height: 1.4;
 		padding: 8px 20px;
 	
 	}
 
 	&--md {
-		@include font-size(12, 16);
-		
+		font-size: 1rem;
+		line-height: 1.6;
 		padding: 12px 30px; 
 	
 	}
 	
 	&--lg { 
-		@include font-size(14, 18);
-		
+		font-size: 1.2rem;
+		line-height: 1.8;
 		padding: 15px 40px;
 		border-radius: 40px;
 		
 	}
 
 	&--compare { 
-		@include font-size(14, 18);
-		
+		font-size: 1.2rem;
+		line-height: 1.8;
 		background: $Crimson;
 		color: $White;
 		padding: 15px 40px;
@@ -66,14 +66,14 @@
 		color: $White;
 	}
 
-	&--light-blue {
+	&--green {
 		background-color: $highlightGreen;
 		color: $White;
 	}
 
 	&--ghost {
 		background-color: transparent;
-		border: 1px solid $highlightPink;
+		border: 2px solid $highlightPink;
 		color: $highlightPink;
 
 		&.cta--white {
@@ -86,7 +86,7 @@
 			color: $primary;
 		}
 
-		&.cta--light-blue {
+		&.cta--green {
 			border-color: $highlightGreen;
 			color: $highlightGreen;
 		}

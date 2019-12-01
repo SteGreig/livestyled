@@ -9,7 +9,7 @@ function GlobalSetCookie(cname, cvalue, exdays) {
 
 // Sticky Header
 $(document).scroll(function () {
-	if ($(this).scrollTop() > 0) {
+	if ($(this).scrollTop() > 70) {
 		$('.header').addClass('header--sticky');
 	} else {
 		$('.header').removeClass('header--sticky');

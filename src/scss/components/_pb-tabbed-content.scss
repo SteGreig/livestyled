@@ -58,12 +58,12 @@
     }
 
     &__label {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 650;
         margin: auto;
 
         @include lg-up {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -81,7 +81,11 @@
         border-radius: 20px;
         padding: 50px 20px 60px;
         display: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
+
+        p {
+            line-height: 1.4;
+        }
 
         &.active {
             display: block;
@@ -97,11 +101,11 @@
         margin: 0 auto;
 
         h2 {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             margin-top: 0;
 
             @include md-up {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
         }
 

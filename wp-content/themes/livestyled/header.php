@@ -38,11 +38,9 @@
 	?>
 
 	<header class="header flexbox align-items-center">
-		<?php if(get_field('logo','option')): ?>
 			<a class="site-logo" href="<?php echo get_site_url(); ?>">
 				<img class="site-logo__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo get_bloginfo(); ?>">
 			</a>
-		<?php endif; ?>
 
 		<nav class="desktop-nav">
 			<?php
@@ -55,7 +53,7 @@
 			?>
 		</nav>
 
-		<a class="cta cta--ghost cta--red cta--sm header__contact-cta" href="<?php echo get_page_link(195); ?>">Contact Us</a>
+		<a class="cta cta--ghost cta--white cta--ghost cta--sm header__contact-cta" href="<?php echo get_page_link(195); ?>">Contact Us</a>
 
 		<button class="mob-nav-toggle">
 			<?php icon('bars'); ?>

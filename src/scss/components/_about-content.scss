@@ -9,11 +9,11 @@
 
     .section__header {
         @include lg-up {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
 
         @include xl-up {
-            font-size: 3.9rem;
+            font-size: 3.4rem;
         }
     }
 }

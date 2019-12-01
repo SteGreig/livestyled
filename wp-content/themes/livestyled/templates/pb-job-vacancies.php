@@ -22,7 +22,7 @@
             <?php endif; ?>
 
             <?php if(get_sub_field('job_spec')): ?>
-            <a target="_blank" class="cta cta--md cta--red" href="<?php echo get_sub_field('job_spec')['url'] ?>">Job Spec</a>
+            <a target="_blank" class="cta cta--md cta--pink" href="<?php echo get_sub_field('job_spec')['url'] ?>">Job Spec</a>
             <?php endif; ?>
 
         </div>

@@ -23,7 +23,7 @@
 
     &__nav-item {
         margin: 0 20px;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1;
         position: relative;
         cursor: pointer;
@@ -41,7 +41,7 @@
         &.active {
             color: $highlightGreen;
             font-weight: 900;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
 
             &:before {
                 content: "";
@@ -109,10 +109,10 @@
 
     &__title {
         color: $highlightGreen;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
 
         @include xl-up {
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
     }
 
@@ -120,7 +120,7 @@
         max-width: 600px;
 
         @include xl-up {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 300;
         }
     }
@@ -162,7 +162,7 @@
     }
 
     &__stat-number {
-        font-size: 3rem;
+        font-size: 2.8rem;
         font-weight: 900;
         margin: 0;
 
@@ -177,12 +177,12 @@
 
     &__stat-text {
         margin: 0;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.3;
 
         @include lg-up {
             width: 55%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         @include xl-up {

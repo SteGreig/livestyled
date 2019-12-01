@@ -24,24 +24,7 @@
 	$sectionCtas = get_sub_field( 'ci_ctas' );
 	$sectionCtaSize = $sectionCtas['ci_cta_size'];
 	$sectionCtaRepeater = $sectionCtas['ci_ctas_repeater'];
-
-
-// ------------------------------------------------------------------------------------
-// For main Blog page
-// ------------------------------------------------------------------------------------
-if(is_home() || is_archive('case-studies') || is_404()) {
-	$section = 1;
-	$sectionAlignment = "right";
-	$sectionTheme = "primary";
-
-	if(is_home()) { $pg = "blog"; } elseif(is_archive('case-studies')) { $pg = "case_studies"; } elseif(is_404()) { $pg = "404"; }
 	
-	$sectionImage = get_field($pg.'_hero_image', 'option')['url'];
-	
-	$sectionHeader = get_field($pg.'_hero_heading', 'option');
-	$sectionCopy = get_field($pg.'_hero_text', 'option');
-}
-// ------------------------------------------------------------------------------------
 ?>
 
 

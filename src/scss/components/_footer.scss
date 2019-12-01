@@ -7,7 +7,7 @@
     color: #c5c4ce;
     @include flex-direction(column);
     text-align: center;
-    font-size: 1rem;
+    font-size: .9rem;
 
     @include md-up {
         @include flex-direction(row);
