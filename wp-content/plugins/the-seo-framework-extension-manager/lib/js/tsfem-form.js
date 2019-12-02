@@ -24,34 +24,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-// ==ClosureCompiler==
-// @compilation_level SIMPLE_OPTIMIZATIONS
-// @debug false
-// @use_types_for_optimization false
-// @disable_property_renaming true
-// @extra_annotations access
-// @language ECMASCRIPT6_STRICT
-// @language_out ECMASCRIPT6_STRICT
-// @output_file_name tsfem-form.min.js
-// @externs_url https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/jquery-1.9.js
-// @externs_url http://testmijnphp7.nl/wp-content/plugins/the-seo-framework-extension-manager/lib/js/externs/tsfem.externs.js
-// @externs_url http://testmijnphp7.nl/wp-content/plugins/the-seo-framework-extension-manager/lib/js/externs/tsfem-form.externs.js
-// ==/ClosureCompiler==
-// http://closure-compiler.appspot.com/home
-//
-// These don't work:
-// // @use_types_for_optimization false
-// // @disable_property_renaming true
-// // @extra_annotations access
-//
-// x.dataset properties are rewritten, and I have yet to find a way to bypass that.
-//
-// Therefore, this file is annotated with SIMPLE_OPTIMIZATIONS.
-// This means all "access private" methods are now "access public", regardless.
-//
-// We don't want to use homebrew closure-compiler (i.e. local command line) as it defeats the purpose of open source.
-// Because, that would mean that users can't replicate the file and test its integrity.
-
 'use strict';
 
 /**
@@ -155,7 +127,8 @@ window.tsfemForm = {
 		tsfemForm.prepareItItems( $items );
 		tsfemForm.prepareCollapseItems();
 
-		let itBuffer = 0, itTimeout = 3000,
+		let itBuffer = 0,
+			itTimeout = 1500,
 			vBar, vBarS, vBarTimeout, vBarWidth = 0, vBuffer = 0,
 			vBarSmoothness = 2,
 			vBarSuperSmooth = true,
@@ -487,7 +460,7 @@ window.tsfemForm = {
 			buttonWrap.dataset.geoApiIsButtonWrap = 1;
 			buttonWrap.style.opacity = 0;
 			let button = document.createElement( 'button' );
-			button.className = 'tsfem-button-primary tsfem-button-green tsfem-button-cloud';
+			button.className = 'tsfem-button-primary tsfem-button-primary-bright tsfem-button-cloud';
 			button.innerHTML = tsfemForm.i18n['validate'];
 			button.type = 'button';
 			buttonWrap.appendChild( button );
@@ -1928,7 +1901,7 @@ window.tsfemForm = {
 		let $forms = jQuery( 'form.tsfem-form' );
 
 		$forms.each( ( i, element ) => {
-			jQuery( document.querySelector( '[type=submit][form="' + element.id + '"]' ) ).attr( 'onclick', 'tsfemForm.saveInput( event )' );
+			jQuery( document.querySelectorAll( '[type=submit][form="' + element.id + '"]' ) ).attr( 'onclick', 'tsfemForm.saveInput( event )' );
 		} );
 	},
 
@@ -2010,22 +1983,27 @@ window.tsfemForm = {
 				$checkbox = $header.find( '.tsfem-form-collapse-checkbox' ).first();
 
 				let scrollToTimeout;
-				const scrollTo = function( $to, $wrap ) {
+				const scrollTo = function( $to ) {
 					//= Let the tooltip be painted first.
 					clearTimeout( scrollToTimeout );
 					scrollToTimeout = setTimeout( function() {
-						/**
-						 * We require the current scrollTop in this calculation
-						 * as the $to offset changes based on its position.
-						 *
-						 * We grab $wrap.position.top to create a nice relatable
-						 * offset. It isn't to be trusted, but in this context
-						 * it will always work.
-						 */
-						let _to = ( $to.offset().top + $wrap.prop( 'scrollTop' ) ) - $wrap.offset().top - $wrap.position().top;
+						let _scrollTop    = document.documentElement.scrollTop,
+							_clientHeight = document.documentElement.clientHeight,
+							_to           = $to.offset().top,
+							/* Most eyes focus on 1/3th top of screen */
+							_offSet       = jQuery( '.tsfem-sticky-top' ).height() + ( _clientHeight * 1/3 ),
+							_doScroll     = false;
 
-						if ( $wrap.prop( 'scrollHeight' ) > $wrap.prop( 'clientHeight' ) ) {
-							$wrap.animate( { 'scrollTop' : _to }, 500 );
+						if ( _to - _offSet < ( _scrollTop ) ) {
+							// Scroll up.
+							_doScroll = true;
+						} else if ( _to + _offSet > ( _clientHeight + _scrollTop ) ) {
+							// Scroll down.
+							_doScroll = true;
+						}
+
+						if ( _doScroll ) {
+							jQuery( document.documentElement ).animate( { 'scrollTop' : _to - _offSet }, 500 );
 						}
 					}, 50 );
 				}
@@ -2040,8 +2018,7 @@ window.tsfemForm = {
 
 				//= Create tooltip, scroll to it, add tooltip listeners.
 				tsfTT.doTooltip( void 0, $label, notification );
-				scrollTo( $label, $label.closest( '.tsfem-pane-inner-wrap' ) );
-				//scrollTo( tsfem.getTooltip( $label ), $label.closest( '.tsfem-pane-inner-wrap' ) );
+				scrollTo( $label );
 				$checkbox.off( 'change.tsfemForm.removeToolTip' );
 				$checkbox.on( 'change.tsfemForm.removeToolTip', removeToolTip );
 			}

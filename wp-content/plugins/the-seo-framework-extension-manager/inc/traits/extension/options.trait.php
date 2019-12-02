@@ -41,7 +41,7 @@ final class Extensions_Options_Cache {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param array $options
+	 * @var array $options
 	 */
 	private static $options = null;
 
@@ -82,11 +82,11 @@ final class Extensions_Options_Cache {
 	 * @since 1.0.0
 	 * @access private
 	 *
-	 * @param string|int $index The option index that has to be changed.
+	 * @param string|int $index       The option index that has to be changed.
 	 * @param null|array $new_options The new options to set.
-	 *        Should not have changed options from outside the current extension's scope.
-	 * @param bool $delete If $new_options aren't set, but this is true, then
-	 *        it will delete the current options $index from cache.
+	 *                                Should not have changed options from outside the current extension's scope.
+	 * @param bool       $delete      If $new_options aren't set, but this is true, then
+	 *                                it will delete the current options $index from cache.
 	 * @return array The current extension options.
 	 */
 	public static function _set_options_cache( $index = '', $new_options = null, $delete = false ) {
@@ -122,7 +122,7 @@ final class Stale_Extensions_Options_Cache {
 	 *
 	 * @since 1.3.0
 	 *
-	 * @param array $options
+	 * @var array $options
 	 */
 	private static $options = null;
 
@@ -163,11 +163,11 @@ final class Stale_Extensions_Options_Cache {
 	 * @since 1.3.0
 	 * @access private
 	 *
-	 * @param string|int $index The option index that has to be changed.
+	 * @param string|int $index       The option index that has to be changed.
 	 * @param null|array $new_options The new options to set.
-	 *        Should not have changed options from outside the current extension's scope.
-	 * @param bool $delete If $new_options aren't set, but this is true, then
-	 *        it will delete the current options $index from cache.
+	 *                                Should not have changed options from outside the current extension's scope.
+	 * @param bool       $delete      If $new_options aren't set, but this is true, then
+	 *                                it will delete the current options $index from cache.
 	 * @return array The current extension options.
 	 */
 	public static function _set_options_cache( $index = '', $new_options = null, $delete = false ) {
@@ -199,9 +199,10 @@ trait Extension_Options {
 	 * @NOTE: Always set this directly in the constructor of the class.
 	 *        Traits do not share class properties and thus properties hold their
 	 *        value as if it were its user's class.
+	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $o_index The current extension settings base index field.
+	 * @var string $o_index The current extension settings base index field.
 	 */
 	protected $o_index = '';
 
@@ -210,9 +211,10 @@ trait Extension_Options {
 	 *
 	 * If option key's value is not null, it will fall back to set option when
 	 * $this->get_option()'s second parameter is not null either.
+	 *
 	 * @since 1.3.0
 	 *
-	 * @param array $o_defaults The default options.
+	 * @var array $o_defaults The default options.
 	 */
 	protected $o_defaults = [];
 
@@ -221,80 +223,12 @@ trait Extension_Options {
 	 *
 	 * If option key's value is not null, it will fall back to set option when
 	 * $this->get_option()'s second parameter is not null either.
+	 *
 	 * @since 1.3.0
 	 *
-	 * @param array $o_stale_defaults The default options.
+	 * @var array $o_stale_defaults The default options.
 	 */
 	protected $o_stale_defaults = [];
-
-	/**
-	 * Loops through multidimensional keys and values to find the corresponding one.
-	 *
-	 * Expected not to go beyond 10 key depth.
-	 * CAUTION: 2nd parameter is passed by reference and it will be annihilated.
-	 *
-	 * @since 1.3.0
-	 *
-	 * @param array|string $keys  The keys that collapse with $value. For performance
-	 *                            benefits, the last value should be a string.
-	 * @param array|string $value The values that might contain $keys' value.
-	 *                            Passed by reference for huge performance improvement.
-	 * @return mixed|null Null if not found. Value otherwise.
-	 */
-	final protected function get_mda_value( $keys, &$value ) {
-
-		//= Because it's cast to array, the return will always be inside this loop.
-		foreach ( (array) $keys as $k => $v ) {
-			if ( is_array( $v ) ) {
-				return isset( $value[ $k ] ) ? $this->get_mda_value( $v, $value[ $k ] ) : null;
-			} else {
-				if ( $k ) {
-					return isset( $value[ $k ][ $v ] ) ? $value[ $k ][ $v ] : null;
-				}
-
-				return isset( $value[ $v ] ) ? $value[ $v ] : null;
-			}
-		}
-	}
-
-	/**
-	 * Converts a single or sequential|associative array into a multidimensional array.
-	 *
-	 * satoma: "Single Array to Multidimensional Array"
-	 *
-	 * Example: '[ 0 => a, 1 => b, 3 => c ]';
-	 * Becomes: [ a => [ b => [ c ] ];
-	 *
-	 * This function can also be found in class \TSF_Extension_Manager\Core.
-	 *
-	 * @NOTE Do not pass multidimensional arrays, as they will cause PHP errors.
-	 *       Their values will be used as keys. Arrays can't be keys.
-	 *
-	 * @since 1.3.0
-	 * @staticvar array $_b Maintains iteration and depth.
-	 *
-	 * @param array $a The single dimensional array.
-	 * @return array Multidimensional array, where the values are the dimensional keys.
-	 */
-	final protected function satoma( array $a ) {
-
-		static $_b;
-
-		$_b = $a;
-
-		if ( $_b ) {
-			$last = array_shift( $a );
-
-			if ( $a ) {
-				$r = [];
-				$r[ $last ] = $this->satoma( $a );
-			} else {
-				$r = $last;
-			}
-		}
-
-		return $r;
-	}
 
 	/**
 	 * Returns current extension options array based upon $o_index;
@@ -323,8 +257,8 @@ trait Extension_Options {
 	 * @since 1.0.0
 	 * @since 1.2.0 : Now listens to $this->o_defaults.
 	 *
-	 * @param string $option The Option name.
-	 * @param mixed $default The fallback value if the option doesn't exist. Defaults to $this->o_defaults[ $option ].
+	 * @param string $option  The Option name.
+	 * @param mixed  $default The fallback value if the option doesn't exist. Defaults to $this->o_defaults[ $option ].
 	 * @return mixed The option value if exists. Otherwise $default.
 	 */
 	final protected function get_option( $option, $default = null ) {
@@ -351,28 +285,26 @@ trait Extension_Options {
 	 *
 	 * @since 1.3.0
 	 *
-	 * @param array $key The key that should collapse with the option.
+	 * @param array $keys    The keys that should collapse with the option.
 	 * @param mixed $default The fallback value if the option doesn't exist.
 	 *                       Defaults to the corrolated $this->o_defaults.
 	 * @return mixed The option value if exists. Otherwise $default.
 	 */
-	final protected function get_option_by_mda_key( array $key, $default = null ) {
+	final protected function get_option_by_mda_key( array $keys, $default = null ) {
 
 		//= If the array is sequential, convert it to a multidimensional array.
-		if ( array_values( $key ) === $key ) {
-			$key = $this->satoma( $key );
+		if ( array_values( $keys ) === $keys ) {
+			$keys = FormFieldParser::satoma( $keys );
 		}
 
-		$_ = $this->get_extension_options();
-		$value = $this->get_mda_value( $key, $_ ) ?: $default;
+		$_     = $this->get_extension_options();
+		$value = FormFieldParser::get_mda_value( $keys, $_ ) ?: $default;
 
 		if ( isset( $value ) )
 			return $value;
 
-		if ( isset( $this->o_defaults ) ) {
-			$_ = $this->o_defaults;
-			return $this->get_mda_value( $key, $_ );
-		}
+		if ( isset( $this->o_defaults ) )
+			return FormFieldParser::get_mda_value( $keys, $this->o_defaults );
 
 		return null;
 	}
@@ -383,7 +315,7 @@ trait Extension_Options {
 	 * @since 1.0.0
 	 *
 	 * @param string $option The option name.
-	 * @param mixed $value The option value.
+	 * @param mixed  $value  The option value.
 	 * @return bool True on success or the option is unchanged, false on failure.
 	 */
 	final protected function update_option( $option, $value ) {
@@ -400,7 +332,7 @@ trait Extension_Options {
 		$options[ $option ] = $value;
 
 		//* Prepare options cache.
-		$c_options = Extensions_Options_Cache::_get_options_cache();
+		$c_options                   = Extensions_Options_Cache::_get_options_cache();
 		$c_options[ $this->o_index ] = $options;
 
 		$success = \update_option( TSF_EXTENSION_MANAGER_EXTENSION_OPTIONS, $c_options );
@@ -435,7 +367,7 @@ trait Extension_Options {
 		unset( $options[ $option ] );
 
 		//* Prepare options cache.
-		$c_options = Extensions_Options_Cache::_get_options_cache();
+		$c_options                   = Extensions_Options_Cache::_get_options_cache();
 		$c_options[ $this->o_index ] = $options;
 
 		$success = \update_option( TSF_EXTENSION_MANAGER_EXTENSION_OPTIONS, $c_options );
@@ -509,8 +441,9 @@ trait Extension_Options {
 	 *
 	 * @since 1.3.0
 	 *
-	 * @param string $option The Option name.
-	 * @param mixed $default The fallback value if the option doesn't exist. Defaults to $this->o_stale_defaults[ $option ].
+	 * @param string $option  The Option name.
+	 * @param mixed  $default The fallback value if the option doesn't exist.
+	 *                        Defaults to $this->o_stale_defaults[ $option ].
 	 * @return mixed The option value if exists. Otherwise $default.
 	 */
 	final protected function get_stale_option( $option, $default = null ) {
@@ -537,28 +470,26 @@ trait Extension_Options {
 	 *
 	 * @since 1.3.0
 	 *
-	 * @param array $key The key that should collapse with the option.
+	 * @param array $keys    The keys that should collapse with the option.
 	 * @param mixed $default The fallback value if the option doesn't exist.
 	 *                       Defaults to the corrolated $this->o_stale_defaults.
 	 * @return mixed The option value if exists. Otherwise $default.
 	 */
-	final protected function get_stale_option_by_mda_key( array $key, $default = null ) {
+	final protected function get_stale_option_by_mda_key( array $keys, $default = null ) {
 
 		//= If the array is sequential, convert it to a multidimensional array.
-		if ( array_values( $key ) === $key ) {
-			$key = $this->satoma( $key );
+		if ( array_values( $keys ) === $keys ) {
+			$keys = FormFieldParser::satoma( $keys );
 		}
 
-		$_ = $this->get_stale_extension_options();
-		$value = $this->get_mda_value( $key, $_ ) ?: $default;
+		$_     = $this->get_stale_extension_options();
+		$value = FormFieldParser::get_mda_value( $keys, $_ ) ?: $default;
 
 		if ( isset( $value ) )
 			return $value;
 
-		if ( isset( $this->o_stale_defaults ) ) {
-			$_ = $this->o_stale_defaults;
-			return $this->get_mda_value( $key, $_ );
-		}
+		if ( isset( $this->o_stale_defaults ) )
+			return FormFieldParser::get_mda_value( $keys, $this->o_stale_defaults );
 
 		return null;
 	}
@@ -584,7 +515,7 @@ trait Extension_Options {
 	 * @since 1.3.0
 	 *
 	 * @param string $option The option name.
-	 * @param mixed $value The option value.
+	 * @param mixed  $value  The option value.
 	 * @return bool True on success or the option is unchanged, false on failure.
 	 */
 	final protected function update_stale_option( $option, $value ) {
@@ -601,7 +532,7 @@ trait Extension_Options {
 		$options[ $option ] = $value;
 
 		//* Prepare options cache.
-		$c_options = Stale_Extensions_Options_Cache::_get_options_cache();
+		$c_options                   = Stale_Extensions_Options_Cache::_get_options_cache();
 		$c_options[ $this->o_index ] = $options;
 
 		$success = \update_option( TSF_EXTENSION_MANAGER_EXTENSION_STALE_OPTIONS, $c_options, 'no' );
@@ -636,7 +567,7 @@ trait Extension_Options {
 		unset( $options[ $option ] );
 
 		//* Prepare options cache.
-		$c_options = Stale_Extensions_Options_Cache::_get_options_cache();
+		$c_options                   = Stale_Extensions_Options_Cache::_get_options_cache();
 		$c_options[ $this->o_index ] = $options;
 
 		if ( [] === $c_options ) {

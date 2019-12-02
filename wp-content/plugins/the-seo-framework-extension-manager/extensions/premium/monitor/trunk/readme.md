@@ -3,7 +3,7 @@ Location: https://theseoframework.com/extensions/monitor/
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-This extension keeps track of your website's SEO, optimization, uptime, and statistics.
+This extension keeps track of your website's SEO optimizations and statistics.
 
 ## Overview
 
@@ -114,6 +114,12 @@ If you just initiated a crawl request, you might receive outdated or incorrect d
 ## Changelog
 
 *Because Monitor is a heavily dependent two-part system, these changes are annotated through Extension and API nodes.*
+
+### 1.2.3-beta-5
+
+[tsfep-release time="November 5th, 2019"]
+
+* **Improved:** To honor the new Extension Manager interface, we restyled the non-default items.
 
 ### 1.2.2-beta-5
 

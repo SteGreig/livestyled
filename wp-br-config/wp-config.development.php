@@ -29,3 +29,4 @@ define( 'SAVEQUERIES', true );
 define( 'SCRIPT_DEBUG', false );
 define( 'WP_CACHE', false );
 define( 'WP_AUTO_UPDATE_CORE', false );
+define('DOMAIN_CURRENT_SITE', 'dev.livestyled.com');

@@ -115,6 +115,9 @@ final class InpostGUI {
 
 	/**
 	 * Constructor. Loads all appropriate actions asynchronously.
+	 *
+	 * @TODO consider running "post type supported" calls, instead of relying on failsafes in TSF.
+	 * @see \the_seo_framework()->_init_admin_scripts(); this requires TSF 4.0+ dependency, however.
 	 */
 	private function construct() {
 
@@ -149,13 +152,13 @@ final class InpostGUI {
 				'dashicon' => 'layout',
 				'args'     => [ 'structure' ],
 			],
-			'audit' => [
+			'audit'     => [
 				'name'     => \__( 'Audit', 'the-seo-framework-extension-manager' ),
 				'callback' => [ $this, '_output_tab_content' ],
 				'dashicon' => 'analytics',
 				'args'     => [ 'audit' ],
 			],
-			'advanced' => [
+			'advanced'  => [
 				'name'     => \__( 'Advanced', 'the-seo-framework-extension-manager' ),
 				'callback' => [ $this, '_output_tab_content' ],
 				'dashicon' => 'list-view',
@@ -217,8 +220,8 @@ final class InpostGUI {
 					'locale'      => \get_locale(),
 					'userLocale'  => function_exists( '\\get_user_locale' ) ? \get_user_locale() : \get_locale(),
 					'debug'       => (bool) WP_DEBUG,
-					'rtl'  => (bool) \is_rtl(),
-					'i18n' => [
+					'rtl'         => (bool) \is_rtl(),
+					'i18n'        => [
 						'InvalidResponse' => \esc_html__( 'Received invalid AJAX response.', 'the-seo-framework-extension-manager' ),
 						'UnknownError'    => \esc_html__( 'An unknown error occurred.', 'the-seo-framework-extension-manager' ),
 						'TimeoutError'    => \esc_html__( 'Timeout: Server took too long to respond.', 'the-seo-framework-extension-manager' ),
@@ -328,7 +331,7 @@ final class InpostGUI {
 	 *
 	 * @since 1.5.0
 	 *
-	 * @param array $colors The color CSS.
+	 * @param array $styles The styles, with possible colors.
 	 * @return array $css
 	 */
 	private function get_inline_css( array $styles ) {
@@ -402,7 +405,7 @@ final class InpostGUI {
 	 *
 	 * @since 1.5.0
 	 *
-	 * @param array $templates, single or multi-dimensional : {
+	 * @param array $templates single or multi-dimensional : {
 	 *   'file' => string $file. The full file location,
 	 *   'args' => array $args. Optional,
 	 * }
@@ -461,7 +464,7 @@ final class InpostGUI {
 	 *
 	 * @since 1.5.0
 	 *
-	 * @param int|null $post_id
+	 * @param int|null $post_id The post ID to test.
 	 * @return bool True if user has acces. False otherwise.
 	 */
 	public static function current_user_can_edit_post( $post_id = null ) {
@@ -491,7 +494,8 @@ final class InpostGUI {
 	 * Verifies nonce on POST and writes the class $save_access_state variable.
 	 *
 	 * @since 1.5.0
-	 * @since 2.0.2 : Added \wp_unslash to POST data.
+	 * @since 2.0.2 Added \wp_unslash to POST data.
+	 * @since 2.1.0 Now tests for post revision.
 	 * @access private
 	 *
 	 * @param integer  $post_id Post ID.
@@ -505,14 +509,16 @@ final class InpostGUI {
 		|| ( ! \current_user_can( 'edit_post', $post->ID ) )
 		   ) return;
 
-		static::$save_access_state = 0b0001;
+		static::$save_access_state = TSFEM_INPOST_IS_SECURE;
 
-		if ( ! defined( 'DOING_AUTOSAVE' ) || ! DOING_AUTOSAVE )
-			static::$save_access_state |= 0b0010;
-		if ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX )
-			static::$save_access_state |= 0b0100;
-		if ( ! defined( 'DOING_CRON' ) || ! DOING_CRON )
-			static::$save_access_state |= 0b1000;
+		if ( ! \wp_is_post_autosave( $post ) )
+			static::$save_access_state |= TSFEM_INPOST_NO_AUTOSAVE;
+		if ( ! \wp_doing_ajax() )
+			static::$save_access_state |= TSFEM_INPOST_NO_AJAX;
+		if ( ! \wp_doing_cron() )
+			static::$save_access_state |= TSFEM_INPOST_NO_CRON;
+		if ( ! \wp_is_post_revision( $post ) )
+			static::$save_access_state |= TSFEM_INPOST_NO_REVISION;
 
 		$data = ! empty( $_POST[ static::META_PREFIX ] ) ? \wp_unslash( $_POST[ static::META_PREFIX ] ) : null; // Input var, sanitization OK.
 
@@ -525,12 +531,13 @@ final class InpostGUI {
 		 * @param array|null    $data              The meta data, set through `pm_index` keys.
 		 * @param int (bitwise) $save_access_state The state the save is in.
 		 *    Any combination of : {
-		 *      1 = 0001 : Passed nonce and capability checks. Always set at this point.
-		 *      2 = 0010 : Not doing autosave.
-		 *      4 = 0100 : Not doing AJAX.
-		 *      8 = 1000 : Not doing WP Cron.
+		 *      1  = 00001 : Passed nonce and capability checks. Always set at this point.
+		 *      2  = 00010 : Not doing autosave.
+		 *      4  = 00100 : Not doing AJAX.
+		 *      8  = 01000 : Not doing WP Cron.
+		 *      16 = 10000 : Not creating a post revision.
 		 *      |
-		 *     15 = 1111 : Post is manually published or updated.
+		 *      31 = 11111 : Post is manually and securely published or updated.
 		 *    }
 		 */
 		\do_action_ref_array( 'tsfem_inpostgui_verified_nonce', [ $post, $data, static::$save_access_state ] );
@@ -540,48 +547,49 @@ final class InpostGUI {
 	 * Determines whether POST data can be safely written.
 	 *
 	 * @since 1.5.0
+	 * @since 2.1.0 Now tests for post revision.
 	 *
 	 * @return bool True if user verification passed, and not doing autosave, cron, or ajax.
 	 */
 	public static function can_safely_write() {
-		return ! ( static::$save_access_state ^ 0b1111 );
+		return static::is_state_safe( static::$save_access_state );
+	}
+
+	/**
+	 * Determines whether input state is safe.
+	 *
+	 * @since 2.1.0
+	 *
+	 * @param int $state (bitwise) The state to test.
+	 * @return bool True if user verification passed, and not doing autosave, cron, or ajax.
+	 */
+	public static function is_state_safe( $state ) {
+		return (bool) ( $state & (
+			TSFEM_INPOST_IS_SECURE | TSFEM_INPOST_NO_AUTOSAVE | TSFEM_INPOST_NO_AJAX | TSFEM_INPOST_NO_CRON | TSFEM_INPOST_NO_REVISION
+		) );
 	}
 
 	/**
 	 * Adds registered active tabs to The SEO Framework inpost metabox.
 	 *
 	 * @since 1.5.0
+	 * @since 2.1.0 Removed second parameter.
 	 * @access private
 	 *
-	 * @param array  $tabs  The registered tabs.
-	 * @param string $label The post type label.
+	 * @param array $tabs The registered tabs.
 	 * @return array $tabs The SEO Framework's tabs.
 	 */
-	public function _load_tabs( array $tabs, $label ) {
+	public function _load_tabs( array $tabs ) {
 
 		$registered_tabs = static::$tabs;
 		$active_tab_keys = static::$active_tab_keys;
 
 		foreach ( $registered_tabs as $index => $args ) :
 			empty( $active_tab_keys[ $index ] ) or
-				$tabs[ $index ] = $this->append_type_arg( $args, $label );
+				$tabs[ $index ] = $args;
 		endforeach;
 
 		return $tabs;
-	}
-
-	/**
-	 * Appends post type label argument to the tab arguments.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param array  $tab_args The current tab arguments.
-	 * @param string $label    The post type label.
-	 * @return array The extended tab arguments.
-	 */
-	private function append_type_arg( array $tab_args, $label ) {
-		$tab_args['args'] += [ 'post_type_label' => $label ];
-		return $tab_args;
 	}
 
 	/**
@@ -613,19 +621,21 @@ final class InpostGUI {
 	 * @see \TSF_Extension_Manager\InpostGUI::verify( $secret )
 	 *
 	 * @since 1.5.0
+	 * @since 2.1.0 Enabled entropy to prevent system sleep.
 	 * @uses static::$include_secret
 	 *
 	 * @param string $file The file location.
 	 * @param array  $args The registered view arguments.
 	 */
 	private function output_view( $file, array $args ) {
+
 		foreach ( $args as $_key => $_val )
 			$$_key = $_val;
 
 		unset( $_key, $_val, $args );
 
 		//= Prevent private includes hijacking.
-		static::$include_secret = $_secret = mt_rand() . uniqid();
+		static::$include_secret = $_secret = mt_rand() . uniqid( '', true );
 		include $file;
 		static::$include_secret = null;
 	}
@@ -658,8 +668,8 @@ final class InpostGUI {
 	 * @param string $tab The tab to activate.
 	 *               Either 'structure', 'audit' or 'advanced'.
 	 */
-	public static function activate_tab( $key ) {
-		static::$active_tab_keys[ $key ] = true;
+	public static function activate_tab( $tab ) {
+		static::$active_tab_keys[ $tab ] = true;
 	}
 
 	/**
@@ -669,10 +679,10 @@ final class InpostGUI {
 	 * @see static::activate_tab();
 	 * @uses static::$views
 	 *
-	 * @param string $file The file to include.
-	 * @param array  $args The arguments to pass to the file. Each array index is
-	 *               converted to a respectively named variable.
-	 * @param string $tab  The tab the view is outputted in.
+	 * @param string    $file The file to include.
+	 * @param array     $args The arguments to pass to the file. Each array index is
+	 *                        converted to a respectively named variable.
+	 * @param string    $tab  The tab the view is outputted in.
 	 * @param int|float $priority The priority of the view. A lower value results in an earlier output.
 	 */
 	public static function register_view( $file, array $args = [], $tab = 'advanced', $priority = 10 ) {

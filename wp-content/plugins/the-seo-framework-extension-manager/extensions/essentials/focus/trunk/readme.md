@@ -136,7 +136,7 @@ So, to prevent this from happening, Focus notifies you via this rating.
 
 One of the best ways to be found on a keyword is by placing it in the page URL. So, be sure to include it here.
 
-You can change your page URL right above the content editor.
+You can change your page URL in the sidebar under "Document > Permalink." On some WordPress setups you can find it above the content editor instead.
 
 ## FAQ
 
@@ -152,7 +152,7 @@ The API currently supports English only. Support for other languages will be add
 
 We're currently working on inflection lookups. When it's ready, an update will be sent out.
 
-### "A parsing failure occurred", what does this mean?
+### "A parsing failure occurred." What does this mean?
 
 When the content parser experiences any error, the rater shows this generic message.
 Most likely, your computer may be restraint in processing power in combination with page builders.
@@ -177,7 +177,37 @@ These builders work as intended:
 
 We're working on an update to improve accuracy for the affected page builders.
 
+## Developers
+
+### Filters
+
+Here you can find the available filters for Focus.
+
+#### Set supported post types
+
+```php
+add_filter( 'the_seo_framework_focus_elements', function( $elements ) {
+
+	// Add an overriding (dominating) check for pageTitle.
+	$elements['pageTitle'] = [ '#my-element > input' => 'dominate' ];
+
+	// Add extra (appending) pageContent for parsing.
+	$elements['pageContent'] = [ '#my-element > input' => 'append' ];
+
+	return $elements;
+} );
+```
+
 ## Changelog
+
+### 1.3.1
+
+[tsfep-release time="November 5th, 2019"]
+
+* **Improved:** Addressed Gutenberg 6.4 (WP 5.3) changes (by fixing `wp.data.select( 'core/editor' ).isTyping` deprecation).
+* **Updated:** Removed backward compatibility checks. The extension now requires TSF v4.0 and later.
+* **API changes:**
+	* *June 1st, 2019*: The API has been updated to be more performant and secure. Although unlikely, you may see different dictionary results henceforth.
 
 ### 1.3.0
 

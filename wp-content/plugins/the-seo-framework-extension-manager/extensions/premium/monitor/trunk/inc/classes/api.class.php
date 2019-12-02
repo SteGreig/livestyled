@@ -78,7 +78,7 @@ class Api extends Data {
 		\tsf_extension_manager()->_request_premium_extension_verification_instance( $this, $_instance, $bits );
 		$count = 1;
 		foreach ( \tsf_extension_manager()->_yield_verification_instance( 2, $_instance, $bits ) as $verification ) :
-			$bits = $verification['bits'];
+			$bits      = $verification['bits'];
 			$_instance = $verification['instance'];
 
 			switch ( $count ) :
@@ -161,7 +161,7 @@ class Api extends Data {
 		}
 
 		$success = [];
-		$success[] = $this->update_option( 'monitor_expected_domain', str_ireplace( [ 'http://', 'https://' ], '', \esc_url( \get_home_url(), [ 'http', 'https' ] ) ) );
+		$success[] = $this->update_option( 'monitor_expected_domain', str_ireplace( [ 'https://', 'http://' ], '', \esc_url( \get_home_url(), [ 'https', 'http' ] ) ) );
 		$success[] = $this->update_option( 'connected', 'yes' );
 
 		if ( in_array( false, $success, true ) ) {

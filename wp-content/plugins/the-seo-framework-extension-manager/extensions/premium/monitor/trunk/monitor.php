@@ -5,10 +5,10 @@
 namespace TSF_Extension_Manager\Extension\Monitor;
 
 /**
- * Extension Name: Monitor - *beta*
+ * Extension Name: Monitor - *β*
  * Extension URI: https://theseoframework.com/extensions/monitor/
- * Extension Description: The Monitor extension keeps track of your website's SEO, optimization, uptime and statistics.
- * Extension Version: 1.2.2-***β-5***
+ * Extension Description: The Monitor extension keeps track of your website's SEO optimizations and statistics.
+ * Extension Version: 1.2.3-***β-5***
  * Extension Author: Sybre Waaijer
  * Extension Author URI: https://cyberwire.nl/
  * Extension License: GPLv3

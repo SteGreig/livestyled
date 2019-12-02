@@ -49,6 +49,16 @@ define( 'WP_POST_REVISIONS', 2 );
 define( 'EMPTY_TRASH_DAYS', 10 );
 define( 'AUTOSAVE_INTERVAL', 160 );
 
+
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

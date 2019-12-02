@@ -299,7 +299,7 @@ window.tsfem_e_focus_inpost = function( $ ) {
 
 		/**
 		 * @param {(boolean|object<number,string>|array)} inflections
-		 * @param {boolean|object<number,string>|array)} synonyms
+		 * @param {(boolean|object<number,string>|array)} synonyms
 		 */
 		let inflections = activeWords( idPrefix ).get( 'inflections' ),
 			synonyms    = activeWords( idPrefix ).get( 'synonyms' );
@@ -606,7 +606,7 @@ window.tsfem_e_focus_inpost = function( $ ) {
 					'post_ID' : tsfem_inpost.postID,
 					'args' : {
 						'keyword': keyword,
-						'language': 'en' // language || 'en', // TODO
+						'language': 'en' // language || 'en' // TODO this accepts: 'en', and a few other languages. No 'en-us', 'en-gb', etc. however.
 					},
 				},
 				timeout: 15000,
@@ -814,7 +814,7 @@ window.tsfem_e_focus_inpost = function( $ ) {
 					'post_ID' : tsfem_inpost.postID,
 					'args' : {
 						'form': form,
-						'language': 'en' // language || 'en', // TODO
+						'language': 'en' // language || 'en' // TODO this accepts: 'en', 'en-gb', 'en-us', but nothing else...!
 					},
 				},
 				timeout: 15000,
@@ -2013,7 +2013,7 @@ window.tsfem_e_focus_inpost = function( $ ) {
 
 		if ( ! holder ) return;
 
-		const getId = type => `tsfem-focus-gbc-${type}`;
+		const getId      = type => `tsfem-focus-gbc-${type}`;
 		const getElement = type => document.getElementById( getId( type ) );
 
 		/**
@@ -2089,7 +2089,15 @@ window.tsfem_e_focus_inpost = function( $ ) {
 		}
 		$document.on( 'tsf-updated-gutenberg-content', ( event, content ) => {
 			let debouncer = lodash.debounce( updateContent, 500 );
-			if ( wp.data.select( 'core/editor' ).isTyping() ) {
+
+			let isTyping = false,
+				editor   = wp.data.select( 'core/block-editor' ) || wp.data.select( 'core/editor' );
+
+			if ( 'function' === typeof editor.isTyping ) {
+				isTyping = editor.isTyping();
+			}
+
+			if ( isTyping ) {
 				// Don't process and lag when typing, just show that the data is invalidated.
 				setAllRatersOf( 'pageContent', 'unknown' );
 				debouncer( content );
