@@ -1560,7 +1560,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "30",
+                                        "width": "20",
                                         "class": "",
                                         "id": ""
                                     },
@@ -1584,7 +1584,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "30",
+                                        "width": "20",
                                         "class": "",
                                         "id": ""
                                     },
@@ -1593,7 +1593,34 @@
                                         "yes": "Yes"
                                     },
                                     "default_value": [
-                                        "no"
+                                        "yes"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5de526a507650",
+                                    "label": "Image Size",
+                                    "name": "cb_image_size",
+                                    "type": "select",
+                                    "instructions": "'Tall' is ideal for phone images",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "standard": "Standard",
+                                        "tall": "Tall"
+                                    },
+                                    "default_value": [
+                                        "standard"
                                     ],
                                     "allow_null": 0,
                                     "multiple": 0,
@@ -2540,5 +2567,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1575235070
+    "modified": 1575299005
 }

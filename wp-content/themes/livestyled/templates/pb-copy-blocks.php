@@ -53,6 +53,7 @@
 				$blockImageArray = $block['cb_block_image'];
 				$blockImageUrl = $blockImageArray['sizes']['large'];
 				$blockImagePadding = $block['cb_image_padding'];
+				$blockImageSize = $block['cb_image_size'];
 				$blockHeader = $block['cb_block_header'];
 				$blockCopy = $block['cb_block_content'];
 				$blockCta = $block['cb_cta'];
@@ -66,7 +67,7 @@
 				<<?php echo $el; ?> href="<?php echo $blockCtaLink['url']; ?>" class="block block--margins copy-block flexbox copy-block--mob-<?php echo $sectionMobLayout; ?> theme--<?php echo $blockTheme; ?> align--<?php echo $blockAlignment; ?> <?php if($blockTheme != "none" && $sectionAlignment != "full-width"): echo "copy-block--boxed"; endif; ?> <?php if($sectionAlignment == 'center'): echo "align-items-center"; elseif($sectionAlignment == 'full-width'): echo "copy-block--full align-items-center"; endif; ?> <?php if(!$blockCtaLink || $sectionAlignment == "full-width" || $blockTheme != "none"): echo "no-hover"; endif; ?> <?php if($blockImagePadding == "no" && $blockImageUrl != ""): echo "copy-block--no-padding"; endif; ?> anim-750 anim-d-<?php echo $n*2; ?>00" data-animate="fadeInUp">
 
 					<?php if($blockImageUrl): ?>
-					<div class="copy-block__img-wrap flexbox align-items-center">
+					<div class="copy-block__img-wrap flexbox align-items-center <?php if($blockImageSize == "tall"): echo "copy-block__img-wrap--tall"; endif; ?>">
 						<img class="rwd lazyload" data-src="<?php echo $blockImageUrl;?>" alt="">
 					</div>
 					<?php endif; ?>

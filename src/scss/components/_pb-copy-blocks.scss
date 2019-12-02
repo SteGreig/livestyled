@@ -101,6 +101,14 @@
         }
     }
 
+    &__img-wrap--tall {
+        height: 250px;
+
+        @include sm-up {
+            height: 350px;
+        }
+    }
+
     img {
         padding: 0 15px;
         -webkit-filter: drop-shadow(2px 7px 5px rgba(0,0,0,.1));
