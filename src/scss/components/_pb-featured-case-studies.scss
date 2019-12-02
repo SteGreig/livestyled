@@ -194,53 +194,57 @@
         position: relative;
         z-index: 10;
         @include order(1);
+        margin: 0 auto;
+        height: 350px;
+        /*
         width: 180px;
         height: 310px;
-        margin: 0 auto;
         perspective: 1000px;
         perspective-origin: 150% -130%;
+        */
 
         @include md-up {
             @include order(0);
         }
 
         @include lg-up {
+            height: 450px;
+            transform: translateX(35%) translateY(8%);
+            /*
             transform: translateX(30%) translateY(-20px);
             width: 280px;
             height: 420px;
             perspective-origin: 0 0;
             perspective: 1000px;
+            */
         }
 
         &:before {
             content: "";
             position: absolute;
-            top: 55%;
-            left: 46%;
+            top: 50%;
+            left: 50%;
             transform: translateX(-50%) translateY(-50%);
             width: 224px;
-            height: 235px;
+            height: 224px;
             border-radius: 50%;
             background: $highlightGreen;
 
             @include lg-up {
-                top: 60%;
-                left: 42%;
-                width: 125%;
-                height: 86%;
+                width: 324px;
+                height: 324px;
             }
         }
     }
 
     &__img {
-        transform: rotateX(75deg) rotateY(20deg) rotateZ(-40deg);
+        //transform: rotateX(75deg) rotateY(20deg) rotateZ(-40deg);
         height: 100%;
-        width: 100%;
-        -webkit-filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.3));
-        filter: drop-shadow(-15px 10px 15px rgba(0,0,0,.3));
+        -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.15));
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.15));
 
         @include lg-up {
-            transform: rotateX(45deg) rotateY(20deg) rotateZ(-25deg);
+            //transform: rotateX(45deg) rotateY(20deg) rotateZ(-25deg);
 
             /*
             &:hover {
@@ -250,7 +254,7 @@
     }
 
     &__cta {
-        margin-top: 60px;
+        margin-top: 40px;
         @include order(2)
 
         @include md-up {
