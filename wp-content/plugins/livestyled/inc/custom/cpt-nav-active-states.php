@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------------------
 function wpdev_nav_classes( $classes, $item ) {
     if( ( is_post_type_archive( 'case-studies' ) || is_singular( 'case-studies' ) || is_tax('case-study-category') )
-        && $item->title == 'Blog' ){
+        && ($item->title == 'Blog' || $item->title == 'Learn') ){
         $classes = array_diff( $classes, array( 'menu-item--active' ) );
     }
     return $classes;

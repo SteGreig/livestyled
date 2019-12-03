@@ -37,6 +37,30 @@
 		//get_template_part( 'templates/global-header' );
 	?>
 
+	<?php /*
+	// If we are on UK site and user's IP is in the US
+	if(get_bloginfo('name') == "Realife Tech"): ?>
+		<?php // IF US IP ADDRESS echo do_shortcode('[{ip:ipAddress}]'); ?>
+		<div class="lang-selector">
+			<select name="" id="">
+				<option value="<?php echo get_site_url(); ?>/us/?noredirect=true">US</option>
+				<option value="<?php echo get_site_url(); ?>/?noredirect=true">UK</option>
+			</select>
+		</div>
+	<?php endif; ?>
+
+	<?php
+	// If we are on US site and user's IP is not in the US
+	if(get_bloginfo('name') == "Realife Tech US"): ?>
+		<?php // IF US IP ADDRESS echo do_shortcode('[{ip:ipAddress}]'); ?>
+		<div class="lang-selector">
+			<select name="" id="">
+				<option value="<?php echo get_site_url(); ?>/?noredirect=true">UK</option>
+				<option value="<?php echo get_site_url(); ?>/us/?noredirect=true">US</option>
+			</select>
+		</div>
+	<?php endif; */ ?>
+
 	<header class="header flexbox align-items-center">
 			<a class="site-logo" href="<?php echo get_site_url(); ?>">
 				<img class="site-logo__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="<?php echo get_bloginfo(); ?>">

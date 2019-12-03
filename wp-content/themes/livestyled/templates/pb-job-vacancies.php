@@ -2,6 +2,7 @@
 
     <h3 class="section__header">Open Roles</h3>
 
+    <?php /*
     <section class="media-blocks-wrap media-blocks-wrap--scrollable tabs flexbox hide-scrollbar scroll-touch drag-scroll">
 
         <?php $n=0; while(have_rows('vacancies')): the_row(); $n++; ?>
@@ -29,6 +30,32 @@
 
         <?php endwhile; ?>
 
-	</section>
+    </section>
+    */ ?>
+    
+    <div style="margin-top:30px" id="recruitee-careers"></div><script type="text/javascript"> var rtscript = document.createElement('script');  rtscript.type = 'text/javascript';  rtscript.onload = function() { var widget = new RTWidget({
+    "companies": [
+    43564
+    ],
+    "detailsMode": "popup",
+    "language": "en",
+    "departmentsFilter": [],
+    "themeVars": {
+    "primary": "#1999e3",
+    "secondary": "#000",
+    "text": "#5c6f78",
+    "textDark": "#37474f",
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, \"Lucida Grande\", sans-serif;",
+    "baseFontSize": "16px"
+    },
+    "flags": {
+    "showLocation": true,
+    "showCountry": true,
+    "showCity": true,
+    "groupByLocation": false,
+    "groupByDepartment": true,
+    "groupByCompany": false
+    }
+    }) }; rtscript.src = 'https://d10zminp1cyta8.cloudfront.net/widget.js'; document.body.appendChild(rtscript);</script>
 
 </article>
