@@ -3,12 +3,12 @@
 // --------------------------------------------------------------------------------------------------
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: 15px;
-    transition: .3s;
+    transition: background .3s;
     z-index: 1000;
 
     @include lg-up {
@@ -16,7 +16,13 @@
     }
 
     &--sticky {
+        position: fixed;
         background-color: $primary;
+        position: fixed;
+    }
+
+    &--sticky-0 {
+        top: 0 !important;
     }
 
     &__contact-cta {
