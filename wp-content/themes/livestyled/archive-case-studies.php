@@ -15,7 +15,7 @@ get_template_part( 'templates/pb-banner-full-bleed' );
 	foreach ( $terms as $term ):
 		if($term->name != "Uncategorised"): ?>
 
-		<section class="container">
+		<section class="case-studies-list-wrap">
 
 			<h2 class="section__header section__header--normal-case"><?php echo $term->name; ?></h2>
 
@@ -34,14 +34,18 @@ get_template_part( 'templates/pb-banner-full-bleed' );
 			$posts = get_posts($args);
 			?>
 
-			<ul class="post-list post-list--sectioned flexbox flex-wrap">
-				<?php $n=0; foreach($posts as $post):
-					if ($n++ == 2) break;
+			<ul class="case-studies-list case-studies-list--sectioned flexbox hide-scrollbar scroll-touch carousel">
+				<?php foreach($posts as $post):
 					get_template_part( 'templates/post-case-study' );
 				endforeach; ?>
 			</ul>
 
+			<button class="carousel__arrow carousel__arrow--left"><?php icon('angle-left'); ?></button>
+			<button class="carousel__arrow carousel__arrow--right"><?php icon('angle-right'); ?></button>
+
+			<?php /*
 			<a href="<?php echo get_term_link($term->term_id); ?>">More from this category</a>
+			*/ ?>
 
 		</section>
 

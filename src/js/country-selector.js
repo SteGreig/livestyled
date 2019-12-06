@@ -10,9 +10,8 @@ $('.country-selector .continue').click(function() {
 if($('.country-selector').length > 0) {
   var origin = window.location.origin;
   var path = window.location.pathname;
-  var usPath = path.replace(path, '/us'+path);
-  console.log(usPath);
-  $('.country-selector .us').val(origin+usPath+"?noredirect=true");
+  var path = path.replace('/us', '');
+  $('.country-selector .us').val(origin+"/us"+path+"?noredirect=true");
   $('.country-selector .uk').val(origin+path+"?noredirect=true");
 }
 

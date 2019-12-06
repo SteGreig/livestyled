@@ -21,6 +21,7 @@
 	include( plugin_dir_path(__FILE__) . 'inc/custom/limit-content-length.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/blog-ajax.php' );
 	include( plugin_dir_path(__FILE__) . 'inc/custom/cpt-nav-active-states.php' );
+	include( plugin_dir_path(__FILE__) . 'inc/custom/ip2-location-get-country-code.php' );
 
 
 	

@@ -5,22 +5,23 @@
 	}
 
   //$location = array("countryCode"=>"US");
+  //echo "<p>test".ip2loc_get_country_code()."</p>";
 ?>
 
-<?php if( (get_bloginfo('name') == "Realife Tech" && $location['countryCode'] == "US") || (get_bloginfo('name') == "Realife Tech US" && $location['countryCode'] != "US") ): ?>
+<?php // if( (get_bloginfo('name') == "Realife Tech" && ip2loc_get_country_code() == "US") || (get_bloginfo('name') == "Realife Tech US" && ip2loc_get_country_code() != "US") ): ?>
 
   <div class="country-selector flexbox justify-content-center">
 
     <p class="txt">Choose another country to see content specific to your location</p>
 
-    <?php if(get_bloginfo('name') == "Realife Tech" && $location['countryCode'] == "US"): ?>
+    <?php if(/*get_bloginfo('name') == "Realife Tech" &&*/ ip2loc_get_country_code() == "US"): ?>
 
       <select name="" id="">
         <option class="us" value="<?php echo get_site_url(); ?>/us/?noredirect=true">United States</option>
         <option class="uk" value="<?php echo get_site_url(); ?>/?noredirect=true">United Kindom</option>
       </select>
 
-    <?php elseif(get_bloginfo('name') == "Realife Tech US" && $location['countryCode'] != "US"): ?>
+    <?php elseif(/*get_bloginfo('name') == "Realife Tech US" &&*/ ip2loc_get_country_code() != "US"): ?>
 
       <select name="" id="">
         <option class="uk" value="<?php echo get_site_url(); ?>/?noredirect=true">United Kingdom</option>
@@ -37,4 +38,4 @@
 
   </div>
 
-<?php endif; ?>
+<?php // endif; ?>
