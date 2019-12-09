@@ -47,6 +47,10 @@
 .justify-content-space-between { @include justify-content(space-between); }
 .flex-wrap { @include flex-wrap(wrap); }
 
+.relative {
+	position: relative;
+}
+
 .icon {
     display: inline-block;
     width: 1em;
