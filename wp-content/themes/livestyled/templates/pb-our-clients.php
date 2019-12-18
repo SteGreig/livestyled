@@ -3,7 +3,7 @@
 
 	<h3 class="section__header section__header--our-clients">Our Clients</h3>
 
-	<section class="our-clients__logos grid flexbox align-items-center drag-scroll hide-scrollbar scroll-touch anim-500" data-animate="fadeInUp-disabled">
+	<section class="our-clients__logos grid flexbox align-items-center drag-scroll hide-scrollbar scroll-touch anim-500 carousel" data-animate="fadeInUp-disabled">
 
 		<?php while( has_sub_field('clients', 'option') ): ?>
 
@@ -18,5 +18,8 @@
 		<?php endwhile; ?>
 
 	</section>
+
+	<button class="carousel__arrow carousel__arrow--left"><?php icon('angle-left'); ?></button>
+	<button class="carousel__arrow carousel__arrow--right"><?php icon('angle-right'); ?></button>
 
 </article>

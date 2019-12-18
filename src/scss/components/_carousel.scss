@@ -22,7 +22,8 @@
       background: lighten($highlightGreen, 5%);
   }
 
-  .section--our-partners & {
+  .section--our-partners &,
+  .section--our-clients & {
       top: 60%;
       background: $highlightPink;
 

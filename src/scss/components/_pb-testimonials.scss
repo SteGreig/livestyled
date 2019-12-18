@@ -35,11 +35,12 @@
 }
 
 .testimonials__quotes {
-    padding: 20px;
+    width: 100%;
 
     @include lg-up {
         margin-right: auto;
         padding: 0;
+        width: auto;
     }
 }
 
@@ -93,11 +94,13 @@
     left: 0;
     opacity: 0;
     visibility: hidden;
-    transition: .3s;
+    transition: .5s;
     margin: 0;
     font-weight: 700;
     font-size: 1.1rem;
     max-width: 500px;
+    min-height: 251px;
+    padding: 20px;
 
     @include lg-up {
         text-align: left;

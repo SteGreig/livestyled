@@ -32,9 +32,10 @@ get_template_part( 'templates/pb-banner-full-bleed' );
 				)
 			);
 			$posts = get_posts($args);
+			$count = count($posts);
 			?>
 
-			<ul class="case-studies-list case-studies-list--sectioned flexbox hide-scrollbar scroll-touch carousel">
+			<ul class="case-studies-list case-studies-list--sectioned flexbox hide-scrollbar scroll-touch carousel <?php if($count < 4): echo "count-3"; endif; ?>">
 				<?php foreach($posts as $post):
 					get_template_part( 'templates/post-case-study' );
 				endforeach; ?>

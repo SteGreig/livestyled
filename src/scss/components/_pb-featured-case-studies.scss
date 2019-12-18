@@ -5,6 +5,7 @@
 .fcs-tabs {
     @include flex-direction(column);
     margin-top: 30px;
+    position: relative;
 
     @include md-up {
         @include flex-direction(row);
@@ -14,6 +15,8 @@
         @include order(1);
         @include align-items(flex-end);
         margin-top: 50px;
+        position: relative;
+        z-index: 50;
 
         @include md-up {
             @include order(0);
@@ -63,15 +66,27 @@
         }
     }
 
+    &__panels {
+        position: relative;
+    }
+
     &__panel {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        @include flexbox;
         @include flex-direction(column);
         @include align-items(center);
         width: 100%;
+        transition: .5s;
+        opacity: 0;
+        visibility: hidden;
 
         &.active {
-            display: block;
-            @include flexbox;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
         }
 
         @include md-up {

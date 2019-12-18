@@ -461,7 +461,7 @@ var child = $(".carousel > *");
     x;
 
 // Auto scroll
-var scrollInt = setInterval(timer, 4000);
+var scrollInt = setInterval(timer, 2000);
 
 function timer() {
   x = ((child.width() + 40)) + cont.scrollLeft();

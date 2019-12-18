@@ -7,6 +7,7 @@
 
     h2 {
         padding-left: 20px;
+        text-align: center;
     }
 }
 
@@ -39,6 +40,12 @@
         height: 200px;
         display: block;
         opacity: 0;
+    }
+
+    &.count-3 {
+        @include xl-up {
+            @include justify-content(center);
+        }
     }
 }
 

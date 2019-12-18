@@ -5,6 +5,7 @@
 .section--our-clients {
     width: 100%;
     overflow: hidden;
+    position: relative;
 
     @include xl-up {
         padding: 90px 0 105px;
