@@ -31,7 +31,9 @@
 .anim-d-1300 { animation-delay: 1300ms; }
 .anim-d-1400 { animation-delay: 1400ms; }
 .anim-d-1500 { animation-delay: 1500ms; }
+.anim-d-1800 { animation-delay: 1800ms; }
 .anim-d-2000 { animation-delay: 2000ms; }
+.anim-d-2100 { animation-delay: 2100ms; }
 
 .anim-ease-in { animation-timing-function: ease-in; }
 .anim-ease-out { animation-timing-function: ease-out; }
@@ -145,3 +147,32 @@
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
   }
+
+
+  //-------------------------------------------------------------
+// Fade In
+//-------------------------------------------------------------
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}

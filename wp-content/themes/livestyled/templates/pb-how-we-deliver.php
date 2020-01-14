@@ -29,13 +29,15 @@
 
 		<section class="grid grid--<?php echo $grid; ?> grid--mob-<?php echo $sectionMobLayout; ?> justify-content-center hide-scrollbar">
 		<?php
+			$n=0;
 			foreach( $sectionBlocks as $block ) :
 				$blockImageArray = $block['hwd_block_image'];
-				$blockImageUrl = $blockImageArray['sizes']['medium'];
+				$blockImageUrl = $blockImageArray['sizes']['large'];
 				$blockHeader = $block['hwd_block_header'];
 				$blockCopy = $block['hwd_block_copy'];
+				$n++;
 		?>
-				<article class="block align--center copy-block copy-block--hwd flexbox align-items-center no-hover anim-500" data-animate="fadeInUp-disabled">
+				<article class="block align--center copy-block copy-block--hwd flexbox align-items-center no-hover anim-1250 anim-d-<?php echo ($n*8)-4; ?>00" data-animate="fadeIn">
 
 					<?php if($blockImageUrl): ?>
 					<div class="copy-block__img-wrap copy-block__img-wrap--hwd flexbox align-items-center justify-content-center">
