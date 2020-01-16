@@ -37,7 +37,7 @@
 				$blockCopy = $block['hwd_block_copy'];
 				$n++;
 		?>
-				<article class="block align--center copy-block copy-block--hwd flexbox align-items-center no-hover anim-1250 anim-d-<?php echo ($n*8)-4; ?>00" data-animate="fadeIn">
+				<article class="block align--center copy-block copy-block--hwd flexbox align-items-center no-hover anim-2000 anim-d-<?php echo ($n*9)-4; ?>00" data-animate="fadeIn">
 
 					<?php if($blockImageUrl): ?>
 					<div class="copy-block__img-wrap copy-block__img-wrap--hwd flexbox align-items-center justify-content-center">
