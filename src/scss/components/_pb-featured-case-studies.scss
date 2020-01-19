@@ -125,6 +125,7 @@
     &__title {
         color: $highlightGreen;
         font-size: 1.5rem;
+        font-family: Museo;
 
         @include xl-up {
             font-size: 2rem;

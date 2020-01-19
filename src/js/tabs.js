@@ -17,7 +17,7 @@ for (var i=0; i<=tabsCount; i++) {
             $(this).parents('.tabs').find('.tabs-nav li:nth-child('+i+')').addClass('active');
             $(this).parents('.tabs').find('.tabs-panel:nth-child('+i+')').addClass('active');
             clearInterval(interval);
-            timer();
+            //timer();
         });
     })(i);
 }
