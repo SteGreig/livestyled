@@ -15,7 +15,7 @@
 	
 	<section class="container relative">
 
-		<h3 class="section__header section__header--our-partners">Our Partners</h3>
+		<h3 class="section__header section__header--our-partners">Our Integration Partners</h3>
 
 		<section class="our-clients__logos grid flexbox align-items-center drag-scroll hide-scrollbar scroll-touch anim-500 carousel" data-animate="fadeInUp-disabled">
 
