@@ -77,7 +77,6 @@
         display: block;
         @include flexbox;
         @include flex-direction(column);
-        @include align-items(center);
         width: 100%;
         transition: .5s;
         opacity: 0;
@@ -96,6 +95,9 @@
     }
 
     &__text-wrap {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include align-content(center);
 
         @include md-up {
             width: 50%;
