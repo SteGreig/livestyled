@@ -513,8 +513,10 @@ var iconAngleDown = "<svg class='icon icon-angle-down'><use xlink:href='"+themeU
 // Copy primary and secondary menus to .mob-nav element
 var mobNav = document.querySelector('.mob-nav .scroll-container');
 
-var copyPrimaryMenu = document.querySelector('.desktop-nav .main-menu').cloneNode(true);
-mobNav.appendChild(copyPrimaryMenu);
+if($('.desktop-nav .main-menu').length > 0) {
+    var copyPrimaryMenu = document.querySelector('.desktop-nav .main-menu').cloneNode(true);
+    mobNav.appendChild(copyPrimaryMenu);
+}
 
 // Add Close Icon element
 $( "<div class='mob-nav-close'>"+iconClose+"</div>" ).insertAfter( ".mob-nav .scroll-container" );
