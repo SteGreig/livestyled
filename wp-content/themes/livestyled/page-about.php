@@ -39,7 +39,7 @@ $section=1; while(have_rows('content_sections')): the_row(); $section++; ?>
 
 <?php endwhile;
 
-include( 'templates/meet-the-team.php' );
+//include( 'templates/meet-the-team.php' );
 
 include( 'templates/awards.php' );
 

@@ -70,6 +70,10 @@
 
 					include( 'pb-our-clients.php' );
 
+				elseif( get_row_layout() == 'logo_grid'):
+
+					include( 'pb-logo-grid.php' );
+
 				elseif( get_row_layout() == 'testimonials_section' && get_sub_field('t_show_testimonials_section')):
 
 					include( 'pb-testimonials.php' );
